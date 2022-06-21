@@ -21,11 +21,11 @@ void EditProfile::Delete_Profile(QString username)
           QString line = in.readLine();
           if(line==username)
               ++flag;
-          if(flag>0 && flag<9){
+          if(flag>0 && flag<10){
               ++flag;
               continue;
           }
-          if(flag==0 || flag>=9){
+          if(flag==0 || flag>=10){
               out<<line<<Qt::endl;
           }
 
@@ -77,7 +77,7 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
        {
           QString line = in.readLine();
 
-          if(flag>0 && flag<9)
+          if(flag>0 && flag<10)
               ++flag;
           if(line==username)
               ++flag;
