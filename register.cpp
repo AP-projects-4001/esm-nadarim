@@ -24,6 +24,7 @@ int Register::checkUsername(QString username)
 {
     int flag=0;
     QFile read_file("C:/Users/amirr/Desktop/test.txt");
+    qDebug()<<username;
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);
@@ -88,14 +89,18 @@ void Register::on_signup_btn_reg_clicked()
       msg.warning(this,"not Successful","you have to fill all fields");
       return;
   }
+
+  username="Username:"+username;
   int flag=checkUsername(username);
-  if(flag==-1){
+
+  if(flag==-1)
+     WriteInFile();
+  else{
       QMessageBox msg;
       msg.warning(this,"not Successful","The username is already taken");
       return;
-    }
-  else
-     WriteInFile();
+  }
+
 }
 
 
