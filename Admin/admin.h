@@ -6,6 +6,7 @@
 #include <QString>
 #include <QVector>
 #include <editprofile.h>
+#include <QTimer>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Admin; }
 QT_END_NAMESPACE
@@ -30,9 +31,14 @@ private slots:
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_8_clicked();
+
 private:
     Ui::Admin *ui;
     QVector<QString>vecAdmin;
-    int index;
+    int index = 0;
+    EditProfile obj;
 };
 #endif // ADMIN_H

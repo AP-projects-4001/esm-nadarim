@@ -6,7 +6,6 @@ Admin::Admin(QWidget *parent)
     , ui(new Ui::Admin)
 {
     ui->setupUi(this);
-
     QFile readFile("C:/Users/Lenovo/Desktop/test.txt");
     if (readFile.open(QIODevice::ReadOnly))
     {
@@ -25,15 +24,22 @@ Admin::Admin(QWidget *parent)
           vecAdmin.append(line);
        }
        readFile.close();
-       ui->lineEdit->setText(vecAdmin[0]);
-       ui->lineEdit_2->setText(vecAdmin[1]);
-       ui->lineEdit_3->setText(vecAdmin[2]);
-       ui->textEdit->setText(vecAdmin[3]);
-       ui->lineEdit_4->setText(vecAdmin[4]);
-       ui->lineEdit_5->setText(vecAdmin[5]);
-       ui->lineEdit_6->setText(vecAdmin[6]);
-       ui->lineEdit_7->setText(vecAdmin[7]);
-       index = 8;
+       if(vecAdmin.size() >=8)
+       {
+           ui->lineEdit->setText(vecAdmin[0]);
+           ui->lineEdit_2->setText(vecAdmin[1]);
+           ui->lineEdit_3->setText(vecAdmin[2]);
+           ui->textEdit->setText(vecAdmin[3]);
+           ui->lineEdit_4->setText(vecAdmin[4]);
+           ui->lineEdit_5->setText(vecAdmin[5]);
+           ui->lineEdit_6->setText(vecAdmin[6]);
+           ui->lineEdit_7->setText(vecAdmin[7]);
+           if (vecAdmin[7] == "False")
+           {
+                ui->pushButton_8->setText("Activate account");
+           }
+           index = 8;
+        }
     }
 }
 
@@ -69,7 +75,16 @@ void Admin::on_pushButton_clicked()
     ui->lineEdit_6->setText(vecAdmin[index]);
     index++;
     ui->lineEdit_7->setText(vecAdmin[index]);
+    if (vecAdmin[index] == "False")
+    {
+         ui->pushButton_8->setText("Activate account");
+    }
+    else if (vecAdmin[index] == "True")
+    {
+         ui->pushButton_8->setText("Disable account");
+    }
     index++;
+
 }
 
 
@@ -97,22 +112,37 @@ void Admin::on_pushButton_2_clicked()
     ui->lineEdit_6->setText(vecAdmin[index]);
     index++;
     ui->lineEdit_7->setText(vecAdmin[index]);
+    if (vecAdmin[index] == "False")
+    {
+         ui->pushButton_8->setText("Activate account");
+    }
+    else if (vecAdmin[index] == "True")
+    {
+         ui->pushButton_8->setText("Disable account");
+    }
     index++;
 }
 
 
 void Admin::on_pushButton_4_clicked()
 {
+    if(ui->lineEdit->text() == "")
+    {
+        QMessageBox* msg = new QMessageBox();
+        msg->setText("No user available");
+        msg->exec();
+        return;
+    }
     ui->pushButton_7->setEnabled(true);
     ui->pushButton_5->setEnabled(false);
     ui->pushButton_4->setEnabled(false);
     ui->pushButton_3->setEnabled(false);
     ui->pushButton_2->setEnabled(false);
+    ui->pushButton_8->setEnabled(false);
     ui->pushButton->setEnabled(false);
-    //ui->lineEdit->setReadOnly(false);
+    ui->lineEdit->setReadOnly(false);
     ui->lineEdit_2->setReadOnly(false);
     ui->lineEdit_4->setReadOnly(false);
-    //ui->lineEdit_6->setReadOnly(false);
     ui->textEdit->setReadOnly(false);
 }
 
@@ -127,24 +157,74 @@ void Admin::on_pushButton_7_clicked()
         return;
     }
     EditProfile obj;
-    //obj.Edit_Profile(ui->lineEdit->text(),ui->label->text(),);
+    obj.change_username(vecAdmin[index-8] ,ui->lineEdit->text());
+    vecAdmin[index-8]= ui->lineEdit->text();
     obj.Edit_Profile(ui->lineEdit->text(),ui->label_2->text(),ui->lineEdit_2->text());
     vecAdmin[index-7] = ui->lineEdit_2->text();
     obj.Edit_Profile(ui->lineEdit->text(),ui->label_4->text(),ui->textEdit->toPlainText());
     vecAdmin[index-5] = ui->textEdit->toPlainText();
     obj.Edit_Profile(ui->lineEdit->text(),ui->label_5->text(),ui->lineEdit_4->text());
     vecAdmin[index-4] = ui->lineEdit_4->text();
-    //obj.Edit_Profile(ui->lineEdit->text(),ui->label_7->text(),ui->lineEdit_6->text());
     ui->pushButton_7->setEnabled(false);
     ui->pushButton_5->setEnabled(true);
     ui->pushButton_4->setEnabled(true);
     ui->pushButton_3->setEnabled(true);
     ui->pushButton_2->setEnabled(true);
     ui->pushButton->setEnabled(true);
-    //ui->lineEdit->setReadOnly(true);
+    ui->lineEdit->setReadOnly(true);
     ui->lineEdit_2->setReadOnly(true);
     ui->lineEdit_4->setReadOnly(true);
-    //ui->lineEdit_6->setReadOnly(true);
     ui->textEdit->setReadOnly(true);
 }
+
+
+void Admin::on_pushButton_5_clicked()
+{
+    if(ui->lineEdit->text() == "")
+    {
+        QMessageBox* msg = new QMessageBox();
+        msg->setText("No user available");
+        msg->exec();
+        return;
+    }
+    obj.Delete_Profile(ui->lineEdit->text());
+    for(int j=-8 ; j<0 ; j++)
+    {
+        index--;
+        vecAdmin.remove(index);
+    }
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
+        ui->lineEdit_3->clear();
+        ui->lineEdit_4->clear();
+        ui->lineEdit_5->clear();
+        ui->lineEdit_6->clear();
+        ui->lineEdit_7->clear();
+        ui->textEdit->clear();
+}
+
+
+void Admin::on_pushButton_8_clicked()
+{
+    if(ui->lineEdit->text() == "")
+    {
+        QMessageBox* msg = new QMessageBox();
+        msg->setText("No user available");
+        msg->exec();
+        return;
+    }
+    if (ui->pushButton_8->text() == "Activate account")
+    {
+        ui->lineEdit_7->setText("True");
+        vecAdmin[index-1] = "True";
+        ui->pushButton_8->setText("Disable account");
+    }
+    else if (ui->pushButton_8->text() == "Disable account")
+    {
+        ui->lineEdit_7->setText("False");
+        vecAdmin[index-1] = "False";
+        ui->pushButton_8->setText("Activate account");
+    }
+}
+
 
