@@ -1,2 +1,2 @@
 # esm-nadarim
-The "Store" project of "اسم نداریم" group
+The "Store" project of "programmer" group
