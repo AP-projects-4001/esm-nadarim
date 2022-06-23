@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    admin.cpp \
     editprofile.cpp \
     forgetpassword.cpp \
     main.cpp \
@@ -16,12 +17,14 @@ SOURCES += \
     register.cpp
 
 HEADERS += \
+    admin.h \
     editprofile.h \
     forgetpassword.h \
     mainwindow.h \
     register.h
 
 FORMS += \
+    admin.ui \
     forgetpassword.ui \
     mainwindow.ui \
     register.ui
@@ -30,3 +33,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    Admin.pro.user
