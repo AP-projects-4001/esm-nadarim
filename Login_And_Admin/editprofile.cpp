@@ -128,7 +128,7 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
     }
 }
 
-void EditProfile::cahnge_username(QString old_User, QString new_User)
+void EditProfile::change_username(QString old_User, QString new_User)
 {
     int flag=0;
     int txtsize=old_User.size();

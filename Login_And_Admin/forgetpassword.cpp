@@ -21,11 +21,10 @@ ForgetPassword::~ForgetPassword()
 void ForgetPassword::check(){
 
     QString username=ui->user_line->text();
-    QString password=ui->pass_line->text();
-    QString newpassword=ui->newpass_line->text();
-    QString confirm=ui->confirmpass_line->text();
+    QString phonenum=ui->phone_line->text();
 
-    password=username+"-Password:"+password;
+
+    phonenum=username+"-Phone-number:"+phonenum;
     username="Username:"+username;
 
     int flag=0;
@@ -38,7 +37,7 @@ void ForgetPassword::check(){
           QString line = in.readLine();
           if(username==line)
               ++flag;
-          if(password==line){
+          if(phonenum==line){
               ++flag;
               break;
           }
@@ -47,18 +46,13 @@ void ForgetPassword::check(){
        read_file.close();
     }
 
-    if(confirm==newpassword)
-        ++flag;
-    if(flag==3){
-        username="Username:"+username;
-        EditProfile change_pass;
-        change_pass.Edit_Profile(username,"Password",newpassword);
-
-        QMessageBox::information(this,"Change password","Changed sccessfully");
+    if(flag==2){
+        QMessageBox::information(this,"Forget password","A recovery link sent to your phone");
+        return;
     }
     else{
         QMessageBox msg;
-        msg.warning(this,"Change password","There is a problem try again!.");
+        msg.warning(this,"Forget password","There is a problem try again!.");
         return;
     }
 }
@@ -67,11 +61,10 @@ void ForgetPassword::check(){
 void ForgetPassword::on_confirm_btn_clicked()
 {
     QString username=ui->user_line->text();
-    QString password=ui->pass_line->text();
-    QString newpassword=ui->newpass_line->text();
-    QString confirm=ui->confirmpass_line->text();
+    QString phonenum=ui->phone_line->text();
 
-    if(username=="" || password=="" || newpassword=="" || confirm==""){
+
+    if(username=="" || phonenum==""){
         QMessageBox msg;
         msg.warning(this,"Empty field(s)","you have to fill all fields");
         return;

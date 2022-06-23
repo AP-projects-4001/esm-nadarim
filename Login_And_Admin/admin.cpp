@@ -1,5 +1,6 @@
 #include "admin.h"
 #include "ui_admin.h"
+#include "editprofile.h"
 
 Admin::Admin(QWidget *parent)
     : QMainWindow(parent)
