@@ -217,12 +217,14 @@ void Admin::on_pushButton_8_clicked()
     {
         ui->lineEdit_7->setText("True");
         vecAdmin[index-1] = "True";
+        obj.Edit_Profile(ui->lineEdit->text(),"Status" , "True");
         ui->pushButton_8->setText("Disable account");
     }
     else if (ui->pushButton_8->text() == "Disable account")
     {
         ui->lineEdit_7->setText("False");
         vecAdmin[index-1] = "False";
+        obj.Edit_Profile(ui->lineEdit->text(),"Status" , "False");
         ui->pushButton_8->setText("Activate account");
     }
 }
