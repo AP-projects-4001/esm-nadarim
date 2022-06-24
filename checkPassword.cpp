@@ -10,8 +10,8 @@ bak::checkPassword::checkPassword(std::string passwordIn)
 		numLetter();
 		uperfluousLetter();
 	}
-	catch (std::exception e) {
-		errMessage = e.what();
+	catch (std::string err) {
+		errMessage = err;
 		confirm = false;
 	}
 }
@@ -21,11 +21,11 @@ bool bak::checkPassword::isConfirm(){return confirm;}
 std::string bak::checkPassword::getErr() { return errMessage; }
 
 void bak::checkPassword::sizePassword() {
-	errMessage = (std::string)"The password must be more than " + std::to_string(minSize)
+	errMessage = "The password must be more than " + std::to_string(minSize)
 		+ (std::string)" and less than " + std::to_string(maxSize) + (std::string)" characters";
 
 	if (password.size() < minSize || password.size() > maxSize)
-		throw std::exception(errMessage.c_str());
+		throw errMessage;
 }
 
 void bak::checkPassword::capitalLetter() {
@@ -35,7 +35,7 @@ void bak::checkPassword::capitalLetter() {
 	std::function<bool()> condition = [&]()->bool {
 		return (letter >= 'A' && letter <= 'Z');
 	};
-	rangeCondition(minCountCapitalLetter, NULL, condition);
+	rangeCondition(minCountCapitalLetter, -1, condition);
 }
 
 void bak::checkPassword::smallLetter() {
@@ -45,7 +45,7 @@ void bak::checkPassword::smallLetter() {
 	std::function<bool()> condition = [&]()->bool {
 		return (letter >= 'a' && letter <= 'z');
 	};
-	rangeCondition(minCountSmallLetter, NULL, condition);
+	rangeCondition(minCountSmallLetter, -1, condition);
 }
 
 void bak::checkPassword::numLetter() {
@@ -55,7 +55,7 @@ void bak::checkPassword::numLetter() {
 	std::function<bool()> condition = [&]()->bool {
 		return (letter >= '0' && letter <= '9');
 	};
-	rangeCondition(minCountNumLetter, NULL, condition);
+	rangeCondition(minCountNumLetter, -1, condition);
 }
 
 void bak::checkPassword::uperfluousLetter() {
@@ -64,7 +64,7 @@ void bak::checkPassword::uperfluousLetter() {
 	std::function<bool()> condition = [&]()->bool {
 		return !(letter >= 'A' && letter <= 'Z') && !(letter >= 'a' && letter <= 'z') && !(letter >= '0' && letter <= '9');
 	};
-	rangeCondition(NULL, maxSuperfluousLetter, condition);
+	rangeCondition(-1, maxSuperfluousLetter, condition);
 }
 
 void bak::checkPassword::rangeCondition(const int& minCount, const int& maxCount, std::function<bool()> condition) {
@@ -77,10 +77,10 @@ void bak::checkPassword::rangeCondition(const int& minCount, const int& maxCount
 			countNumber++;
 	}
 
-	if (minCount != NULL)
+	if (minCount != -1)
 		if (countNumber < minCount)
-			throw std::exception(errMessage.c_str());
-	if (maxCount != NULL)
+			throw errMessage;
+	if (maxCount != -1)
 		if (countNumber > maxCount)
-			throw std::exception(errMessage.c_str());
+			throw errMessage;
 }
