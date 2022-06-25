@@ -1,91 +1,9 @@
 #include "product.h"
 
-void bak::product::setUserNameSeller(std::string userNameSellerIn) {
-
-	
-	restrictWord(userNameSellerIn, userNameSeller, sizeof(userNameSeller));
-
-}
-
-void bak::product::setUserNameShopper(std::string userNameShopperIn) {
-
-
-	restrictWord(userNameShopperIn, userNameShopper, sizeof(userNameShopper));
-
-
-}
-
-void bak::product::setName(std::string nameIn) {
-
-
-	restrictWord(nameIn, name, sizeof(name));
-
-
-}
-
-void bak::product::setGroup(std::string groupIn) {
-
-	restrictWord(groupIn, group, sizeof(group));
-
-
-}
-
-void bak::product::setNumber(int numberIn) {
-
-	number = numberIn;
-
-	//todo: check num
-
-}
-
-void bak::product::setPrice(int priceIn) {
-
-	price = priceIn;
-	//todo: check num
-
-
-}
-
-void bak::product::setWeight(int weightIn) {
-
-
-	weight = weightIn;
-	//todo: check num
-
-}
-
-void bak::product::setBrand(std::string brandIn) {
-
-	restrictWord(brandIn, brand, sizeof(brand));
-
-
-}
-
-void bak::product::setModel(std::string modelIn) {
-
-	restrictWord(modelIn, model, sizeof(model));
-
-
-}
-
-void bak::product::setColor(std::string colorIn) {
-
-	restrictWord(colorIn, color, sizeof(color));
-
-
-}
-
-void bak::product::setWarranty(std::string warrantyIn) {
-
-	restrictWord(warrantyIn, warranty, sizeof(warranty));
-
-
-}
-
-bool bak::product::operator==(product& productIn){
+bool bak::product::operator==(product& productIn) {
 	if (std::string(this->userNameSeller) != std::string(productIn.userNameSeller))
 		return false;
-	if (std::string(this->userNameShopper) != std::string(productIn.userNameShopper))
+	if (std::string(this->userNameBuyer) != std::string(productIn.userNameBuyer))
 		return false;
 	if (std::string(this->name) != std::string(productIn.name))
 		return false;
@@ -109,6 +27,46 @@ bool bak::product::operator==(product& productIn){
 	return true;
 }
 
+bool bak::product::operator!=(product& productIn) {return (*this == productIn) ? false : true;}
+
+bool bak::product::operator<=(product comparison) {
+
+	if (!std::string(this->userNameSeller).empty()
+		&& std::string(this->userNameSeller) != std::string(comparison.userNameSeller))
+		return false;
+	if (!std::string(this->userNameBuyer).empty()
+		&& std::string(this->userNameBuyer) != std::string(comparison.userNameBuyer))
+		return false;
+	if (!std::string(this->name).empty()
+		&& std::string(this->name) != std::string(comparison.name))
+		return false;
+	if (!std::string(this->group).empty()
+		&& std::string(this->group) != std::string(comparison.group))
+		return false;
+	if (!std::string(this->brand).empty()
+		&& std::string(this->brand) != std::string(comparison.brand))
+		return false;
+	if (!std::string(this->model).empty()
+		&& std::string(this->model) != std::string(comparison.model))
+		return false;
+	if (!std::string(this->color).empty()
+		&& std::string(this->color) != std::string(comparison.color))
+		return false;
+	if (!std::string(this->warranty).empty()
+		&& std::string(this->warranty) != std::string(comparison.warranty))
+		return false;
+	if (this->number != -1 && this->number != comparison.number)
+		return false;
+	if (this->price != -1 && this->price != comparison.price)
+		return false;
+	if (this->weight != -1 && this->weight != comparison.weight)
+		return false;
+
+	return true;
+}
+
+bool bak::product::operator>=(product comparison) {return (comparison <= *this);}
+
 void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
 
 	int length = wordIn.size();
@@ -117,5 +75,5 @@ void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
 
 	const char* word = wordIn.data();
 
-	strncpy_s(wordOut, (length+1),word, length);
+	strncpy(wordOut, word, length);
 }
