@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     admin.cpp \
+    checkpassword.cpp \
     editprofile.cpp \
     forgetpassword.cpp \
     main.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     admin.h \
+    checkpassword.h \
     editprofile.h \
     forgetpassword.h \
     mainwindow.h \

@@ -1,6 +1,7 @@
 #ifndef CHECKPASSWORD_H
 #define CHECKPASSWORD_H
 
+
 #include <exception>
 #include <string>
 #include <functional>
@@ -9,10 +10,10 @@
 
 namespace bak {
 
-    class CheckPassword {
+    class checkPassword {
 
     public:
-        CheckPassword(std::string passwordIn);
+        checkPassword(std::string passwordIn);
 
         bool isConfirm();
         std::string getErr();
@@ -28,12 +29,13 @@ namespace bak {
 
         std::string errMessage;
         std::string password;
+        char letter;
         bool confirm = true;
 
         int minSize = 8, maxSize = 20;
         int minCountCapitalLetter = 1, minCountSmallLetter = 1, minCountNumLetter = 1;
         int maxSuperfluousLetter = 0;
-        char letter;
+
     };
 
 }

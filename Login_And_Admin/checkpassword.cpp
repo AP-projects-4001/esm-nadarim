@@ -1,8 +1,12 @@
 #include "checkpassword.h"
+
 #include <exception>
+#include <string>
+#include <functional>
+#include <QString>
 
 
-bak::CheckPassword::CheckPassword(std::string passwordIn)
+bak::checkPassword::checkPassword(std::string passwordIn)
     :password(passwordIn) {
 
     try {
@@ -11,62 +15,64 @@ bak::CheckPassword::CheckPassword(std::string passwordIn)
         smallLetter();
         numLetter();
         uperfluousLetter();
+
+        errMessage = "";
     }
-    catch (std::exception e) {
-        errMessage = e.what();
+    catch (std::string err) {
+        errMessage = err;
         confirm = false;
     }
 }
 
-bool bak::CheckPassword::isConfirm(){return confirm;}
+bool bak::checkPassword::isConfirm(){return confirm;}
 
-std::string bak::CheckPassword::getErr() { return errMessage; }
+std::string bak::checkPassword::getErr() { return errMessage; }
 
-void bak::CheckPassword::sizePassword() {
-    errMessage = (std::string)"The password must be more than " + std::to_string(minSize)
+void bak::checkPassword::sizePassword() {
+    errMessage = "The password must be more than " + std::to_string(minSize)
         + (std::string)" and less than " + std::to_string(maxSize) + (std::string)" characters";
 
     if (password.size() < minSize || password.size() > maxSize)
-        throw std::exception(errMessage.c_str());
+        throw errMessage;
 }
 
-void bak::CheckPassword::capitalLetter() {
+void bak::checkPassword::capitalLetter() {
     errMessage = (std::string)"The password must contain at least " + std::to_string(minCountCapitalLetter)
         + (std::string)" capital letter";
 
     std::function<bool()> condition = [&]()->bool {
         return (letter >= 'A' && letter <= 'Z');
     };
-    rangeCondition(minCountCapitalLetter, NULL, condition);
+    rangeCondition(minCountCapitalLetter, -1, condition);
 }
 
-void bak::CheckPassword::smallLetter() {
+void bak::checkPassword::smallLetter() {
     errMessage = (std::string)"The password must contain at least " + std::to_string(minCountSmallLetter)
         + (std::string)" Small letter";
 
     std::function<bool()> condition = [&]()->bool {
         return (letter >= 'a' && letter <= 'z');
     };
-    rangeCondition(minCountSmallLetter, NULL, condition);
+    rangeCondition(minCountSmallLetter, -1, condition);
 }
 
-void bak::CheckPassword::numLetter() {
+void bak::checkPassword::numLetter() {
     errMessage = (std::string)"The password must contain at least " + std::to_string(minCountNumLetter)
         + (std::string)" number";
 
     std::function<bool()> condition = [&]()->bool {
         return (letter >= '0' && letter <= '9');
     };
-    rangeCondition(minCountNumLetter, NULL, condition);
+    rangeCondition(minCountNumLetter, -1, condition);
 }
 
-void bak::CheckPassword::uperfluousLetter() {
+void bak::checkPassword::uperfluousLetter() {
     errMessage = "The password must contain number and small and capital letters in English";
 
     std::function<bool()> condition = [&]()->bool {
         return !(letter >= 'A' && letter <= 'Z') && !(letter >= 'a' && letter <= 'z') && !(letter >= '0' && letter <= '9');
     };
-    rangeCondition(NULL, maxSuperfluousLetter, condition);
+    rangeCondition(-1, maxSuperfluousLetter, condition);
 }
 
 void bak::checkPassword::rangeCondition(const int& minCount, const int& maxCount, std::function<bool()> condition) {
@@ -74,15 +80,15 @@ void bak::checkPassword::rangeCondition(const int& minCount, const int& maxCount
     int countNumber = 0;
 
     for (int i = 0; i < password.size(); i++) {
-        char letter = password[i];
+        letter = password[i];
         if (condition())
             countNumber++;
     }
 
-    if (minCount != NULL)
+    if (minCount != -1)
         if (countNumber < minCount)
-            throw std::exception(errMessage.c_str());
-    if (maxCount != NULL)
+            throw errMessage;
+    if (maxCount != -1)
         if (countNumber > maxCount)
-            throw std::exception(errMessage.c_str());
+            throw errMessage;
 }

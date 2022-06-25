@@ -1,4 +1,5 @@
 #include "register.h"
+#include "checkpassword.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ui_register.h"
@@ -6,6 +7,7 @@
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <string>
 #include <QMessageBox>
 
 Register::Register(QWidget *parent) :
@@ -18,6 +20,8 @@ Register::Register(QWidget *parent) :
 Register::~Register()
 {
     delete ui;
+    delete(newpassword);
+    delete(login);
 }
 
 int Register::checkUsername(QString username)
@@ -90,9 +94,17 @@ void Register::on_signup_btn_reg_clicked()
       return;
   }
 
+
   username="Username:"+username;
   int flag=checkUsername(username);
 
+  newpassword=new bak::checkPassword(password.toStdString());
+  if(!newpassword->isConfirm()){
+      QMessageBox msg;
+      msg.warning(this,"Password is weak","You hava to set a stronger password");
+      return;
+
+  }
   if(flag==-1)
      WriteInFile();
   else{

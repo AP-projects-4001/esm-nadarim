@@ -4,6 +4,7 @@
 #include "mainwindow.h"
 #include <QWidget>
 #include <QString>
+#include "checkpassword.h"
 
 namespace Ui {
 class Register;
@@ -28,6 +29,7 @@ private slots:
 private:
     Ui::Register *ui;
     QMainWindow *login;
+    bak::checkPassword *newpassword;
 };
 
 #endif // REGISTER_H
