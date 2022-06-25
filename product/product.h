@@ -2,6 +2,7 @@
 
 #include <string>
 #include <string>
+#pragma warning(disable : 4996)
 
 namespace bak {
 

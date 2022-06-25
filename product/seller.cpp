@@ -37,9 +37,11 @@ void bak::seller::setWarranty(std::string warrantyIn) {
 std::vector<bak::product> bak::seller::allProducts(){
 	fileProduct sellerFile;
 	std::vector<bak::product> listOut = sellerFile.searchProduct(sellerProduct);
-	for (int i=0; i< listOut.size();i++)
-		if(!std::string(listOut[i].userNameBuyer).empty())
+	for (int i = 0; i < listOut.size(); i++) {
+		if (!std::string(listOut[i].userNameBuyer).empty())
 			listOut.erase(listOut.begin() + i);
+		i--;
+	}
 
 	return listOut;
 }
