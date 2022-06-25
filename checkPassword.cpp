@@ -9,6 +9,8 @@ bak::checkPassword::checkPassword(std::string passwordIn)
 		smallLetter();
 		numLetter();
 		uperfluousLetter();
+
+		errMessage = "";
 	}
 	catch (std::string err) {
 		errMessage = err;
@@ -72,7 +74,7 @@ void bak::checkPassword::rangeCondition(const int& minCount, const int& maxCount
 	int countNumber = 0;
 
 	for (int i = 0; i < password.size(); i++) {
-		char letter = password[i];
+		letter = password[i];
 		if (condition())
 			countNumber++;
 	}
