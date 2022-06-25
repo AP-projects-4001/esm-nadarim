@@ -137,7 +137,7 @@ void Admin::on_pushButton_4_clicked()
     ui->pushButton_7->setEnabled(true);
     ui->pushButton_5->setEnabled(false);
     ui->pushButton_4->setEnabled(false);
-    ui->pushButton_3->setEnabled(false);
+    //ui->pushButton_3->setEnabled(false);
     ui->pushButton_2->setEnabled(false);
     ui->pushButton_8->setEnabled(false);
     ui->pushButton->setEnabled(false);
@@ -169,7 +169,7 @@ void Admin::on_pushButton_7_clicked()
     ui->pushButton_7->setEnabled(false);
     ui->pushButton_5->setEnabled(true);
     ui->pushButton_4->setEnabled(true);
-    ui->pushButton_3->setEnabled(true);
+    //ui->pushButton_3->setEnabled(true);
     ui->pushButton_2->setEnabled(true);
     ui->pushButton->setEnabled(true);
     ui->lineEdit->setReadOnly(true);
@@ -230,4 +230,15 @@ void Admin::on_pushButton_8_clicked()
     }
 }
 
+
+
+/*void Admin::on_pushButton_3_clicked()
+{
+    bak::manager obj_manager;
+    std::vector<bak::product> vec_transaction = obj_manager.allTransactions();
+    for(int j =0 ; j < vec_transaction.size() ; j++)
+    {
+        //ui->listWidget->addItem(vec_transaction[j].);
+    }
+}*/
 

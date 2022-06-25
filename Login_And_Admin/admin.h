@@ -7,6 +7,8 @@
 #include <QVector>
 #include <editprofile.h>
 #include <QTimer>
+#include "manager.h"
+#include "transaction.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class Admin; }
 QT_END_NAMESPACE
@@ -34,6 +36,8 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_pushButton_8_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::Admin *ui;
