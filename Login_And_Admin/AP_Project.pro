@@ -23,7 +23,10 @@ SOURCES += \
     manager.cpp \
     product.cpp \
     register.cpp \
-    seller.cpp
+    seller.cpp \
+    transaction.cpp \
+    changeprofile.cpp \
+    customer.cpp
 
 HEADERS += \
     Buyer.h \
@@ -39,7 +42,10 @@ HEADERS += \
     manager.h \
     product.h \
     register.h \
-    seller.h
+    seller.h \
+    transaction.h \
+    changeprofile.h \
+    customer.h
 
 FORMS += \
     admin.ui \
@@ -47,7 +53,10 @@ FORMS += \
     edit_profile_client.ui \
     forgetpassword.ui \
     mainwindow.ui \
-    register.ui
+    register.ui \
+    transaction.ui \
+    changeprofile.ui \
+    customer.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
