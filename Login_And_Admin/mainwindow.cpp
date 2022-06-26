@@ -8,6 +8,7 @@
 #include <fstream>
 #include <QTextStream>
 #include <QMessageBox>
+#include "customer.h"
 #include "mainwindow.h"
 #include "qobjectdefs.h"
 #include "ui_mainwindow.h"
@@ -30,11 +31,12 @@ void MainWindow::searchFile()
 
     password=username+"-Password:"+password;
     QString status=username+"-Status:True";
+    QString save_password=username;
     username="Username:"+username;
 
     QString Level;
     int flag=0;
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_file("C:/Users/amirr/Desktop/test.txt");
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);
@@ -75,6 +77,11 @@ void MainWindow::searchFile()
             Client *client_window = new Client(this,username);
             client_window->show();
         }
+        else if(Level=="Customer"){
+            this->hide();
+            customer=new Customer(nullptr,save_password);
+            customer->show();
+        }
     }
     else{
         QMessageBox::information(this,"idk","not match sccessfully");
@@ -84,6 +91,7 @@ void MainWindow::searchFile()
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete(customer);
 }
 
 

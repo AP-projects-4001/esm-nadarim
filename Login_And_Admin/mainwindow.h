@@ -5,6 +5,7 @@
 #include <register.h>
 #include "admin.h"
 #include "client.h"
+#include "customer.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -26,5 +27,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Customer *customer;
+
 };
 #endif // MAINWINDOW_H

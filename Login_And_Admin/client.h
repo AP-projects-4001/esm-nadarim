@@ -17,7 +17,7 @@ public:
     ~Client();
 
 private slots:
-    void on_pushButton_clicked();
+    //void on_pushButton_clicked();
 
     void on_actionProfile_triggered();
 
