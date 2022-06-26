@@ -69,6 +69,11 @@ void MainWindow::searchFile()
             Admin *w = new Admin(this);
             w->show();
         }
+        else if(Level == "Client")
+        {
+            Client *client_window = new Client(this);
+            client_window->show();
+        }
     }
     else{
         QMessageBox::information(this,"idk","not match sccessfully");
