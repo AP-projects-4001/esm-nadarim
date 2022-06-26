@@ -61,10 +61,11 @@ void bak::checkPassword::numLetter() {
 }
 
 void bak::checkPassword::uperfluousLetter() {
-	errMessage = "The password must contain number and small and capital letters in English";
+	errMessage = "The password must contain number , @ , small and capital letters in English";
 
 	std::function<bool()> condition = [&]()->bool {
-		return !(letter >= 'A' && letter <= 'Z') && !(letter >= 'a' && letter <= 'z') && !(letter >= '0' && letter <= '9');
+		return !(letter >= 'A' && letter <= 'Z') && !(letter >= 'a' && letter <= 'z') 
+			&& !(letter >= '0' && letter <= '9')&& (letter != '@');
 	};
 	rangeCondition(-1, maxSuperfluousLetter, condition);
 }
