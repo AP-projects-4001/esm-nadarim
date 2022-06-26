@@ -38,10 +38,17 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_10_clicked();
+
 private:
     Ui::Admin *ui;
     QVector<QString>vecAdmin;
     int index = 0;
     EditProfile obj;
+    //bak::manager obj_manager;
+    int index_transaction;
+    std::vector<bak::product> vecTransaction;
 };
 #endif // ADMIN_H

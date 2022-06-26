@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
-    <height>476</height>
+    <width>931</width>
+    <height>490</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -503,11 +503,11 @@
       <string>Customer Name</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_11">
+    <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>110</y>
+       <y>150</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -516,12 +516,12 @@
       <string>Product Name</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_12">
+    <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>150</y>
-       <width>49</width>
+       <x>90</x>
+       <y>190</y>
+       <width>31</width>
        <height>16</height>
       </rect>
      </property>
@@ -529,11 +529,11 @@
       <string>Price</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_13">
+    <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>190</y>
+       <x>80</x>
+       <y>230</y>
        <width>49</width>
        <height>16</height>
       </rect>
@@ -546,7 +546,7 @@
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>230</y>
+       <y>280</y>
        <width>80</width>
        <height>24</height>
       </rect>
@@ -562,7 +562,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>230</y>
+       <y>280</y>
        <width>80</width>
        <height>24</height>
       </rect>
@@ -574,12 +574,38 @@
       <string>Previous</string>
      </property>
     </widget>
+    <widget class="QLineEdit" name="lineEdit_13">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>230</y>
+       <width>181</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>110</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Group</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
       <x>680</x>
-      <y>380</y>
+      <y>350</y>
       <width>151</width>
       <height>24</height>
      </rect>
@@ -598,7 +624,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>930</width>
+     <width>931</width>
      <height>21</height>
     </rect>
    </property>

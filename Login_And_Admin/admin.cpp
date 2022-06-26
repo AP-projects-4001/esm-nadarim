@@ -41,6 +41,18 @@ Admin::Admin(QWidget *parent)
            }
            index = 8;
         }
+       bak::manager obj_manager;
+       std::vector<bak::product> vecTransaction = obj_manager.allTransactions();
+       if(vecTransaction.size() > 0 )
+       {
+           ui->lineEdit_8->setText(vecTransaction[0].userNameBuyer);
+           ui->lineEdit_9->setText(vecTransaction[0].userNameSeller);
+           ui->lineEdit_10->setText(vecTransaction[0].group);
+           ui->lineEdit_11->setText(vecTransaction[0].name);
+           ui->lineEdit_12->setText(QString::number(vecTransaction[0].price));
+           ui->lineEdit_13->setText(QString::number(vecTransaction[0].number));
+       }
+       index_transaction = 1;
     }
 }
 
@@ -241,4 +253,37 @@ void Admin::on_pushButton_8_clicked()
         //ui->listWidget->addItem(vec_transaction[j].);
     }
 }*/
+
+
+void Admin::on_pushButton_9_clicked()
+{
+    if(vecTransaction.size()==0)
+    {
+        return;
+    }
+    ui->lineEdit_8->setText(vecTransaction[index_transaction].userNameBuyer);
+    ui->lineEdit_9->setText(vecTransaction[index_transaction].userNameSeller);
+    ui->lineEdit_10->setText(vecTransaction[index_transaction].group);
+    ui->lineEdit_11->setText(vecTransaction[index_transaction].name);
+    ui->lineEdit_12->setText(QString::number(vecTransaction[index_transaction].price));
+    ui->lineEdit_13->setText(QString::number(vecTransaction[index_transaction].number));
+    index_transaction++;
+}
+
+
+void Admin::on_pushButton_10_clicked()
+{
+
+    if(vecTransaction.size() < 1)
+    {
+        return;
+    }
+    index_transaction -= 2;
+    ui->lineEdit_8->setText(vecTransaction[index_transaction].userNameBuyer);
+    ui->lineEdit_9->setText(vecTransaction[index_transaction].userNameSeller);
+    ui->lineEdit_10->setText(vecTransaction[index_transaction].group);
+    ui->lineEdit_11->setText(vecTransaction[index_transaction].name);
+    ui->lineEdit_12->setText(QString::number(vecTransaction[index_transaction].price));
+    ui->lineEdit_13->setText(QString::number(vecTransaction[index_transaction].number));
+}
 
