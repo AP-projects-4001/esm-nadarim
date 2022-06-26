@@ -38,6 +38,7 @@ void MainWindow::searchFile()
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);
+
        while (!in.atEnd())
        {
           QString line = in.readLine();
@@ -71,7 +72,7 @@ void MainWindow::searchFile()
         }
         else if(Level == "Client")
         {
-            Client *client_window = new Client(this);
+            Client *client_window = new Client(this,username);
             client_window->show();
         }
     }

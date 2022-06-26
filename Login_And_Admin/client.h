@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "edit_profile_client.h"
+#include <QFile>
 namespace Ui {
 class Client;
 }
@@ -12,7 +13,7 @@ class Client : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Client(QWidget *parent = nullptr);
+    explicit Client(QWidget *parent = nullptr, QString username_client = "");
     ~Client();
 
 private slots:
@@ -24,6 +25,8 @@ private slots:
 
 private:
     Ui::Client *ui;
+    QString username_client;
+    QVector <QString> vec_info_client{6};
 };
 
 #endif // CLIENT_H

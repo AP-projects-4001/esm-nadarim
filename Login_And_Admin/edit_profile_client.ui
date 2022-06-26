@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>Information</string>
     </property>
     <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
@@ -34,6 +34,9 @@
        <width>181</width>
        <height>70</height>
       </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
@@ -165,6 +168,9 @@
        <height>24</height>
       </rect>
      </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
@@ -245,8 +251,20 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menubuy_page">
+    <property name="title">
+     <string>buy page</string>
+    </property>
+    <addaction name="actionBack"/>
+   </widget>
+   <addaction name="menubuy_page"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBack">
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
