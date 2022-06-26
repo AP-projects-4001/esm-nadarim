@@ -8,7 +8,6 @@
 #include <editprofile.h>
 #include <QTimer>
 #include "manager.h"
-#include "transaction.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class Admin; }
 QT_END_NAMESPACE
