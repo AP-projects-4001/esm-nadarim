@@ -19,6 +19,7 @@ SOURCES += \
     fileProduct.cpp \
     filter.cpp \
     forgetpassword.cpp \
+    increase_budget.cpp \
     main.cpp \
     mainwindow.cpp \
     manager.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     fileProduct.h \
     filter.h \
     forgetpassword.h \
+    increase_budget.h \
     mainwindow.h \
     manager.h \
     product.h \
@@ -55,6 +57,7 @@ FORMS += \
     client.ui \
     edit_profile_client.ui \
     forgetpassword.ui \
+    increase_budget.ui \
     mainwindow.ui \
     register.ui \
     transaction.ui \

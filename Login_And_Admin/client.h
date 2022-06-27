@@ -2,7 +2,7 @@
 #define CLIENT_H
 
 #include <QMainWindow>
-#include "edit_profile_client.h"
+//#include "edit_profile_client.h"
 #include <QFile>
 namespace Ui {
 class Client;
@@ -22,6 +22,8 @@ private slots:
     void on_actionProfile_triggered();
 
     void on_actionExit_triggered();
+
+    void on_horizontalSlider_maxPrice_rangeChanged(int min, int max);
 
 private:
     Ui::Client *ui;

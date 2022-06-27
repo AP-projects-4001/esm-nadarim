@@ -1,6 +1,6 @@
 #include "client.h"
 #include "ui_client.h"
-
+#include "edit_profile_client.h"
 Client::Client(QWidget *parent,QString username_client) :
     QMainWindow(parent),
     ui(new Ui::Client)
@@ -35,8 +35,8 @@ Client::Client(QWidget *parent,QString username_client) :
                 vec_info_client[5] = line;
                 break;
             }
-
            }
+           ui->label_budget->setText(vec_info_client[5]);
        }
            read_file.close();
 }
@@ -50,7 +50,8 @@ Client::~Client()
 
 void Client::on_actionProfile_triggered()
 {
-    Edit_Profile_Client* edit_obj = new Edit_Profile_Client(this,vec_info_client);
+    Edit_Profile_Client* edit_obj = new Edit_Profile_Client(nullptr,vec_info_client);
+    this->close();
     edit_obj->show();
 }
 

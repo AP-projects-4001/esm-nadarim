@@ -2,7 +2,9 @@
 #define EDIT_PROFILE_CLIENT_H
 
 #include <QMainWindow>
-
+#include <QMessageBox>
+#include "editprofile.h"
+#include"client.h"
 namespace Ui {
 class Edit_Profile_Client;
 }
@@ -17,6 +19,14 @@ public:
 
 private slots:
     void on_pushButton_4_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_actionBack_triggered();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::Edit_Profile_Client *ui;
