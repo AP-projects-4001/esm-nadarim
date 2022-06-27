@@ -13,8 +13,6 @@ Edit_Profile_Client::Edit_Profile_Client(QWidget *parent,QVector<QString> vec_in
     ui->textEdit->setText(vec_info_profile_client[3]);
     ui->lineEdit_4->setText(vec_info_profile_client[4]);
     ui->lineEdit_6->setText(vec_info_profile_client[5]);
-    for(int i =0 ; i<6 ; i++)
-    qDebug()<< vec_info_profile_client[i];
 }
 
 Edit_Profile_Client::~Edit_Profile_Client()
