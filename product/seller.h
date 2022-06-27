@@ -23,7 +23,8 @@ namespace bak {
 		void setColor(std::string colorIn);
 		void setWarranty(std::string warrantyIn);
 		
-		std::vector<product>allProducts();
+		std::vector<product>allProductsSell();
+		std::vector<product>allProductsPurchase();
 		void addProduct();
 		void deleteProduct();
 		void editProduct(seller newProduct);

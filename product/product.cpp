@@ -27,7 +27,7 @@ bool bak::product::operator==(product& productIn) {
 	return true;
 }
 
-bool bak::product::operator!=(product& productIn) {return (*this == productIn) ? false : true;}
+bool bak::product::operator!=(product& productIn) { return (*this == productIn) ? false : true; }
 
 bool bak::product::operator<=(product comparison) {
 
@@ -65,7 +65,7 @@ bool bak::product::operator<=(product comparison) {
 	return true;
 }
 
-bool bak::product::operator>=(product comparison) {return (comparison <= *this);}
+bool bak::product::operator>=(product comparison) { return (comparison <= *this); }
 
 void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
 
@@ -73,7 +73,10 @@ void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
 	length = (length < (size - 1) ? length : (size - 1));
 	wordIn[length] = '\0';
 
-	const char* word = wordIn.data();
-
-	strncpy(wordOut, word, length);
+	if (wordIn != "") {
+		const char* word = wordIn.data();
+		strncpy(wordOut, word, length);
+	}
+	else
+		wordOut[0] = '\0';
 }

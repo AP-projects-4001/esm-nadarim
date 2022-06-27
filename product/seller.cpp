@@ -1,14 +1,14 @@
 #include "seller.h"
 
-bak::seller::seller(std::string userNameSellerIn){
+bak::seller::seller(std::string userNameSellerIn) {
 	sellerProduct.restrictWord(userNameSellerIn, sellerProduct.userNameSeller, sizeof(sellerProduct.userNameSeller));
 }
 
-void bak::seller::setName(std::string nameIn) { 
-	sellerProduct.restrictWord(nameIn, sellerProduct.name, sizeof(sellerProduct.name)); 
+void bak::seller::setName(std::string nameIn) {
+	sellerProduct.restrictWord(nameIn, sellerProduct.name, sizeof(sellerProduct.name));
 }
 
-void bak::seller::setGroup(std::string groupIn) { 
+void bak::seller::setGroup(std::string groupIn) {
 	sellerProduct.restrictWord(groupIn, sellerProduct.group, sizeof(sellerProduct.group));
 }
 
@@ -34,13 +34,27 @@ void bak::seller::setWarranty(std::string warrantyIn) {
 	sellerProduct.restrictWord(warrantyIn, sellerProduct.warranty, sizeof(sellerProduct.warranty));
 }
 
-std::vector<bak::product> bak::seller::allProducts(){
+std::vector<bak::product> bak::seller::allProductsSell() {
 	fileProduct sellerFile;
 	std::vector<bak::product> listOut = sellerFile.searchProduct(sellerProduct);
 	for (int i = 0; i < listOut.size(); i++) {
-		if (!std::string(listOut[i].userNameBuyer).empty())
+		if (!std::string(listOut[i].userNameBuyer).empty()) {
 			listOut.erase(listOut.begin() + i);
-		i--;
+			i--;
+		}
+	}
+
+	return listOut;
+}
+
+std::vector<bak::product> bak::seller::allProductsPurchase() {
+	fileProduct sellerFile;
+	std::vector<bak::product> listOut = sellerFile.searchProduct(sellerProduct);
+	for (int i = 0; i < listOut.size(); i++) {
+		if (std::string(listOut[i].userNameBuyer).empty()) {
+			listOut.erase(listOut.begin() + i);
+			i--;
+		}
 	}
 
 	return listOut;
