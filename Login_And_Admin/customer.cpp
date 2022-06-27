@@ -1,6 +1,7 @@
 #include "customer.h"
 #include "ui_customer.h"
 #include "changeprofile.h"
+#include "transaction.h"
 
 Customer::Customer(QWidget *parent, QString username) :
     QWidget(parent),
@@ -13,6 +14,8 @@ Customer::Customer(QWidget *parent, QString username) :
 Customer::~Customer()
 {
     delete ui;
+    delete(changeprof);
+    delete(addnew);
 }
 
 
@@ -23,5 +26,25 @@ void Customer::on_editprofile_btn_clicked()
    this->hide();
    changeprof=new changeprofile(nullptr,username);
    changeprof->show();
+}
+
+
+
+
+
+void Customer::on_soldproduct_btn_clicked()
+{
+   this->hide();
+   Transaction=new transaction;
+   Transaction->show();
+
+}
+
+
+void Customer::on_addproduct_btn_clicked()
+{
+    this->hide();
+    addnew=new addproduct;
+    addnew->show();
 }
 

@@ -57,7 +57,7 @@ std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {
 	std::vector<product> listOut;
 	product test;
 
-	std::fstream cearch(addresFile, std::ios::in | std::ios::out | std::ios::binary);
+    std::fstream cearch(addresFile, std::ios::in | std::ios::out | std::ios::binary);
 	cearch.seekg(0);
 	location = cearch.tellg();
 

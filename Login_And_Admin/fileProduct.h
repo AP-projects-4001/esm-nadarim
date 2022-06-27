@@ -21,7 +21,7 @@ namespace bak {
 	private:
 		int findEmptySpace();
 
-		std::string addresFile = "fProducts.dat";
+        std::string addresFile = "C:/Users/amirr/Desktop/fProducts.dat";
 		int lenghFile;
 
 	};

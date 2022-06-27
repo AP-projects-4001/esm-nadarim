@@ -15,6 +15,9 @@ public:
     explicit transaction(QWidget *parent = nullptr);
     ~transaction();
 
+private slots:
+    void on_next_btn_clicked();
+
 private:
     Ui::transaction *ui;
 };

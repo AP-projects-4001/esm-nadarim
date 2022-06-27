@@ -40,7 +40,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="Clientname_line"/>
         </item>
        </layout>
       </item>
@@ -57,7 +57,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="Cusname_line"/>
         </item>
        </layout>
       </item>
@@ -74,7 +74,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_3"/>
+         <widget class="QLineEdit" name="group_name"/>
         </item>
        </layout>
       </item>
@@ -91,7 +91,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QLineEdit" name="productname_line"/>
         </item>
        </layout>
       </item>
@@ -108,7 +108,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_5"/>
+         <widget class="QLineEdit" name="price_line"/>
         </item>
        </layout>
       </item>
@@ -125,7 +125,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_6"/>
+         <widget class="QLineEdit" name="number_line"/>
         </item>
        </layout>
       </item>
@@ -142,7 +142,7 @@ color: rgb(0, 0, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="next_btn">
           <property name="text">
            <string>Next</string>
           </property>

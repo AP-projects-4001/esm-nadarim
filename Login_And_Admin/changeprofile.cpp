@@ -71,6 +71,7 @@ changeprofile::changeprofile(QWidget *parent,QString username) :
     }
 }
 
+
 changeprofile::~changeprofile()
 {
     delete ui;

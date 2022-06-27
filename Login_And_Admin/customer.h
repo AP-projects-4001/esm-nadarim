@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include "changeprofile.h"
+#include "transaction.h"
+#include "addproduct.h"
 
 namespace Ui {
 class Customer;
@@ -19,10 +21,16 @@ public:
 private slots:
     void on_editprofile_btn_clicked();
 
+    void on_soldproduct_btn_clicked();
+
+    void on_addproduct_btn_clicked();
+
 private:
     Ui::Customer *ui;
     QString username;
     changeprofile *changeprof;
+    transaction *Transaction;
+    addproduct *addnew;
 
 };
 

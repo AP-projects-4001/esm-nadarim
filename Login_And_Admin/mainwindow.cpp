@@ -15,6 +15,7 @@
 #include "register.h"
 #include "editprofile.h"
 #include "forgetpassword.h"
+#include "addproduct.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
