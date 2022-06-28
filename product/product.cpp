@@ -73,6 +73,8 @@ void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
 	length = (length < (size - 1) ? length : (size - 1));
 	wordIn[length] = '\0';
 
+	strncpy(wordOut, "", size);
+
 	if (wordIn != "") {
 		const char* word = wordIn.data();
 		strncpy(wordOut, word, length);
