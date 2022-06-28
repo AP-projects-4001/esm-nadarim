@@ -15,8 +15,19 @@ public:
     explicit changeprofile(QWidget *parent = nullptr,QString username="");
     ~changeprofile();
 
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_back_btn_clicked();
+
 private:
     Ui::changeprofile *ui;
+    QString Username;
+    QString Username_1;
+    QString name;
+    QString budget;
+    QString phonenum;
+    QString address;
 };
 
 #endif // CHANGEPROFILE_H

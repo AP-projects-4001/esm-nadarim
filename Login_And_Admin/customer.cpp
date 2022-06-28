@@ -23,6 +23,7 @@ Customer::~Customer()
 
 void Customer::on_editprofile_btn_clicked()
 {
+   qDebug()<<username;
    this->hide();
    changeprof=new changeprofile(nullptr,username);
    changeprof->show();
@@ -44,7 +45,7 @@ void Customer::on_soldproduct_btn_clicked()
 void Customer::on_addproduct_btn_clicked()
 {
     this->hide();
-    addnew=new addproduct;
+    addnew=new addproduct(nullptr,username);
     addnew->show();
 }
 

@@ -103,7 +103,7 @@ void addproduct::on_confirm_btn_clicked()
 void addproduct::on_pushButton_2_clicked()
 {
     this->hide();
-    Customer *customer=new Customer;
+    Customer *customer=new Customer(nullptr,username);
     customer->show();
 }
 

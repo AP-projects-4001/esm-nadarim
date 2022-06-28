@@ -169,7 +169,7 @@ color: rgb(0, 0, 0);</string>
          <number>0</number>
         </property>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="back_btn">
           <property name="text">
            <string>Back</string>
           </property>
