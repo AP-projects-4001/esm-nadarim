@@ -23,7 +23,7 @@ private slots:
 
     void on_actionExit_triggered();
 
-    void on_horizontalSlider_maxPrice_rangeChanged(int min, int max);
+    //void on_horizontalSlider_maxPrice_rangeChanged(int min, int max);
 
 private:
     Ui::Client *ui;

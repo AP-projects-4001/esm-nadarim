@@ -12,6 +12,7 @@ SOURCES += \
     Buyer.cpp \
     addproduct.cpp \
     admin.cpp \
+    allproducts.cpp \
     checkpassword.cpp \
     client.cpp \
     edit_profile_client.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     Buyer.h \
     addproduct.h \
     admin.h \
+    allproducts.h \
     checkpassword.h \
     client.h \
     edit_profile_client.h \
@@ -54,6 +56,7 @@ HEADERS += \
 FORMS += \
     addproduct.ui \
     admin.ui \
+    allproducts.ui \
     client.ui \
     edit_profile_client.ui \
     forgetpassword.ui \

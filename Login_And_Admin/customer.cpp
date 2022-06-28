@@ -36,7 +36,7 @@ void Customer::on_editprofile_btn_clicked()
 void Customer::on_soldproduct_btn_clicked()
 {
    this->hide();
-   Transaction=new transaction;
+   Transaction=new transaction(nullptr,username);
    Transaction->show();
 
 }
