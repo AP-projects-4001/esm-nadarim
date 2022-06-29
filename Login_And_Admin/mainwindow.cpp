@@ -16,6 +16,7 @@
 #include "editprofile.h"
 #include "forgetpassword.h"
 #include "addproduct.h"
+#include "allproducts.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -39,7 +40,7 @@ void MainWindow::searchFile()
 
     QString Level;
     int flag=0;
-    QFile read_file("C:/Users/amirr/Desktop/test.txt");
+    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);
@@ -100,6 +101,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_login_btn_clicked()
 {
+
     QString username=ui->user_line->text();
     QString password=ui->pass_line->text();
 

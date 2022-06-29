@@ -7,46 +7,72 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>313</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 85, 127);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_13">
    <item>
     <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
      <property name="title">
       <string>GroupBox</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_12">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <property name="spacing">
+       <number>14</number>
+      </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>15</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="next_btn">
             <property name="text">
              <string>Next</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="previous_btn">
             <property name="text">
              <string>Previous</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="delete_btn">
             <property name="text">
              <string>Delete</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="save_btn">
+            <property name="text">
+             <string>Save</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exit_btn">
             <property name="text">
              <string>Exit</string>
             </property>
@@ -56,6 +82,12 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_11">
+          <property name="spacing">
+           <number>14</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
@@ -68,7 +100,27 @@
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox"/>
+               <widget class="QComboBox" name="group_combo">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Home and Kitchen</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Electronics</string>
+                 </property>
+                </item>
+               </widget>
               </item>
              </layout>
             </item>
@@ -82,7 +134,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_4"/>
+               <widget class="QComboBox" name="product_combo">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 170, 255);</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -100,7 +156,71 @@
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_2"/>
+               <widget class="QComboBox" name="color_combo">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 170, 255);</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Red</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Blue</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Yellow</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Pink</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Orange</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Green</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Brown</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Purple</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>White</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Gray</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Black</string>
+                 </property>
+                </item>
+               </widget>
               </item>
              </layout>
             </item>
@@ -109,12 +229,31 @@
               <item>
                <widget class="QLabel" name="label_4">
                 <property name="text">
-                 <string>Warranty</string>
+                 <string>Guarantee</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_3"/>
+               <widget class="QComboBox" name="guarantee">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 170, 255);</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>True</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>False</string>
+                 </property>
+                </item>
+               </widget>
               </item>
              </layout>
             </item>
@@ -132,7 +271,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_3"/>
+               <widget class="QLineEdit" name="name_line"/>
               </item>
              </layout>
             </item>
@@ -146,7 +285,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_4"/>
+               <widget class="QLineEdit" name="brand_line"/>
               </item>
              </layout>
             </item>
@@ -164,7 +303,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_2"/>
+               <widget class="QLineEdit" name="number_line"/>
               </item>
              </layout>
             </item>
@@ -178,7 +317,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_5"/>
+               <widget class="QLineEdit" name="weight_line"/>
               </item>
              </layout>
             </item>
@@ -194,7 +333,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit"/>
+             <widget class="QLineEdit" name="price_line"/>
             </item>
            </layout>
           </item>
