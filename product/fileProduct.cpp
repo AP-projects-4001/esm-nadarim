@@ -65,7 +65,7 @@ std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {
 		cearch.read(reinterpret_cast<char*>(&test), sizeof(product));
 		location = cearch.tellg();
 
-		if (test >= productIn)
+		if (test >= productIn && !std::string(test.userNameSeller).empty())
 			listOut.push_back(test);
 	}
 
