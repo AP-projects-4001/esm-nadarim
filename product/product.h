@@ -14,6 +14,8 @@ namespace bak {
 		bool operator<=(product comparison);
 		bool operator>=(product comparison);
 
+
+
 		char userNameSeller[50] = "";
 		char userNameBuyer[50] = "";
 		char name[50] = "";

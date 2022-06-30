@@ -54,19 +54,19 @@ std::vector<bak::product> bak::filter::allProducts() {
 			listOut.erase(listOut.begin() + i);
 			i--;
 		}
-		else if (minNumber != -1) {
+		if (minNumber != -1) {
 			if (listOut[i].number > maxNumber || listOut[i].number < minNumber) {
 				listOut.erase(listOut.begin() + i);
 				i--;
 			}
 		}
-		else if (minPrice != -1) {
+		if (minPrice != -1) {
 			if (listOut[i].price > maxPrice || listOut[i].price < minPrice) {
 				listOut.erase(listOut.begin() + i);
 				i--;
 			}
 		}
-		else if (minWeight != -1) {
+		if (minWeight != -1) {
 			if (listOut[i].weight > maxWeight || listOut[i].weight < minWeight) {
 				listOut.erase(listOut.begin() + i);
 				i--;
