@@ -25,6 +25,11 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">border-color: rgb(82, 241, 255);
+border-color: rgb(8, 177, 255);
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
@@ -34,6 +39,10 @@
       <width>541</width>
       <height>311</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(242, 254, 255);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="title">
      <string>Information</string>

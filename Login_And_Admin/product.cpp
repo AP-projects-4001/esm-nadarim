@@ -1,7 +1,6 @@
 #include "product.h"
 #include <cstring>
 
-
 bool bak::product::operator==(product& productIn) {
     if (std::string(this->userNameSeller) != std::string(productIn.userNameSeller))
         return false;
@@ -74,6 +73,8 @@ void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
     int length = wordIn.size();
     length = (length < (size - 1) ? length : (size - 1));
     wordIn[length] = '\0';
+
+    strncpy(wordOut,"", size);
 
     if (wordIn != "") {
         const char* word = wordIn.data();

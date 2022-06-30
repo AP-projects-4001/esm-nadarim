@@ -48,7 +48,7 @@ private:
     int index = 0;
     EditProfile obj;
     //bak::manager obj_manager;
-    int index_transaction;
+    int index_transaction = 0;
     std::vector<bak::product> vecTransaction;
 };
 #endif // ADMIN_H

@@ -51,8 +51,9 @@ Admin::Admin(QWidget *parent)
            ui->lineEdit_11->setText(vecTransaction[0].name);
            ui->lineEdit_12->setText(QString::number(vecTransaction[0].price));
            ui->lineEdit_13->setText(QString::number(vecTransaction[0].number));
+           index_transaction = 1;
        }
-       index_transaction = 1;
+
     }
 }
 
@@ -257,7 +258,7 @@ void Admin::on_pushButton_8_clicked()
 
 void Admin::on_pushButton_9_clicked()
 {
-    if(vecTransaction.size()==0)
+    if(vecTransaction.size() == index_transaction)
     {
         return;
     }
@@ -274,7 +275,7 @@ void Admin::on_pushButton_9_clicked()
 void Admin::on_pushButton_10_clicked()
 {
 
-    if(vecTransaction.size() < 1)
+    if(vecTransaction.size() < 2)
     {
         return;
     }
@@ -285,5 +286,6 @@ void Admin::on_pushButton_10_clicked()
     ui->lineEdit_11->setText(vecTransaction[index_transaction].name);
     ui->lineEdit_12->setText(QString::number(vecTransaction[index_transaction].price));
     ui->lineEdit_13->setText(QString::number(vecTransaction[index_transaction].number));
+    index_transaction++;
 }
 

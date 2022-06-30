@@ -38,7 +38,10 @@ Client::Client(QWidget *parent,QString username_client) :
            }
            ui->label_budget->setText(vec_info_client[5]);
        }
-           read_file.close();
+       read_file.close();
+       connect(ui->horizontalSlider_minPrice,SIGNAL(valueChanged(int)),ui->label_setminPrice,SLOT(setNum(int)));
+       connect(ui->horizontalSlider_maxPrice,SIGNAL(valueChanged(int)),ui->label_setmaxPrice,SLOT(setNum(int)));
+       connect(ui->horizontalSlider_weight,SIGNAL(valueChanged(int)),ui->label_weight,SLOT(setNum(int)));
 }
 
 Client::~Client()
@@ -59,5 +62,149 @@ void Client::on_actionProfile_triggered()
 void Client::on_actionExit_triggered()
 {
     this->close();
+}
+
+
+void Client::on_comboBox_group_currentTextChanged(const QString &arg1)
+{
+    if(ui->comboBox_group->currentText() == "")
+    {
+        ui->comboBox_products->clear();
+        ui->comboBox_products->addItem("");
+        ui->comboBox_products->addItem("Accessories & Supplies");
+        ui->comboBox_products->addItem("Cell Phones & Accessories");
+        ui->comboBox_products->addItem("Camera & Photo");
+        ui->comboBox_products->addItem("Televison & Video");
+        ui->comboBox_products->addItem("Video Game Consoles & Accessories");
+        ui->comboBox_products->addItem("Headphones");
+        ui->comboBox_products->addItem("Computer & Accessories");
+        ui->comboBox_products->addItem("Bedding");
+        ui->comboBox_products->addItem("Bath");
+        ui->comboBox_products->addItem("Furniture");
+        ui->comboBox_products->addItem("Home Decor");
+        ui->comboBox_products->addItem("Kitchen & dining");
+        ui->comboBox_products->addItem("Cleaning Supplies");
+        ui->comboBox_products->addItem("Irons & Steamers");
+    }
+    else if(ui->comboBox_group->currentText()=="Electronics")
+    {
+        ui->comboBox_products->clear();
+        ui->comboBox_products->addItem("");
+        ui->comboBox_products->addItem("Accessories & Supplies");
+        ui->comboBox_products->addItem("Cell Phones & Accessories");
+        ui->comboBox_products->addItem("Camera & Photo");
+        ui->comboBox_products->addItem("Televison & Video");
+        ui->comboBox_products->addItem("Video Game Consoles & Accessories");
+        ui->comboBox_products->addItem("Headphones");
+        ui->comboBox_products->addItem("Computer & Accessories");
+    }
+    else if(ui->comboBox_group->currentText() == "Home and Kitchen")
+    {
+        ui->comboBox_products->clear();
+        ui->comboBox_products->addItem("");
+        ui->comboBox_products->addItem("Bedding");
+        ui->comboBox_products->addItem("Bath");
+        ui->comboBox_products->addItem("Furniture");
+        ui->comboBox_products->addItem("Home Decor");
+        ui->comboBox_products->addItem("Kitchen & dining");
+        ui->comboBox_products->addItem("Cleaning Supplies");
+        ui->comboBox_products->addItem("Irons & Steamers");
+    }
+}
+
+
+void Client::on_pushButton_clicked()
+{
+    index_filter = 0;
+    ui->lineEdit->clear();
+    ui->lineEdit_2->clear();
+    ui->lineEdit_3->clear();
+    ui->lineEdit_4->clear();
+    ui->lineEdit_5->clear();
+    ui->lineEdit_6->clear();
+    ui->lineEdit_7->clear();
+    ui->lineEdit_8->clear();
+    ui->lineEdit_9->clear();
+    qDebug() <<  filter_obj.allProducts().size() << "1-  ";
+    if(ui->horizontalSlider_maxPrice->value() < ui->horizontalSlider_minPrice->value() )
+    {
+        QMessageBox::information(this,"Problem","Searching failed");
+        return;
+    }
+
+        filter_obj.setBrand((ui->lineEdit_brand->text()).toStdString());
+
+
+        filter_obj.setColor(ui->color_combo->currentText().toStdString());
+
+
+    filter_obj.setPrice(ui->horizontalSlider_minPrice->value(),ui->horizontalSlider_maxPrice->value());
+
+
+        filter_obj.setGroup(ui->comboBox_group->currentText().toStdString());
+
+  filter_obj.setModel(ui->comboBox_products->currentText().toStdString());
+
+        filter_obj.setWarranty(ui->comboBox_warranty->currentText().toStdString());
+
+    filter_obj.setWeight(0,ui->horizontalSlider_weight->value());
+    qDebug() <<  filter_obj.allProducts().size() << "2-  ";
+    if(filter_obj.allProducts().size() >0)
+    {
+        ui->lineEdit->setText(filter_obj.allProducts()[0].group);
+        ui->lineEdit_2->setText(filter_obj.allProducts()[0].model);
+        ui->lineEdit_3->setText(filter_obj.allProducts()[0].name);
+        ui->lineEdit_4->setText(filter_obj.allProducts()[0].brand);
+        ui->lineEdit_5->setText(filter_obj.allProducts()[0].color);
+        ui->lineEdit_6->setText(QString::number(filter_obj.allProducts()[0].number));
+        ui->lineEdit_7->setText(QString::number(filter_obj.allProducts()[0].weight));
+        ui->lineEdit_8->setText(QString::number(filter_obj.allProducts()[0].price));
+        ui->lineEdit_9->setText(filter_obj.allProducts()[0].warranty);
+        index_filter++;
+    }
+    qDebug() <<  filter_obj.allProducts().size() << "3-  ";
+
+}
+
+
+
+void Client::on_pushButton_2_clicked()
+{
+    qDebug() <<  filter_obj.allProducts().size() << Qt::endl;
+    if(filter_obj.allProducts().size() == index_filter )
+    {
+        return;
+    }
+    ui->lineEdit->setText(filter_obj.allProducts()[index_filter].group);
+    ui->lineEdit_2->setText(filter_obj.allProducts()[index_filter].model);
+    ui->lineEdit_3->setText(filter_obj.allProducts()[index_filter].name);
+    ui->lineEdit_4->setText(filter_obj.allProducts()[index_filter].brand);
+    ui->lineEdit_5->setText(filter_obj.allProducts()[index_filter].color);
+    ui->lineEdit_6->setText(QString::number(filter_obj.allProducts()[index_filter].number));
+    ui->lineEdit_7->setText(QString::number(filter_obj.allProducts()[index_filter].weight));
+    ui->lineEdit_8->setText(QString::number(filter_obj.allProducts()[index_filter].price));
+    ui->lineEdit_9->setText(filter_obj.allProducts()[0].warranty);
+    index_filter++;
+}
+
+
+void Client::on_pushButton_3_clicked()
+{
+        qDebug() <<  filter_obj.allProducts().size() << Qt::endl;
+    if(index_filter < 2 )
+    {
+        return;
+    }
+    index_filter -=2;
+    ui->lineEdit->setText(filter_obj.allProducts()[index_filter].group);
+    ui->lineEdit_2->setText(filter_obj.allProducts()[index_filter].model);
+    ui->lineEdit_3->setText(filter_obj.allProducts()[index_filter].name);
+    ui->lineEdit_4->setText(filter_obj.allProducts()[index_filter].brand);
+    ui->lineEdit_5->setText(filter_obj.allProducts()[index_filter].color);
+    ui->lineEdit_6->setText(QString::number(filter_obj.allProducts()[index_filter].number));
+    ui->lineEdit_7->setText(QString::number(filter_obj.allProducts()[index_filter].weight));
+    ui->lineEdit_8->setText(QString::number(filter_obj.allProducts()[index_filter].price));
+    ui->lineEdit_9->setText(filter_obj.allProducts()[index_filter].warranty);
+    index_filter++;
 }
 
