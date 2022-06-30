@@ -21,6 +21,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_actionBack_triggered();
+
 private:
     Ui::Increase_Budget *ui;
     QVector<QString> vec_info{6};

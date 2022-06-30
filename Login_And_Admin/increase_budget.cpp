@@ -57,3 +57,14 @@ void Increase_Budget::on_pushButton_clicked()
     this->close();
 }
 
+
+void Increase_Budget::on_actionBack_triggered()
+{
+    QMessageBox::information(this,"Payment","Payment failed");
+    t->stop();
+    Edit_Profile_Client* profile_obj = new Edit_Profile_Client(nullptr,vec_info);
+    profile_obj->show();
+    this->close();
+
+}
+

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>931</width>
-    <height>490</height>
+    <height>510</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,28 +18,29 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>940</width>
-    <height>490</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Admin</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(239, 255, 255);</string>
+   <string notr="true">background-color: rgb(0, 85, 127);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>20</y>
       <width>551</width>
       <height>421</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(249, 255, 254);
+     <string notr="true">background-color: rgb(255, 255, 255);
 </string>
     </property>
     <property name="title">
@@ -161,7 +162,7 @@
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Next</string>
@@ -177,7 +178,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Previous</string>
@@ -193,7 +194,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Delete profile</string>
@@ -209,7 +210,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Edit profile</string>
@@ -245,7 +246,7 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Save</string>
@@ -387,7 +388,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Disable account</string>
@@ -398,13 +399,13 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>10</y>
+      <y>20</y>
       <width>351</width>
-      <height>311</height>
+      <height>421</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(249, 255, 254);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
      <string>transaction</string>
@@ -429,7 +430,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>70</y>
+       <y>80</y>
        <width>181</width>
        <height>24</height>
       </rect>
@@ -442,7 +443,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>110</y>
+       <y>130</y>
        <width>181</width>
        <height>24</height>
       </rect>
@@ -455,7 +456,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>150</y>
+       <y>180</y>
        <width>181</width>
        <height>24</height>
       </rect>
@@ -468,7 +469,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>190</y>
+       <y>230</y>
        <width>181</width>
        <height>24</height>
       </rect>
@@ -494,7 +495,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>70</y>
+       <y>80</y>
        <width>91</width>
        <height>20</height>
       </rect>
@@ -507,7 +508,7 @@
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>150</y>
+       <y>180</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -520,7 +521,7 @@
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>190</y>
+       <y>230</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -533,7 +534,7 @@
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>230</y>
+       <y>280</y>
        <width>49</width>
        <height>16</height>
       </rect>
@@ -545,14 +546,14 @@
     <widget class="QPushButton" name="pushButton_9">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>280</y>
+       <x>220</x>
+       <y>350</y>
        <width>80</width>
        <height>24</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Next</string>
@@ -561,14 +562,14 @@
     <widget class="QPushButton" name="pushButton_10">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>280</y>
+       <x>70</x>
+       <y>350</y>
        <width>80</width>
        <height>24</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 255, 253);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Previous</string>
@@ -578,7 +579,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>230</y>
+       <y>280</y>
        <width>181</width>
        <height>24</height>
       </rect>
@@ -591,7 +592,7 @@
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>110</y>
+       <y>130</y>
        <width>41</width>
        <height>16</height>
       </rect>
@@ -604,14 +605,17 @@
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>350</y>
+      <x>390</x>
+      <y>460</y>
       <width>151</width>
       <height>24</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;
+background-color: rgbrgb(0, 82, 127);
+background-color: rgb(249, 247, 255);
+
 </string>
     </property>
     <property name="text">
