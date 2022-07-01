@@ -53,23 +53,27 @@ std::vector<bak::product> bak::filter::allProducts() {
 		if (!std::string(listOut[i].userNameBuyer).empty()) {
 			listOut.erase(listOut.begin() + i);
 			i--;
+			continue;
 		}
 		if (minNumber != -1) {
 			if (listOut[i].number > maxNumber || listOut[i].number < minNumber) {
 				listOut.erase(listOut.begin() + i);
 				i--;
+				continue;
 			}
 		}
 		if (minPrice != -1) {
 			if (listOut[i].price > maxPrice || listOut[i].price < minPrice) {
 				listOut.erase(listOut.begin() + i);
 				i--;
+				continue;
 			}
 		}
 		if (minWeight != -1) {
 			if (listOut[i].weight > maxWeight || listOut[i].weight < minWeight) {
 				listOut.erase(listOut.begin() + i);
 				i--;
+				continue;
 			}
 		}
 	}

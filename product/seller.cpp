@@ -65,12 +65,12 @@ void bak::seller::addProduct() {
 	sellerFile.addProduct(sellerProduct);
 }
 
-void bak::seller::deleteProduct() {
+void bak::seller::deleteProduct(int CountProductIn) {
 	fileProduct sellerFile;
-	sellerFile.deleteProduct(sellerProduct);
+	sellerFile.deleteProduct(CountProductIn);
 }
 
-void bak::seller::editProduct(seller newProduct) {
+void bak::seller::editProduct(int CountProductIn) {
 	fileProduct sellerFile;
-	sellerFile.editProduct(sellerProduct, newProduct.sellerProduct);
+	sellerFile.editProduct(CountProductIn, sellerProduct);
 }

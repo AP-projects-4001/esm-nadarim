@@ -15,7 +15,6 @@ namespace bak {
 		bool operator>=(product comparison);
 
 
-
 		char userNameSeller[50] = "";
 		char userNameBuyer[50] = "";
 		char name[50] = "";
@@ -27,6 +26,7 @@ namespace bak {
 		int number = -1;
 		int price = -1;
 		int weight = -1;
+		int CountProduct = -1;
 
 		void restrictWord(std::string wordIn, char* wordOut, int size);
 

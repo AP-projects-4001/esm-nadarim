@@ -12,44 +12,25 @@ void bak::fileProduct::addProduct(product newProduct) {
 
 	std::fstream fProducts(addresFile, std::ios::in | std::ios::out | std::ios::binary);
 	fProducts.seekp(location);
+
+	newProduct.CountProduct = (location / sizeof(product));
 	fProducts.write(reinterpret_cast<const char*>(&newProduct), sizeof(product));
 
 	fProducts.close();
 }
 
-void bak::fileProduct::deleteProduct(product productIn) {
+void bak::fileProduct::deleteProduct(int CountProductIn) { editProduct(CountProductIn, product()); }
 
-	editProduct(productIn, product());
+void bak::fileProduct::editProduct(int CountProductIn, product newProduct) {
+	int location=(CountProductIn *sizeof(product));
+	product search = searchProduct(CountProductIn);
 
-}
+	newProduct.CountProduct = search.CountProduct;
 
-void bak::fileProduct::editProduct(product oldProduct, product newProduct) {
-	int location;
-	product test;
-	bool isFinded = false;
-
-	std::fstream cearch(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-	cearch.seekg(0);
-	location = cearch.tellg();
-
-	while (location != lenghFile) {
-		location = cearch.tellg();
-		cearch.read(reinterpret_cast<char*>(&test), sizeof(product));
-
-		if (test == oldProduct) {
-			isFinded = true;
-			break;
-		}
-	}
-
-	cearch.close();
-
-	if (isFinded) {
-		std::fstream edit(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-		edit.seekp(location);
-		edit.write(reinterpret_cast<const char*>(&newProduct), sizeof(product));
-		edit.close();
-	}
+	std::fstream edit(addresFile, std::ios::in | std::ios::out | std::ios::binary);
+	edit.seekp(location);
+	edit.write(reinterpret_cast<const char*>(&newProduct), sizeof(product));
+	edit.close();
 }
 
 std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {
@@ -72,6 +53,18 @@ std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {
 	cearch.close();
 
 	return listOut;
+}
+
+bak::product bak::fileProduct::searchProduct(int CountProductIn) {
+	int location = (CountProductIn * sizeof(product));
+	product productOut;
+
+	std::fstream cearch(addresFile, std::ios::in | std::ios::out | std::ios::binary);
+	cearch.seekg(location);
+	cearch.read(reinterpret_cast<char*>(&productOut), sizeof(product));
+	cearch.close();
+
+	return productOut;
 }
 
 
