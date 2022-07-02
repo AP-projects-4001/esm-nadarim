@@ -886,7 +886,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(242, 254, 255);</string>
+     <string notr="true">background-color: rgb(249, 250, 255);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
      <string>Buy by credit card</string>
@@ -902,7 +903,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(242, 254, 255);</string>
+     <string notr="true">background-color: rgb(249, 250, 255);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
      <string>Buy from budget</string>

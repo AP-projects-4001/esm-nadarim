@@ -170,7 +170,6 @@ void Client::on_pushButton_clicked()
 
 void Client::on_pushButton_2_clicked()
 {
-    qDebug() <<  filter_obj.allProducts().size() << Qt::endl;
     if(filter_obj.allProducts().size() == index_filter )
     {
         return;
@@ -183,14 +182,13 @@ void Client::on_pushButton_2_clicked()
     ui->lineEdit_6->setText(QString::number(filter_obj.allProducts()[index_filter].number));
     ui->lineEdit_7->setText(QString::number(filter_obj.allProducts()[index_filter].weight));
     ui->lineEdit_8->setText(QString::number(filter_obj.allProducts()[index_filter].price));
-    ui->lineEdit_9->setText(filter_obj.allProducts()[0].warranty);
+    ui->lineEdit_9->setText(filter_obj.allProducts()[index_filter].warranty);
     index_filter++;
 }
 
 
 void Client::on_pushButton_3_clicked()
 {
-        qDebug() <<  filter_obj.allProducts().size() << Qt::endl;
     if(index_filter < 2 )
     {
         return;
@@ -206,5 +204,37 @@ void Client::on_pushButton_3_clicked()
     ui->lineEdit_8->setText(QString::number(filter_obj.allProducts()[index_filter].price));
     ui->lineEdit_9->setText(filter_obj.allProducts()[index_filter].warranty);
     index_filter++;
+}
+
+void Client::on_pushButton_5_clicked()
+{
+    if(ui->lineEdit->text() == "" )
+    {
+        QMessageBox::information(this,"Error","There is no product on the page.");
+        return;
+    }
+    if(ui->spinBox->value() > ui->lineEdit_6->text().toInt() )
+    {
+        QMessageBox::information(this,"Error","The number of goods requested is more than the number of available goods.");
+        return;
+    }
+    if(ui->label_budget->text().toInt() < ui->lineEdit_8->text().toInt() * ui->spinBox->value())
+    {
+        QMessageBox::information(this,"Error","Your budget is not enough");
+        return;
+    }
+
+
+    int budget = ui->label_budget->text().toInt() - ui->lineEdit_8->text().toInt() * ui->spinBox->value();
+    ui ->label_budget->setNum(budget);
+    vec_info_client[5] = QString::number(budget);
+    EditProfile obj_edit_budget;
+    obj_edit_budget.Edit_Profile(vec_info_client[0],"Budget",QString::number(budget));
+    ui->lineEdit_6->setText(QString::number(ui->lineEdit_6->text().toInt() - (ui->spinBox->value())));
+
+    bak::Buyer buy_obj {vec_info_client[0].toStdString()};
+    buy_obj.buy(filter_obj.allProducts()[index_filter-1].CountProduct,ui->spinBox->value());
+
+    QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
 }
 

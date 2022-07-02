@@ -22,7 +22,7 @@ public:
 
 private slots:
 
-    void on_pushButton_6_clicked();
+   // void on_pushButton_6_clicked();
 
     void on_pushButton_clicked();
 
@@ -42,6 +42,8 @@ private slots:
 
     void on_pushButton_10_clicked();
 
+    void on_actionBack_triggered();
+
 private:
     Ui::Admin *ui;
     QVector<QString>vecAdmin;
@@ -49,6 +51,6 @@ private:
     EditProfile obj;
     //bak::manager obj_manager;
     int index_transaction = 0;
-    std::vector<bak::product> vecTransaction;
+    bak::manager obj_manger;
 };
 #endif // ADMIN_H

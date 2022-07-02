@@ -20,7 +20,7 @@ changeprofile::changeprofile(QWidget *parent,QString username) :
     qDebug()<<username;
 
     int flag=0;
-    QFile readFile("C:/Users/amirr/Desktop/test.txt");
+    QFile readFile("C:/Users/Lenovo/Desktop/test.txt");
     if (readFile.open(QIODevice::ReadOnly))
     {
        QTextStream in(&readFile);

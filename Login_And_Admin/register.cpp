@@ -27,7 +27,7 @@ Register::~Register()
 int Register::checkUsername(QString username)
 {
     int flag=0;
-    QFile read_file("C:/Users/amirr/Desktop/test.txt");
+    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
     qDebug()<<username;
     if (read_file.open(QIODevice::ReadOnly))
     {
@@ -49,7 +49,7 @@ int Register::checkUsername(QString username)
 
 void Register::WriteInFile()
 {
-    QFile write_file("C:/Users/amirr/Desktop/test.txt");
+    QFile write_file("C:/Users/Lenovo/Desktop/test.txt");
     if(write_file.open(QIODevice::WriteOnly| QIODevice::Append | QIODevice::Text))
          {
              // We're going to streaming text to the file
