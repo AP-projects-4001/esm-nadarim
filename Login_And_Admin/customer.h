@@ -5,6 +5,7 @@
 #include "changeprofile.h"
 #include "transaction.h"
 #include "addproduct.h"
+#include "allproducts.h"
 
 namespace Ui {
 class Customer;
@@ -25,12 +26,15 @@ private slots:
 
     void on_addproduct_btn_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::Customer *ui;
     QString username;
     changeprofile *changeprof;
     transaction *Transaction;
     addproduct *addnew;
+    allproducts *products;
 
 };
 

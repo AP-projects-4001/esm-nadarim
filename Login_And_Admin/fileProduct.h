@@ -9,21 +9,22 @@
 
 namespace bak {
 
-	struct fileProduct {
+    struct fileProduct {
 
-	public:
-		fileProduct();
-		void addProduct(product newProduct);
-		void deleteProduct(product productIn);
-		void editProduct(product oldProduct, product newProduct);
-		std::vector<product> searchProduct(product productIn);
+    public:
+        fileProduct();
+        void addProduct(product newProduct);
+        void deleteProduct(int CountProductIn);
+        void editProduct(int CountProductIn, product newProduct);
+        std::vector<product> searchProduct(product productIn);
+        product searchProduct(int CountProductIn);
 
-	private:
-		int findEmptySpace();
+    private:
+        int findEmptySpace();
 
-        std::string addresFile = "C:/Users/Lenovo/Desktop/fProducts.dat";
-		int lenghFile;
+        std::string addresFile = "fProducts.dat";
+        int lenghFile;
 
-	};
+    };
 
 }

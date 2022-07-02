@@ -3,6 +3,8 @@
 #include "qmessagebox.h"
 #include "ui_addproduct.h"
 #include "seller.h"
+#include <memory>
+#include <QScopedPointer>
 
 addproduct::addproduct(QWidget *parent, QString username) :
     QWidget(parent),
@@ -105,5 +107,7 @@ void addproduct::on_pushButton_2_clicked()
     this->hide();
     Customer *customer=new Customer(nullptr,username);
     customer->show();
+    //QScopedPointer<Customer> customer(new Customer(nullptr,username));
+    //customer->show();
 }
 

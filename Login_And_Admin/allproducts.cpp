@@ -1,4 +1,5 @@
 #include "allproducts.h"
+#include "customer.h"
 #include "ui_allproducts.h"
 #include "seller.h"
 #include "product.h"
@@ -16,6 +17,7 @@ allproducts::allproducts(QWidget *parent,QString username):
     Allproducts=customer.allProductsSell();
 
     index=0;
+    this->username=username;
 
     if(Allproducts.size()>0)
     {
@@ -42,6 +44,15 @@ allproducts::allproducts(QWidget *parent,QString username):
        index=-1;
     }
 
+    group=ui->group_combo->currentText();
+    product=ui->product_combo->currentText();
+    color=ui->color_combo->currentText();
+    warranty=ui->guarantee->currentText();
+    productname=ui->name_line->text();
+    brand=ui->brand_line->text();
+    number=ui->number_line->text();
+    weight=ui->weight_line->text();
+    price=ui->price_line->text();
 }
 
 allproducts::~allproducts()
@@ -59,6 +70,7 @@ void allproducts::on_next_btn_clicked()
         return;
     }
 
+
     ++index;
     ui->brand_line->setText(Allproducts[index].brand);
     ui->name_line->setText(Allproducts[index].name);
@@ -69,6 +81,16 @@ void allproducts::on_next_btn_clicked()
     ui->color_combo->setCurrentText(Allproducts[index].color);
     ui->product_combo->setCurrentText(Allproducts[index].model);
     ui->guarantee->setCurrentText(Allproducts[index].warranty);
+
+    group=ui->group_combo->currentText();
+    product=ui->product_combo->currentText();
+    color=ui->color_combo->currentText();
+    warranty=ui->guarantee->currentText();
+    productname=ui->name_line->text();
+    brand=ui->brand_line->text();
+    number=ui->number_line->text();
+    weight=ui->weight_line->text();
+    price=ui->price_line->text();
 }
 
 
@@ -83,17 +105,26 @@ void allproducts::on_previous_btn_clicked()
     }
 
     index-=1;
+
     ui->brand_line->setText(Allproducts[index].brand);
     ui->name_line->setText(Allproducts[index].name);
     ui->number_line->setText(QString::number(Allproducts[index].number));
     ui->price_line->setText(QString::number(Allproducts[index].price));
     ui->weight_line->setText(QString::number(Allproducts[index].weight));
-    //ui->group_combo->setEditable(true);
-    //on_product_combo_currentTextChanged();
     ui->group_combo->setCurrentText(Allproducts[index].group);
     ui->color_combo->setCurrentText(Allproducts[index].color);
     ui->product_combo->setCurrentText(Allproducts[index].model);
     ui->guarantee->setCurrentText(Allproducts[index].warranty);
+
+    group=ui->group_combo->currentText();
+    product=ui->product_combo->currentText();
+    color=ui->color_combo->currentText();
+    warranty=ui->guarantee->currentText();
+    productname=ui->name_line->text();
+    brand=ui->brand_line->text();
+    number=ui->number_line->text();
+    weight=ui->weight_line->text();
+    price=ui->price_line->text();
 }
 
 
@@ -128,6 +159,50 @@ void allproducts::on_group_combo_currentTextChanged()
 
 void allproducts::on_delete_btn_clicked()
 {
+   bak::seller deleteproduct(username.toStdString());
 
+   deleteproduct.deleteProduct(Allproducts[index].CountProduct);
+}
+
+
+void allproducts::on_save_btn_clicked()
+{
+    QString group_delete=ui->group_combo->currentText();
+    QString product_delete=ui->product_combo->currentText();
+    QString color_delete=ui->color_combo->currentText();
+    QString warranty_delete=ui->guarantee->currentText();
+    QString productname_delete=ui->name_line->text();
+    QString brand_delete=ui->brand_line->text();
+    QString number_delete=ui->number_line->text();
+    QString weight_delete=ui->weight_line->text();
+    QString price_delete=ui->price_line->text();
+
+    if(group_delete==group && product_delete==product && color_delete==color && warranty_delete==warranty && productname_delete==productname && brand_delete==brand && number_delete==number && weight_delete==weight && price_delete==price){
+        QMessageBox msg;
+        msg.warning(this,"not Successful","There is nothing to be saved");
+        return;
+    }
+
+    bak::seller saveproduct(username.toStdString());
+
+    saveproduct.setName(ui->name_line->text().toStdString());
+    saveproduct.setGroup(ui->group_combo->currentText().toStdString());
+    saveproduct.setBrand(ui->brand_line->text().toStdString());
+    saveproduct.setModel(ui->product_combo->currentText().toStdString());
+    saveproduct.setColor(ui->color_combo->currentText().toStdString());
+    saveproduct.setWarranty(ui->guarantee->currentText().toStdString());
+    saveproduct.setNumberUnsold(ui->number_line->text().toInt());
+    saveproduct.setPrice(ui->price_line->text().toInt());
+    saveproduct.setWeight(ui->weight_line->text().toInt());
+
+    saveproduct.editProduct(Allproducts[index].CountProduct);
+}
+
+
+void allproducts::on_exit_btn_clicked()
+{
+   this->hide();
+   Customer *customer=new Customer(nullptr,username);
+   customer->show();
 }
 

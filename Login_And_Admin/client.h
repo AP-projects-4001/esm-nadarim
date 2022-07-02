@@ -24,11 +24,11 @@ private slots:
 
     void on_actionExit_triggered();
 
-    void on_horizontalSlider_maxPrice_rangeChanged(int min, int max);
+    //void on_horizontalSlider_maxPrice_rangeChanged(int min, int max);
 
-    void on_comboBox_currentTextChanged(const QString &arg1);
+    //void on_comboBox_currentTextChanged(const QString &arg1);
 
-    void on_comboBox_group_currentTextChanged(const QString &arg1);
+    void on_comboBox_group_currentTextChanged();
 
     void on_pushButton_clicked();
 

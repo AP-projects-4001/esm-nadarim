@@ -25,10 +25,24 @@ private slots:
 
     void on_delete_btn_clicked();
 
+    void on_save_btn_clicked();
+
+    void on_exit_btn_clicked();
+
 private:
     Ui::allproducts *ui;
     std::vector<bak::product> Allproducts;
     int index;
+    QString username;
+    QString group;
+    QString product;
+    QString color;
+    QString warranty;
+    QString productname;
+    QString brand;
+    QString number;
+    QString weight;
+    QString price;
 };
 
 #endif // ALLPRODUCTS_H

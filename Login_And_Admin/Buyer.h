@@ -9,28 +9,19 @@
 
 namespace bak {
 
-	class Buyer {
+    class Buyer {
 
-	public:
-		Buyer(std::string userNameBuyer);
+    public:
+        Buyer(std::string userNameBuyer);
 
-		void setUserNameSeller(std::string userNameSellerIn);
-		void setName(std::string nameIn);
-		void setGroup(std::string groupIn);
-		void setNumberSold(int numberIn);
-		void setPrice(int priceIn);
-		void setWeight(int weightIn);
-		void setBrand(std::string brandIn);
-		void setModel(std::string modelIn);
-		void setColor(std::string colorIn);
-		void setWarranty(std::string warrantyIn);
+        void buy(int CountProductIn, int productPurchased);
+        std::vector<product>allProducts();
 
-		void buy();
-		std::vector<product>allProducts();
+    private:
+        void setBuyerProduct(product productIn);
 
-	private:
-		product buyerProduct;
+        product buyerProduct;
 
-	};
+    };
 
 }

@@ -65,7 +65,7 @@ void Client::on_actionExit_triggered()
 }
 
 
-void Client::on_comboBox_group_currentTextChanged(const QString &arg1)
+void Client::on_comboBox_group_currentTextChanged()
 {
     if(ui->comboBox_group->currentText() == "")
     {

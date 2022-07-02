@@ -26,8 +26,8 @@ namespace bak {
         std::vector<product>allProductsSell();
         std::vector<product>allProductsPurchase();
         void addProduct();
-        void deleteProduct();
-        void editProduct(seller newProduct);
+        void deleteProduct(int CountProductIn);
+        void editProduct(int CountProductIn);
 
     private:
         product sellerProduct;
