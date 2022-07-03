@@ -1,6 +1,7 @@
 #include "changeprofile.h"
 #include <QString>
 #include "qmessagebox.h"
+#include "qvalidator.h"
 #include "ui_changeprofile.h"
 #include <QFile>
 #include <QDebug>
@@ -85,6 +86,7 @@ changeprofile::changeprofile(QWidget *parent,QString username) :
        ui->budget_line->setReadOnly(true);
        readFile.close();
     }
+    ui->phone_line->setValidator(new QIntValidator);
 }
 
 
@@ -108,31 +110,45 @@ void changeprofile::on_pushButton_2_clicked()
         msg.warning(this,"not Successful","There is nothing to be saved!");
         return;
     }
+
     if(check_username=="" && check_name=="" && check_budget=="" && check_phonenum=="" && check_address==""){
         QMessageBox msg;
         msg.warning(this,"not Successful","you have to fill all fields");
         return;
     }
 
+    if(check_password==password){
+        if(changeprof.checkpass(check_password)==true)
+          changeprof.Edit_Profile(Username,"Password",check_password);
+        else{
+            QMessageBox msg;
+            msg.warning(this,"not Successful","The Password is weak!");
+            return;
+        }
+    }
 
-    if(check_name!=name){
-        changeprof.Edit_Profile(Username,"Name",check_name);
-    }
-    if(check_address!=address){
-        changeprof.Edit_Profile(Username,"Address",check_address);
-    }
-    if(check_phonenum!=phonenum){
-        changeprof.Edit_Profile(Username,"Phone-number",check_phonenum);
-    }
     if(check_username!=Username){
         if(changeprof.change_username(Username,check_username)==false){
             QMessageBox msg;
             msg.warning(this,"not Successful","The username is already taken!");
             return;
          }
-        else{
+    }
+
+    if(check_name!=name){
+        changeprof.Edit_Profile(Username,"Name",check_name);
+    }
+
+    if(check_address!=address){
+        changeprof.Edit_Profile(Username,"Address",check_address);
+    }
+
+    if(check_phonenum!=phonenum){
+        changeprof.Edit_Profile(Username,"Phone-number",check_phonenum);
+    }
+
+    if(check_username!=Username){
             changeprof.change_username(Username,check_username);
-        }
     }
 
     QMessageBox::information(this,"Change Profile","Saved successfully!");

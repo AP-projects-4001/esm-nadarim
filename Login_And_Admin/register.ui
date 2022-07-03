@@ -32,31 +32,17 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(255, 255, 255);
+background-color: rgb(85, 170, 255);</string>
      </property>
      <property name="title">
       <string>Sign up</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="spacing">
-       <number>7</number>
-      </property>
-      <property name="leftMargin">
-       <number>8</number>
-      </property>
-      <property name="topMargin">
-       <number>9</number>
-      </property>
-      <property name="rightMargin">
-       <number>9</number>
-      </property>
-      <property name="bottomMargin">
-       <number>9</number>
-      </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
-         <number>65</number>
+         <number>73</number>
         </property>
         <item>
          <widget class="QLabel" name="label">
@@ -80,7 +66,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <property name="spacing">
-         <number>43</number>
+         <number>50</number>
         </property>
         <item>
          <widget class="QLabel" name="label_2">
@@ -100,7 +86,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <property name="spacing">
-         <number>15</number>
+         <number>24</number>
         </property>
         <item>
          <widget class="QLabel" name="label_3">
@@ -120,7 +106,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <property name="spacing">
-         <number>59</number>
+         <number>68</number>
         </property>
         <item>
          <widget class="QLabel" name="label_4">
@@ -140,7 +126,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <property name="spacing">
-         <number>44</number>
+         <number>55</number>
         </property>
         <item>
          <widget class="QLabel" name="label_5">
@@ -154,6 +140,32 @@
         </item>
         <item>
          <widget class="QLineEdit" name="pass_line"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <property name="spacing">
+         <number>9</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="maximumSize">
+           <size>
+            <width>98</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Confirm Password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="confirm_line"/>
         </item>
        </layout>
       </item>
@@ -173,6 +185,10 @@
         </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
         </property>
         <property name="modelColumn">
          <number>0</number>
