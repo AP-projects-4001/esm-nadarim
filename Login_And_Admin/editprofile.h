@@ -10,6 +10,7 @@ public:
     void Edit_Profile(QString username,QString part,QString NewInput);
     bool change_username(QString old_User,QString new_User);
     int checkusername(QString username);
+    QString getBudget(QString username);
 };
 
 #endif // EDITPROFILE_H

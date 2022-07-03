@@ -152,6 +152,36 @@ int EditProfile::checkusername(QString username){
     return -1;
 }
 
+QString EditProfile::getBudget(QString username)
+{
+    int flag=0;
+    int txtsize=username.size();
+
+    username="Username:"+username;
+
+    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    if (read_file.open(QIODevice::ReadOnly))
+    {
+       QTextStream in(&read_file);
+       while (!in.atEnd())
+       {
+          QString line = in.readLine();
+          if(line==username)
+             ++flag;
+          if(flag==7){
+              line.remove(0,txtsize);
+              line.remove(0,8);
+              return line;
+          }
+          if(flag>0 && flag<8)
+              ++flag;
+
+       }
+       read_file.close();
+    }
+    return "Not found";
+}
+
 bool EditProfile::change_username(QString old_User, QString new_User)
 {
     int flag=0,checkuser=0;

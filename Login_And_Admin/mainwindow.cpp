@@ -18,7 +18,6 @@
 #include "addproduct.h"
 #include "allproducts.h"
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
