@@ -15,6 +15,8 @@ Register::Register(QWidget *parent) :
     ui(new Ui::Register)
 {
     ui->setupUi(this);
+    ui->phone_line->setValidator(new QIntValidator);
+
 }
 
 Register::~Register()
@@ -87,8 +89,9 @@ void Register::on_signup_btn_reg_clicked()
   QString phonenum=ui->phone_line->text();
   QString address=ui->address_line->text();
   QString password=ui->pass_line->text();
+  QString confirm=ui->confirm_line->text();
 
-  if(name=="" || username=="" || phonenum=="" || address=="" || password==""){
+  if(name=="" || username=="" || phonenum=="" || address=="" || password=="" || confirm==""){
       QMessageBox msg;
       msg.warning(this,"not Successful","you have to fill all fields");
       return;
@@ -104,6 +107,12 @@ void Register::on_signup_btn_reg_clicked()
       msg.warning(this,"Password is weak","You hava to set a stronger password");
       return;
 
+  }
+  if(confirm!=password)
+  {
+      QMessageBox msg;
+      msg.warning(this,"Password is not match","Enter your password again!");
+      return;
   }
   if(flag==-1)
      WriteInFile();

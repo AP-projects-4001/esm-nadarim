@@ -183,6 +183,15 @@ QString EditProfile::getBudget(QString username)
     return "Not found";
 }
 
+bool EditProfile::checkpass(QString password)
+{
+    newpassword=new bak::checkPassword(password.toStdString());
+    if(!newpassword->isConfirm()){
+        return false;
+    }
+    return true;
+}
+
 bool EditProfile::change_username(QString old_User, QString new_User)
 {
     int flag=0,checkuser=0;

@@ -1,5 +1,6 @@
 #ifndef EDITPROFILE_H
 #define EDITPROFILE_H
+#include "checkpassword.h"
 #include <QString>
 #include <QMessageBox>
 
@@ -11,6 +12,9 @@ public:
     bool change_username(QString old_User,QString new_User);
     int checkusername(QString username);
     QString getBudget(QString username);
+    bool checkpass(QString password);
+private:
+     bak::checkPassword *newpassword;
 };
 
 #endif // EDITPROFILE_H
