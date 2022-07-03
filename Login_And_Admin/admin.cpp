@@ -1,4 +1,5 @@
 #include "admin.h"
+#include "QValidator""
 #include "ui_admin.h"
 #include "editprofile.h"
 
@@ -55,6 +56,7 @@ Admin::Admin(QWidget *parent)
        }
 
     }
+        ui->lineEdit_4->setValidator(new QIntValidator(9000000000,990000000000 , this));
 }
 
 Admin::~Admin()
@@ -158,14 +160,20 @@ void Admin::on_pushButton_4_clicked()
 
 void Admin::on_pushButton_7_clicked()
 {
-    if(ui->lineEdit_2->text() == "" || ui->textEdit->toPlainText() == "" || ui->lineEdit_4->text()=="")
+    if( ui->lineEdit->text() == "" || ui->lineEdit_2->text() == "" || ui->textEdit->toPlainText() == "" || ui->lineEdit_4->text()=="")
     {
         QMessageBox msg;
         msg.setText("All fields must be filled");
         msg.exec();
         return;
     }
+
     EditProfile obj;
+    if(obj.checkusername(ui->lineEdit->text()) == 1)
+    {
+        QMessageBox::information(this,"Error","This username is already registered for another user");
+        return;
+    }
     obj.change_username(vecAdmin[index-8] ,ui->lineEdit->text());
     vecAdmin[index-8]= ui->lineEdit->text();
     obj.Edit_Profile(ui->lineEdit->text(),ui->label_2->text(),ui->lineEdit_2->text());
@@ -197,6 +205,12 @@ void Admin::on_pushButton_5_clicked()
         msg->exec();
         return;
     }
+    if(ui->lineEdit_5->text() == "Admin")
+    {
+        QMessageBox::information(this,"Error","You cannot delete the admin.");
+        return;
+    }
+
     obj.Delete_Profile(ui->lineEdit->text());
     for(int j=-8 ; j<0 ; j++)
     {
@@ -221,6 +235,11 @@ void Admin::on_pushButton_8_clicked()
         QMessageBox* msg = new QMessageBox();
         msg->setText("No user available");
         msg->exec();
+        return;
+    }
+    if(ui->lineEdit_5->text() == "Admin")
+    {
+        QMessageBox::information(this,"Error","You cannot disable admin access.");
         return;
     }
     if (ui->pushButton_8->text() == "Activate account")

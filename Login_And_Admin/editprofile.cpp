@@ -112,6 +112,7 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
 
     QFile read_Tmpfile("C:/Users/Lenovo/Desktop/tmp.txt");
     QFile write_Mainfile("C:/Users/Lenovo/Desktop/test.txt");
+
     write_Mainfile.open(QIODevice::WriteOnly);
     if (read_Tmpfile.open(QIODevice::ReadOnly))
     {

@@ -100,6 +100,9 @@
        <height>24</height>
       </rect>
      </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>
