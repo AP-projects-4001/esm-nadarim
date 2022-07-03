@@ -12,6 +12,12 @@ Increase_Budget::Increase_Budget(QWidget *parent, QVector<QString> _vec_info) :
     t->setInterval(1000);
     t->start();
     connect(t,SIGNAL(timeout()),this,SLOT(update_time()));
+    ui->lineEdit_part1->setValidator(new QIntValidator(5000, 6999, this));
+    ui->lineEdit_part2->setValidator(new QIntValidator(1001, 9999, this));
+    ui->lineEdit_part3->setValidator(new QIntValidator(1001, 9999, this));
+    ui->lineEdit_part4->setValidator(new QIntValidator(1001, 9999, this));
+    ui->lineEdit_CVV2->setValidator(new QIntValidator(100, 9999, this));
+    ui->lineEdit_pass->setValidator(new QIntValidator(100, 999999999, this));
  }
 
 Increase_Budget::~Increase_Budget()
@@ -41,12 +47,18 @@ void Increase_Budget::update_time()
 
 void Increase_Budget::on_pushButton_clicked()
 {
-    if(ui->spinBox_part1->value() < 5000 || ui->spinBox_part2->value() == 1000 ||
-            ui->spinBox_part3->value() == 1000 || ui->spinBox_part4->value() == 1000 )
+    if(ui->lineEdit_part1->text().toInt() < 5000 || ui->lineEdit_part1->text().toInt() >= 7000 || ui->lineEdit_part2->text().toInt() == 1000 ||
+            ui->lineEdit_part3->text().toInt() == 1000 || ui->lineEdit_part4->text().toInt() == 1000 )
     {
         QMessageBox::information(this,"Payment","Card number is incorrect");
         return;
     }
+    if(ui->lineEdit_CVV2->text()=="" || ui->lineEdit_pass->text()=="")
+    {
+        QMessageBox::information(this,"Error","The CVV2 and password fields must not be left blank");
+        return;
+    }
+
     t->stop();
     QMessageBox::information(this,"Payment","Payment was successful");
     vec_info[5] = QString::number(vec_info[5].toInt()+ui->spinBox_budget->value());
