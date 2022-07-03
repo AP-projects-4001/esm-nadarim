@@ -43,6 +43,10 @@ changeprofile::changeprofile(QWidget *parent,QString username) :
               continue;
           }
           if(flag==2){
+              line.remove(0,txtsize);
+              line.remove(0,10);
+              ui->pass_line->setText(line);
+              password=line;
               ++flag;
               continue;
           }
@@ -77,8 +81,7 @@ changeprofile::changeprofile(QWidget *parent,QString username) :
 
 
        }
-       ui->level_line->setText("Customer");
-       ui->level_line->setReadOnly(true);
+
        ui->budget_line->setReadOnly(true);
        readFile.close();
     }
@@ -98,8 +101,9 @@ void changeprofile::on_pushButton_2_clicked()
     QString check_budget=ui->budget_line->text();
     QString check_phonenum=ui->phone_line->text();
     QString check_address=ui->address_line->text();
+    QString check_password=ui->pass_line->text();
 
-    if(check_username==Username_1 && check_name==name && check_budget==budget && check_phonenum==phonenum && check_address==address){
+    if(check_username==Username_1 && check_name==name && check_budget==budget && check_phonenum==phonenum && check_address==address && check_password==password){
         QMessageBox msg;
         msg.warning(this,"not Successful","There is nothing to be saved!");
         return;
@@ -121,7 +125,14 @@ void changeprofile::on_pushButton_2_clicked()
         changeprof.Edit_Profile(Username,"Phone-number",check_phonenum);
     }
     if(check_username!=Username){
-        changeprof.change_username(Username,check_username);
+        if(changeprof.change_username(Username,check_username)==false){
+            QMessageBox msg;
+            msg.warning(this,"not Successful","The username is already taken!");
+            return;
+         }
+        else{
+            changeprof.change_username(Username,check_username);
+        }
     }
 
     QMessageBox::information(this,"Change Profile","Saved successfully!");

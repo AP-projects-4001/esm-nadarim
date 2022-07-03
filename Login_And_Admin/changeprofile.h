@@ -28,6 +28,7 @@ private:
     QString budget;
     QString phonenum;
     QString address;
+    QString password;
 };
 
 #endif // CHANGEPROFILE_H

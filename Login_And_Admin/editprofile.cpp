@@ -1,7 +1,9 @@
 #include "editprofile.h"
+#include <QMessageBox>
 #include <QFile>
 #include <QDebug>
 #include <QString>
+#include "qmessagebox.h"
 
 
 
@@ -128,14 +130,44 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
     }
 }
 
-void EditProfile::change_username(QString old_User, QString new_User)
-{
+int EditProfile::checkusername(QString username){
+    username="Username:"+username;
     int flag=0;
+    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    qDebug()<<username;
+    if (read_file.open(QIODevice::ReadOnly))
+    {
+       QTextStream in(&read_file);
+       while (!in.atEnd())
+       {
+          QString line = in.readLine();
+          if(username==line){
+              ++flag;
+              return flag;
+          }
+
+       }
+       read_file.close();
+    }
+    return -1;
+}
+
+bool EditProfile::change_username(QString old_User, QString new_User)
+{
+    int flag=0,checkuser=0;
     int txtsize=old_User.size();
+
+    checkuser=checkusername(new_User);
+    if(checkuser!=-1){
+       return false;
+    }
+
     old_User="Username:"+old_User;
     qDebug()<<old_User;
+
     QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
     QFile write_file("C:/Users/Lenovo/Desktop/tmp.txt");
+
     write_file.open(QIODevice::WriteOnly);
     if (read_file.open(QIODevice::ReadOnly))
     {
@@ -190,6 +222,7 @@ void EditProfile::change_username(QString old_User, QString new_User)
        read_Tmpfile.remove();
     }
 
+    return true;
 }
 
 
