@@ -1,6 +1,8 @@
 #include "client.h"
+#include "payment_client.h"
 #include "ui_client.h"
 #include "edit_profile_client.h"
+#include "abstract_transactions.h"
 Client::Client(QWidget *parent,QString username_client) :
     QMainWindow(parent),
     ui(new Ui::Client)
@@ -236,5 +238,28 @@ void Client::on_pushButton_5_clicked()
     buy_obj.buy(filter_obj.allProducts()[index_filter-1].CountProduct,ui->spinBox->value());
 
     QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
+}
+
+
+void Client::on_pushButton_4_clicked()
+{
+    if(ui->lineEdit->text() == "" )
+    {
+        QMessageBox::information(this,"Error","There is no product on the page.");
+        return;
+    }
+    if(ui->spinBox->value() > ui->lineEdit_6->text().toInt() )
+    {
+        QMessageBox::information(this,"Error","The number of goods requested is more than the number of available goods.");
+        return;
+    }
+    if(ui->label_budget->text().toInt() < ui->lineEdit_8->text().toInt() * ui->spinBox->value())
+    {
+        QMessageBox::information(this,"Error","Your budget is not enough");
+        return;
+    }
+    Abstract_Transactions* payment_obj = new Payment_Client(nullptr,vec_info_client, ui->lineEdit_8->text().toInt() * ui->spinBox->value());
+    this->close();
+    payment_obj->show();
 }
 

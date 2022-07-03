@@ -22,7 +22,7 @@ private slots:
 
     virtual void on_pushButton_confirm_clicked() = 0;
 
-private:
+protected:
     Ui::Abstract_Transactions *ui;
     QVector<QString> vector_info{6};
     QTimer* timer;

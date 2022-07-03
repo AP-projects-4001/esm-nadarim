@@ -25,6 +25,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     manager.cpp \
+    payment_client.cpp \
     product.cpp \
     register.cpp \
     seller.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     increase_budget.h \
     mainwindow.h \
     manager.h \
+    payment_client.h \
     product.h \
     register.h \
     seller.h \
@@ -65,6 +67,7 @@ FORMS += \
     forgetpassword.ui \
     increase_budget.ui \
     mainwindow.ui \
+    payment_client.ui \
     register.ui \
     transaction.ui \
     changeprofile.ui \
