@@ -232,8 +232,9 @@ void Client::on_pushButton_5_clicked()
     vec_info_client[5] = QString::number(budget);
     EditProfile obj_edit_budget;
     obj_edit_budget.Edit_Profile(vec_info_client[0],"Budget",QString::number(budget));
-    obj_edit_budget.Edit_Profile(filter_obj.allProducts()[index_filter].userNameSeller,"Budget",QString::number
-                                 (ui->lineEdit_8->text().toInt() * ui->spinBox->value()));
+    obj_edit_budget.Edit_Profile(filter_obj.allProducts()[index_filter-1].userNameSeller,"Budget",
+            QString::number((ui->lineEdit_8->text().toInt() * ui->spinBox->value())+
+            obj_edit_budget.getBudget(filter_obj.allProducts()[index_filter-1].userNameSeller).toInt()));
     ui->lineEdit_6->setText(QString::number(ui->lineEdit_6->text().toInt() - (ui->spinBox->value())));
 
     bak::Buyer buy_obj {vec_info_client[0].toStdString()};

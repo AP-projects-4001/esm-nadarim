@@ -4,7 +4,9 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include "editprofile.h"
+#include "checkpassword.h"
 #include"client.h"
+#include<QMessageBox>
 namespace Ui {
 class Edit_Profile_Client;
 }

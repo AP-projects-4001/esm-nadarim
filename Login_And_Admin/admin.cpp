@@ -56,7 +56,7 @@ Admin::Admin(QWidget *parent)
        }
 
     }
-        ui->lineEdit_4->setValidator(new QIntValidator(9000000000,990000000000 , this));
+
 }
 
 Admin::~Admin()
@@ -144,6 +144,7 @@ void Admin::on_pushButton_4_clicked()
         msg->exec();
         return;
     }
+    user_current = ui->lineEdit->text();
     ui->pushButton_7->setEnabled(true);
     ui->pushButton_5->setEnabled(false);
     ui->pushButton_4->setEnabled(false);
@@ -167,9 +168,13 @@ void Admin::on_pushButton_7_clicked()
         msg.exec();
         return;
     }
-
+    if(ui->lineEdit_4->text().size() < 11)
+    {
+        QMessageBox::information(this,"Error","The phone number entered is invalid");
+        return;
+    }
     EditProfile obj;
-    if(obj.checkusername(ui->lineEdit->text()) == 1)
+    if(obj.checkusername(ui->lineEdit->text()) == 1 && user_current != ui->lineEdit->text())
     {
         QMessageBox::information(this,"Error","This username is already registered for another user");
         return;

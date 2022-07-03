@@ -52,5 +52,6 @@ private:
     //bak::manager obj_manager;
     int index_transaction = 0;
     bak::manager obj_manger;
+    QString user_current;
 };
 #endif // ADMIN_H
