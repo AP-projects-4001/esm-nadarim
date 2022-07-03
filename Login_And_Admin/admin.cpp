@@ -45,12 +45,12 @@ Admin::Admin(QWidget *parent)
        std::vector<bak::product> vecTransaction = obj_manager.allTransactions();
        if(vecTransaction.size() > 0 )
        {
-           ui->lineEdit_8->setText(vecTransaction[0].userNameBuyer);
-           ui->lineEdit_9->setText(vecTransaction[0].userNameSeller);
-           ui->lineEdit_10->setText(vecTransaction[0].group);
-           ui->lineEdit_11->setText(vecTransaction[0].name);
-           ui->lineEdit_12->setText(QString::number(vecTransaction[0].price));
-           ui->lineEdit_13->setText(QString::number(vecTransaction[0].number));
+           ui->lineEdit_8->setText(obj_manger.allTransactions()[0].userNameBuyer);
+           ui->lineEdit_9->setText(obj_manger.allTransactions()[0].userNameSeller);
+           ui->lineEdit_10->setText(obj_manger.allTransactions()[0].group);
+           ui->lineEdit_11->setText(obj_manger.allTransactions()[0].name);
+           ui->lineEdit_12->setText(QString::number(obj_manger.allTransactions()[0].price));
+           ui->lineEdit_13->setText(QString::number(obj_manger.allTransactions()[0].number));
            index_transaction = 1;
        }
 
@@ -60,11 +60,6 @@ Admin::Admin(QWidget *parent)
 Admin::~Admin()
 {
     delete ui;
-}
-
-void Admin::on_pushButton_6_clicked()
-{
-    this->close();
 }
 
 
@@ -184,6 +179,7 @@ void Admin::on_pushButton_7_clicked()
     ui->pushButton_4->setEnabled(true);
     //ui->pushButton_3->setEnabled(true);
     ui->pushButton_2->setEnabled(true);
+    ui->pushButton_8->setEnabled(true);
     ui->pushButton->setEnabled(true);
     ui->lineEdit->setReadOnly(true);
     ui->lineEdit_2->setReadOnly(true);
@@ -258,16 +254,16 @@ void Admin::on_pushButton_8_clicked()
 
 void Admin::on_pushButton_9_clicked()
 {
-    if(vecTransaction.size() == index_transaction)
+    if(obj_manger.allTransactions().size() == index_transaction -1)
     {
         return;
     }
-    ui->lineEdit_8->setText(vecTransaction[index_transaction].userNameBuyer);
-    ui->lineEdit_9->setText(vecTransaction[index_transaction].userNameSeller);
-    ui->lineEdit_10->setText(vecTransaction[index_transaction].group);
-    ui->lineEdit_11->setText(vecTransaction[index_transaction].name);
-    ui->lineEdit_12->setText(QString::number(vecTransaction[index_transaction].price));
-    ui->lineEdit_13->setText(QString::number(vecTransaction[index_transaction].number));
+    ui->lineEdit_8->setText(obj_manger.allTransactions()[index_transaction].userNameBuyer);
+    ui->lineEdit_9->setText(obj_manger.allTransactions()[index_transaction].userNameSeller);
+    ui->lineEdit_10->setText(obj_manger.allTransactions()[index_transaction].group);
+    ui->lineEdit_11->setText(obj_manger.allTransactions()[index_transaction].name);
+    ui->lineEdit_12->setText(QString::number(obj_manger.allTransactions()[index_transaction].price));
+    ui->lineEdit_13->setText(QString::number(obj_manger.allTransactions()[index_transaction].number));
     index_transaction++;
 }
 
@@ -275,17 +271,23 @@ void Admin::on_pushButton_9_clicked()
 void Admin::on_pushButton_10_clicked()
 {
 
-    if(vecTransaction.size() < 2)
+    if(index_transaction < 2)
     {
         return;
     }
     index_transaction -= 2;
-    ui->lineEdit_8->setText(vecTransaction[index_transaction].userNameBuyer);
-    ui->lineEdit_9->setText(vecTransaction[index_transaction].userNameSeller);
-    ui->lineEdit_10->setText(vecTransaction[index_transaction].group);
-    ui->lineEdit_11->setText(vecTransaction[index_transaction].name);
-    ui->lineEdit_12->setText(QString::number(vecTransaction[index_transaction].price));
-    ui->lineEdit_13->setText(QString::number(vecTransaction[index_transaction].number));
+    ui->lineEdit_8->setText(obj_manger.allTransactions()[index_transaction].userNameBuyer);
+    ui->lineEdit_9->setText(obj_manger.allTransactions()[index_transaction].userNameSeller);
+    ui->lineEdit_10->setText(obj_manger.allTransactions()[index_transaction].group);
+    ui->lineEdit_11->setText(obj_manger.allTransactions()[index_transaction].name);
+    ui->lineEdit_12->setText(QString::number(obj_manger.allTransactions()[index_transaction].price));
+    ui->lineEdit_13->setText(QString::number(obj_manger.allTransactions()[index_transaction].number));
     index_transaction++;
+}
+
+
+void Admin::on_actionBack_triggered()
+{
+    this->close();
 }
 

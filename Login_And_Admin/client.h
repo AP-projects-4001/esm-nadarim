@@ -5,6 +5,7 @@
 //#include "edit_profile_client.h"
 #include <QFile>
 #include "filter.h"
+#include "Buyer.h"
 namespace Ui {
 class Client;
 }
@@ -36,12 +37,14 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::Client *ui;
     QString username_client;
     QVector <QString> vec_info_client{6};
     bak::filter filter_obj;
-    int index_filter = 1;
+    int index_filter = 0;
 };
 
 #endif // CLIENT_H

@@ -41,7 +41,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(242, 254, 255);</string>
     </property>
     <property name="title">
      <string>Payment page</string>
@@ -174,71 +174,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QSpinBox" name="spinBox_part1">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>50</y>
-       <width>71</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>1000</number>
-     </property>
-     <property name="maximum">
-      <number>9999</number>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox_part2">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>50</y>
-       <width>71</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>1000</number>
-     </property>
-     <property name="maximum">
-      <number>9999</number>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox_part3">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>50</y>
-       <width>71</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>1000</number>
-     </property>
-     <property name="maximum">
-      <number>9999</number>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox_part4">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>50</y>
-       <width>71</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>1000</number>
-     </property>
-     <property name="maximum">
-      <number>9999</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="lineEdit_pass">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -254,7 +190,7 @@
       <enum>QLineEdit::Password</enum>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="lineEdit_CVV2">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -268,6 +204,58 @@
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part3">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>50</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part1">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>50</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part4">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>50</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part2">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>50</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
      </property>
     </widget>
    </widget>
@@ -375,7 +363,8 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
      <string>pay</string>
@@ -397,7 +386,7 @@ color: rgb(255, 255, 255);</string>
      <number>100</number>
     </property>
     <property name="maximum">
-     <number>99999999</number>
+     <number>999999999</number>
     </property>
    </widget>
   </widget>

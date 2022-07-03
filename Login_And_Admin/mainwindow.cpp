@@ -40,7 +40,7 @@ void MainWindow::searchFile()
 
     QString Level;
     int flag=0;
-    QFile read_file("C:/Users/amirr/Desktop/test.txt");
+    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);
