@@ -26,6 +26,7 @@ namespace bak {
 
 	private:
 		product filterProduct;
+		fileProduct sellerFile;
 
 		int minNumber=-1, maxNumber=-1;
 		int minPrice=-1, maxPrice=-1;

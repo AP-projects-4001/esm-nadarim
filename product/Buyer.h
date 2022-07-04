@@ -14,14 +14,23 @@ namespace bak {
 	public:
 		Buyer(std::string userNameBuyer);
 
-		void buy(int CountProductIn, int productPurchased);
+		void setCountProduct(int countProductIn);
+		void setNumberPurchased(int numberPurchasedIn);
+
+		void buy();
 		std::vector<product>allProducts();
 
+		bool isPossibleBuy();
+
 	private:
-		void setBuyerProduct(product productIn);
+		void findProductSeller();
+		void setBuyerProduct();
+		void editProductSeller();
 
 		product buyerProduct;
-
+		product sellerProduct;
+		fileProduct BuyerFile;
+		int countProductPurchased;
 	};
 
 }

@@ -15,19 +15,16 @@ void bak::filter::setGroup(std::string groupIn) {
 void bak::filter::setNumber(int minNumberIn, int maxNumberIn) {
 	minNumber = minNumberIn;
 	maxNumber = maxNumberIn;
-	/*todo: check num*/
 }
 
 void bak::filter::setPrice(int minPriceIn, int maxPriceIn) {
 	minPrice = minPriceIn;
 	maxPrice = maxPriceIn;
-	/*todo: check num*/
 }
 
 void bak::filter::setWeight(int minWeightIn, int maxWeightIn) {
 	minWeight = minWeightIn;
 	maxWeight = maxWeightIn;
-	/*todo: check num*/
 }
 
 void bak::filter::setBrand(std::string brandIn) {
@@ -47,7 +44,6 @@ void bak::filter::setWarranty(std::string warrantyIn) {
 }
 
 std::vector<bak::product> bak::filter::allProducts() {
-	fileProduct sellerFile;
 	std::vector<bak::product> listOut = sellerFile.searchProduct(filterProduct);
 	for (int i = 0; i < listOut.size(); i++) {
 		if (!std::string(listOut[i].userNameBuyer).empty()) {

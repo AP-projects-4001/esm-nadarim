@@ -15,6 +15,7 @@ namespace bak {
 
 	private:
 		product transactionsProduct;
+		fileProduct adminFile;
 
 	};
 

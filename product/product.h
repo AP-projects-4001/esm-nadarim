@@ -9,6 +9,8 @@ namespace bak {
 	struct product {
 
 	public:
+		void setProduct(product productIn);
+
 		bool operator==(product& productIn);
 		bool operator!=(product& productIn);
 		bool operator<=(product comparison);

@@ -31,6 +31,7 @@ namespace bak {
 
 	private:
 		product sellerProduct;
+		fileProduct sellerFile;
 
 	};
 
