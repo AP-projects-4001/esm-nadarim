@@ -85,7 +85,7 @@ color: rgb(0, 0, 0);</string>
        <item>
         <widget class="QPushButton" name="pushButton_4">
          <property name="text">
-          <string>Change Password</string>
+          <string>Receive profit</string>
          </property>
         </widget>
        </item>
