@@ -1,6 +1,5 @@
 #include "seller.h"
 
-
 bak::seller::seller(std::string userNameSellerIn) {
     sellerProduct.restrictWord(userNameSellerIn, sellerProduct.userNameSeller, sizeof(sellerProduct.userNameSeller));
 }
@@ -13,11 +12,11 @@ void bak::seller::setGroup(std::string groupIn) {
     sellerProduct.restrictWord(groupIn, sellerProduct.group, sizeof(sellerProduct.group));
 }
 
-void bak::seller::setNumberUnsold(int numberIn) { sellerProduct.number = numberIn;/*todo: check num*/ }
+void bak::seller::setNumberUnsold(int numberIn) { sellerProduct.number = numberIn; }
 
-void bak::seller::setPrice(int priceIn) { sellerProduct.price = priceIn; /*todo: check num*/ }
+void bak::seller::setPrice(int priceIn) { sellerProduct.price = priceIn; }
 
-void bak::seller::setWeight(int weightIn) { sellerProduct.weight = weightIn;/*todo: check num*/ }
+void bak::seller::setWeight(int weightIn) { sellerProduct.weight = weightIn; }
 
 void bak::seller::setBrand(std::string brandIn) {
     sellerProduct.restrictWord(brandIn, sellerProduct.brand, sizeof(sellerProduct.brand));
@@ -36,7 +35,6 @@ void bak::seller::setWarranty(std::string warrantyIn) {
 }
 
 std::vector<bak::product> bak::seller::allProductsSell() {
-    fileProduct sellerFile;
     std::vector<bak::product> listOut = sellerFile.searchProduct(sellerProduct);
     for (int i = 0; i < listOut.size(); i++) {
         if (!std::string(listOut[i].userNameBuyer).empty()) {
@@ -49,7 +47,6 @@ std::vector<bak::product> bak::seller::allProductsSell() {
 }
 
 std::vector<bak::product> bak::seller::allProductsPurchase() {
-    fileProduct sellerFile;
     std::vector<bak::product> listOut = sellerFile.searchProduct(sellerProduct);
     for (int i = 0; i < listOut.size(); i++) {
         if (std::string(listOut[i].userNameBuyer).empty()) {
@@ -61,17 +58,8 @@ std::vector<bak::product> bak::seller::allProductsPurchase() {
     return listOut;
 }
 
-void bak::seller::addProduct() {
-    fileProduct sellerFile;
-    sellerFile.addProduct(sellerProduct);
-}
+void bak::seller::addProduct() { sellerFile.addProduct(sellerProduct); }
 
-void bak::seller::deleteProduct(int CountProductIn) {
-    fileProduct sellerFile;
-    sellerFile.deleteProduct(CountProductIn);
-}
+void bak::seller::deleteProduct(int CountProductIn) { sellerFile.deleteProduct(CountProductIn); }
 
-void bak::seller::editProduct(int CountProductIn) {
-    fileProduct sellerFile;
-    sellerFile.editProduct(CountProductIn, sellerProduct);
-}
+void bak::seller::editProduct(int CountProductIn) { sellerFile.editProduct(CountProductIn, sellerProduct); }
