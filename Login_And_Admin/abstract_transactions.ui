@@ -417,7 +417,7 @@ color: rgb(255, 255, 255);</string>
     <property name="title">
      <string>Bank account name</string>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="lineEdit_name">
      <property name="geometry">
       <rect>
        <x>270</x>

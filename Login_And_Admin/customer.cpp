@@ -61,6 +61,13 @@ void Customer::on_pushButton_2_clicked()
 
 void Customer::on_pushButton_4_clicked()
 {
+
+    EditProfile Budget;
+    if (Budget.getBudget(username) == "0")
+    {
+        QMessageBox::information(this,"Error", "Your budget is 0$");
+        return;
+    }
     QVector<QString> vec(1 , username);
     Get_Money_Customer* get_money_obj = new Get_Money_Customer(nullptr,vec);
     get_money_obj->show();

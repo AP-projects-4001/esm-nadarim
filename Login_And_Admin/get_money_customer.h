@@ -1,6 +1,7 @@
 #ifndef GET_MONEY_CUSTOMER_H
 #define GET_MONEY_CUSTOMER_H
 
+#include "editprofile.h"
 #include <QMainWindow>
 #include <abstract_transactions.h>
 namespace Ui {
@@ -23,6 +24,7 @@ private slots:
 
 private:
     QString username;
+    EditProfile edit_budget;
 };
 
 #endif // GET_MONEY_CUSTOMER_H
