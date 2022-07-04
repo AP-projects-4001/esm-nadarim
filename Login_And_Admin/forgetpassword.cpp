@@ -28,7 +28,7 @@ void ForgetPassword::check(){
     username="Username:"+username;
 
     int flag=0;
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_file("test.txt");
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);

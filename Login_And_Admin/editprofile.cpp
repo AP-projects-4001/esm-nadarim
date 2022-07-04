@@ -11,8 +11,8 @@ void EditProfile::Delete_Profile(QString username)
 {
     int flag=0;
     username="Username:"+username;
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
-    QFile write_file("C:/Users/Lenovo/Desktop/tmp.txt");
+    QFile read_file("test.txt");
+    QFile write_file("tmp.txt");
     write_file.open(QIODevice::WriteOnly);
     if (read_file.open(QIODevice::ReadOnly))
     {
@@ -39,8 +39,8 @@ void EditProfile::Delete_Profile(QString username)
 
 
 
-    QFile read_Tmpfile("C:/Users/Lenovo/Desktop/tmp.txt");
-    QFile write_Mainfile("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_Tmpfile("tmp.txt");
+    QFile write_Mainfile("test.txt");
     write_Mainfile.open(QIODevice::WriteOnly);
     if (read_Tmpfile.open(QIODevice::ReadOnly))
     {
@@ -69,8 +69,8 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
 
     int flag=0;
 
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
-    QFile write_file("C:/Users/Lenovo/Desktop/tmp.txt");
+    QFile read_file("test.txt");
+    QFile write_file("tmp.txt");
     write_file.open(QIODevice::WriteOnly);
     if (read_file.open(QIODevice::ReadOnly))
     {
@@ -110,8 +110,8 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
 
 
 
-    QFile read_Tmpfile("C:/Users/Lenovo/Desktop/tmp.txt");
-    QFile write_Mainfile("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_Tmpfile("tmp.txt");
+    QFile write_Mainfile("test.txt");
 
     write_Mainfile.open(QIODevice::WriteOnly);
     if (read_Tmpfile.open(QIODevice::ReadOnly))
@@ -134,7 +134,7 @@ void EditProfile::Edit_Profile(QString username, QString part, QString NewInput)
 int EditProfile::checkusername(QString username){
     username="Username:"+username;
     int flag=0;
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_file("test.txt");
     qDebug()<<username;
     if (read_file.open(QIODevice::ReadOnly))
     {
@@ -160,7 +160,7 @@ QString EditProfile::getBudget(QString username)
 
     username="Username:"+username;
 
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_file("test.txt");
     if (read_file.open(QIODevice::ReadOnly))
     {
        QTextStream in(&read_file);
@@ -205,8 +205,8 @@ bool EditProfile::change_username(QString old_User, QString new_User)
     old_User="Username:"+old_User;
     qDebug()<<old_User;
 
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
-    QFile write_file("C:/Users/Lenovo/Desktop/tmp.txt");
+    QFile read_file("test.txt");
+    QFile write_file("tmp.txt");
 
     write_file.open(QIODevice::WriteOnly);
     if (read_file.open(QIODevice::ReadOnly))
@@ -242,8 +242,8 @@ bool EditProfile::change_username(QString old_User, QString new_User)
 
 
 
-    QFile read_Tmpfile("C:/Users/Lenovo/Desktop/tmp.txt");
-    QFile write_Mainfile("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_Tmpfile("tmp.txt");
+    QFile write_Mainfile("test.txt");
     write_Mainfile.open(QIODevice::WriteOnly);
     if (read_Tmpfile.open(QIODevice::ReadOnly))
     {

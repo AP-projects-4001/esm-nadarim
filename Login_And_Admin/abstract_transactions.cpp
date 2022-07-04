@@ -1,5 +1,4 @@
 #include "abstract_transactions.h"
-
 #include "edit_profile_client.h"
 #include "ui_abstract_transactions.h"
 

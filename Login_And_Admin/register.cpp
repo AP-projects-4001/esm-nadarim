@@ -29,7 +29,7 @@ Register::~Register()
 int Register::checkUsername(QString username)
 {
     int flag=0;
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_file("test.txt");
     qDebug()<<username;
     if (read_file.open(QIODevice::ReadOnly))
     {
@@ -51,7 +51,7 @@ int Register::checkUsername(QString username)
 
 void Register::WriteInFile()
 {
-    QFile write_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile write_file("test.txt");
     if(write_file.open(QIODevice::WriteOnly| QIODevice::Append | QIODevice::Text))
          {
              // We're going to streaming text to the file
@@ -114,8 +114,9 @@ void Register::on_signup_btn_reg_clicked()
       msg.warning(this,"Password is not match","Enter your password again!");
       return;
   }
-  if(flag==-1)
+  if(flag==-1){
      WriteInFile();
+  }
   else{
       QMessageBox msg;
       msg.warning(this,"not Successful","The username is already taken");

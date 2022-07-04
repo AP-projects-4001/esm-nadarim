@@ -11,7 +11,7 @@ Client::Client(QWidget *parent,QString username_client) :
     QString  line;
     int pos;
     this->username_client = username_client;
-    QFile read_file("C:/Users/Lenovo/Desktop/test.txt");
+    QFile read_file("test.txt");
         if (read_file.open(QIODevice::ReadOnly))
         {
            QTextStream in(&read_file);

@@ -45,7 +45,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(242, 254, 255);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="title">
      <string>Log in</string>

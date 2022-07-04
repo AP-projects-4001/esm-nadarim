@@ -1,5 +1,5 @@
 #include "admin.h"
-#include "QValidator""
+#include "QValidator"//"
 #include "ui_admin.h"
 #include "editprofile.h"
 
@@ -8,7 +8,7 @@ Admin::Admin(QWidget *parent)
     , ui(new Ui::Admin)
 {
     ui->setupUi(this);
-    QFile readFile("C:/Users/Lenovo/Desktop/test.txt");
+    QFile readFile("test.txt");
     if (readFile.open(QIODevice::ReadOnly))
     {
        int pos;
