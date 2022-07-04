@@ -238,7 +238,7 @@ void Client::on_pushButton_5_clicked()
     ui->lineEdit_6->setText(QString::number(ui->lineEdit_6->text().toInt() - (ui->spinBox->value())));
 
     bak::Buyer buy_obj {vec_info_client[0].toStdString()};
-    buy_obj.buy(filter_obj.allProducts()[index_filter-1].CountProduct,ui->spinBox->value());
+    buy_obj.buy();
 
     QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
 }

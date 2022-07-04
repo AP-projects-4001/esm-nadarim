@@ -8,7 +8,7 @@ Admin::Admin(QWidget *parent)
     , ui(new Ui::Admin)
 {
     ui->setupUi(this);
-    QFile readFile("C:/Users/Lenovo/Desktop/test.txt");
+    QFile readFile("D:/barname nevisi/agha ebrahim/pr/test/test(1).txt");
     if (readFile.open(QIODevice::ReadOnly))
     {
        int pos;
