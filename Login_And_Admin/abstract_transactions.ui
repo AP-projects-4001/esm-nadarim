@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
-    <height>354</height>
+    <width>613</width>
+    <height>485</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>648</width>
-    <height>354</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>648</width>
-    <height>354</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -30,13 +30,13 @@
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="groupBox_pass">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>40</y>
-      <width>581</width>
-      <height>221</height>
+      <y>140</y>
+      <width>551</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -45,79 +45,11 @@
     <property name="title">
      <string>Transaction page</string>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>181</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 600 9pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Please Enter your card number :</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_part1">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>30</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>4</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_part2">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>30</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>4</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_part3">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>30</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>4</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_part4">
-     <property name="geometry">
-      <rect>
-       <x>450</x>
-       <y>30</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>4</number>
-     </property>
-    </widget>
     <widget class="QSpinBox" name="spinBox">
      <property name="geometry">
       <rect>
        <x>290</x>
-       <y>150</y>
+       <y>120</y>
        <width>41</width>
        <height>25</height>
       </rect>
@@ -136,7 +68,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>150</y>
+       <y>120</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -152,7 +84,7 @@
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>150</y>
+       <y>120</y>
        <width>20</width>
        <height>20</height>
       </rect>
@@ -171,7 +103,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>110</y>
+       <y>80</y>
        <width>131</width>
        <height>20</height>
       </rect>
@@ -187,7 +119,7 @@
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>150</y>
+       <y>120</y>
        <width>42</width>
        <height>25</height>
       </rect>
@@ -197,7 +129,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>110</y>
+       <y>80</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -213,7 +145,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>70</y>
+       <y>40</y>
        <width>241</width>
        <height>20</height>
       </rect>
@@ -229,7 +161,7 @@
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>70</y>
+       <y>40</y>
        <width>113</width>
        <height>21</height>
       </rect>
@@ -245,7 +177,7 @@
      <property name="geometry">
       <rect>
        <x>360</x>
-       <y>150</y>
+       <y>120</y>
        <width>81</width>
        <height>21</height>
       </rect>
@@ -261,8 +193,8 @@
    <widget class="QPushButton" name="pushButton_confirm">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>280</y>
+      <x>280</x>
+      <y>410</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -386,13 +318,142 @@ color: rgb(255, 255, 255);</string>
      <string>0</string>
     </property>
    </widget>
+   <widget class="QGroupBox" name="groupBox_card">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>551</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(242, 254, 255);</string>
+    </property>
+    <property name="title">
+     <string>card number</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_part4">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part3">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 600 9pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Please Enter your card number :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_part1">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_name">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>310</y>
+      <width>551</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(242, 254, 255);</string>
+    </property>
+    <property name="title">
+     <string>Bank account name</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_name">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>30</y>
+       <width>201</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>60</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>30</y>
+       <width>181</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enter your Bank account name</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>648</width>
+     <width>613</width>
      <height>21</height>
     </rect>
    </property>

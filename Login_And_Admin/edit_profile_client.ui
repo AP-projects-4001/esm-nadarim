@@ -175,6 +175,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <height>24</height>
       </rect>
      </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>

@@ -1,4 +1,5 @@
 #include "edit_profile_client.h"
+#include <QValidator>
 #include "ui_edit_profile_client.h"
 #include "increase_budget.h"
 Edit_Profile_Client::Edit_Profile_Client(QWidget *parent,QVector<QString> vec_info) :
@@ -50,7 +51,23 @@ void Edit_Profile_Client::on_pushButton_2_clicked()
         msg.exec();
         return;
     }
+    bak::checkPassword check_pass(ui->lineEdit_3->text().toStdString());
+    if(check_pass.isConfirm() == false)
+    {
+        QMessageBox::information(this,"Error",QString::fromStdString(check_pass.getErr()));
+        return;
+    }
+    if(ui->lineEdit_4->text().size() < 11)
+    {
+        QMessageBox::information(this,"Error","Invalid phoneNumber");
+        return;
+    }
     EditProfile editProfile_obj;
+    if(editProfile_obj.checkusername(ui->lineEdit->text()) == 1 && vec_info_profile_client[0] != ui->lineEdit->text())
+    {
+        QMessageBox::information(this,"Error","This username is already registered for another user");
+        return;
+    }
     editProfile_obj.change_username(vec_info_profile_client[0],ui->lineEdit->text());
     vec_info_profile_client[0] = ui->lineEdit->text();
     editProfile_obj.Edit_Profile(vec_info_profile_client[0],"Name",ui->lineEdit_2->text());
