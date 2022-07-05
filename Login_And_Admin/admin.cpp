@@ -8,6 +8,7 @@ Admin::Admin(QWidget *parent)
     , ui(new Ui::Admin)
 {
     ui->setupUi(this);
+
     QFile readFile("test.txt");
     if (readFile.open(QIODevice::ReadOnly))
     {

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <string>
 //#pragma warning(disable : 4996)
 
 namespace bak {
@@ -9,6 +8,8 @@ namespace bak {
     struct product {
 
     public:
+        void setProduct(product productIn);
+
         bool operator==(product& productIn);
         bool operator!=(product& productIn);
         bool operator<=(product comparison);
