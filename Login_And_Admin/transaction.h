@@ -29,6 +29,7 @@ private:
     Ui::transaction *ui;
     int index;
     std::vector<bak::product> vecTransaction;
+    QString username;
 };
 
 #endif // TRANSACTION_H

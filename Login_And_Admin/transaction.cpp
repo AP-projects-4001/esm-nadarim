@@ -12,12 +12,11 @@ transaction::transaction(QWidget *parent,QString username):
     ui->setupUi(this);
     index=0;
 
-    qDebug()<<"Salam1";
+    this->username=username;
 
     bak::seller newseller(username.toStdString());
     vecTransaction = newseller.allProductsPurchase();
 
-    qDebug()<<"Salam2";
 
     if(vecTransaction.size()>0)
    {
@@ -85,8 +84,8 @@ void transaction::on_previous_btn_clicked()
 
 void transaction::on_back_btn_clicked()
 {
-   this->hide();
-   Customer *customer=new Customer;
+   this->close();
+   Customer *customer=new Customer(nullptr,username);
    customer->show();
 }
 

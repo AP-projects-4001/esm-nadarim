@@ -116,6 +116,11 @@ void Register::on_signup_btn_reg_clicked()
   }
   if(flag==-1){
      WriteInFile();
+     QMessageBox::information(this,"Sign up","You signed up successfully!");
+     this->close();
+     login=new MainWindow;
+     login->show();
+     return;
   }
   else{
       QMessageBox msg;
@@ -128,8 +133,9 @@ void Register::on_signup_btn_reg_clicked()
 
 void Register::on_login_btn_reg_clicked()
 {
+   this->close();
    login=new MainWindow;
-   this->hide();
    login->show();
+
 }
 

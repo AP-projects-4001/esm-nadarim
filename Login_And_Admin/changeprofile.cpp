@@ -117,7 +117,7 @@ void changeprofile::on_pushButton_2_clicked()
         return;
     }
 
-    if(check_password==password){
+    if(check_password!=password){
         if(changeprof.checkpass(check_password)==true)
           changeprof.Edit_Profile(Username,"Password",check_password);
         else{
