@@ -25,6 +25,8 @@ private slots:
 
     void on_forgetpass_btn_clicked();
 
+    void on_checkBox_pass_clicked();
+
 private:
     Ui::MainWindow *ui;
     Customer *customer;
