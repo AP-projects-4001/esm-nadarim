@@ -34,6 +34,9 @@ void Increase_Budget::update_time()
         t->stop();
         Edit_Profile_Client* profile_obj = new Edit_Profile_Client(nullptr,vec_info);
         profile_obj->show();
+        vec_info.clear();
+        delete ui;
+        delete t;
         this->close();
     }
     if(ui->label_second->text().toInt() == 0)
@@ -66,6 +69,9 @@ void Increase_Budget::on_pushButton_clicked()
     EditProfile obj;
     obj.Edit_Profile(vec_info[0],"Budget",vec_info[5]);
     profile_obj->show();
+    vec_info.clear();
+    delete ui;
+    delete t;
     this->close();
 }
 
@@ -76,7 +82,9 @@ void Increase_Budget::on_actionBack_triggered()
     t->stop();
     Edit_Profile_Client* profile_obj = new Edit_Profile_Client(nullptr,vec_info);
     profile_obj->show();
+    vec_info.clear();
+    delete ui;
+    delete t;
     this->close();
-
 }
 

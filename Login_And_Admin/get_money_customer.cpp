@@ -23,6 +23,8 @@ void Get_Money_Customer::on_actionBack_triggered()
     timer->stop();
     Customer* customer_obj = new Customer(nullptr,username);
     customer_obj->show();
+    delete ui;
+    delete timer;
     this->close();
 }
 
@@ -39,5 +41,7 @@ void Get_Money_Customer::on_pushButton_confirm_clicked()
     QMessageBox::information(this,"Successful operation",ui->label_money->text()+"$ has been credited to your account");
     Customer* customer_obj = new Customer(nullptr,username);
     customer_obj->show();
+    delete ui;
+    delete timer;
     this->close();
 }
