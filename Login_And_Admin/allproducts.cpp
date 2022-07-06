@@ -42,6 +42,8 @@ allproducts::allproducts(QWidget *parent,QString username):
        ui->product_combo->setEnabled(false);
        ui->guarantee->setEnabled(false);
        index=-1;
+       ui->delete_btn->setEnabled(false);
+       ui->save_btn->setEnabled(false);
     }
 
     group=ui->group_combo->currentText();
@@ -159,6 +161,7 @@ void allproducts::on_group_combo_currentTextChanged()
 
 void allproducts::on_delete_btn_clicked()
 {
+
    bak::seller deleteproduct(username.toStdString());
 
    deleteproduct.deleteProduct(Allproducts[index].CountProduct);

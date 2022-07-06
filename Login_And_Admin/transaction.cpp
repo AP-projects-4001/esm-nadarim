@@ -4,6 +4,7 @@
 #include "seller.h"
 #include "product.h"
 #include <QVector>
+#include <QMessageBox>
 
 transaction::transaction(QWidget *parent,QString username):
     QWidget(parent),
@@ -45,6 +46,10 @@ transaction::~transaction()
 
 void transaction::on_next_btn_clicked()
 {
+    if(index==-1){
+        QMessageBox::information(this,"All products","There is nothing");
+    }
+
     if(index==(vecTransaction.size())-1){
         return;
     }
@@ -63,6 +68,10 @@ void transaction::on_next_btn_clicked()
 
 void transaction::on_previous_btn_clicked()
 {
+    if(index==-1){
+        QMessageBox::information(this,"All products","There is nothing");
+    }
+
     if(index<=0)
         return;
 

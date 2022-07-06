@@ -51,6 +51,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        </property>
        <item>
         <widget class="QPushButton" name="addproduct_btn">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 170, 127);</string>
+         </property>
          <property name="text">
           <string>Add new...</string>
          </property>
@@ -58,6 +61,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="editprofile_btn">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 170, 127);</string>
+         </property>
          <property name="text">
           <string>Edit Profile</string>
          </property>
@@ -71,6 +77,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            <height>0</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 170, 127);</string>
+         </property>
          <property name="text">
           <string>Sold Product</string>
          </property>
@@ -78,6 +87,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 170, 127);</string>
+         </property>
          <property name="text">
           <string>Products</string>
          </property>
@@ -85,6 +97,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 170, 127);</string>
+         </property>
          <property name="text">
           <string>Receive profit</string>
          </property>

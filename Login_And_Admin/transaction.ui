@@ -46,7 +46,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="Clientname_line"/>
+         <widget class="QLineEdit" name="Clientname_line">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -63,7 +67,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="Cusname_line"/>
+         <widget class="QLineEdit" name="Cusname_line">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -80,7 +88,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="group_name"/>
+         <widget class="QLineEdit" name="group_name">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -97,7 +109,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="productname_line"/>
+         <widget class="QLineEdit" name="productname_line">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -114,7 +130,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="price_line"/>
+         <widget class="QLineEdit" name="price_line">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -131,7 +151,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="number_line"/>
+         <widget class="QLineEdit" name="number_line">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -142,6 +166,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </property>
         <item>
          <widget class="QPushButton" name="previous_btn">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Previous</string>
           </property>
@@ -149,6 +176,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </item>
         <item>
          <widget class="QPushButton" name="next_btn">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Next</string>
           </property>

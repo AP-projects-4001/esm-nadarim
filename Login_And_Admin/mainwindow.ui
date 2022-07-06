@@ -65,7 +65,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="user_line"/>
+        <widget class="QLineEdit" name="user_line">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -82,7 +86,12 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="pass_line"/>
+        <widget class="QLineEdit" name="pass_line">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -161,6 +170,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="layoutDirection">
           <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
           <string>Log in</string>

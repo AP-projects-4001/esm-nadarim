@@ -60,7 +60,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="user_line"/>
+           <widget class="QLineEdit" name="user_line">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -77,7 +81,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="phone_line"/>
+           <widget class="QLineEdit" name="phone_line">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -95,7 +103,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="name_line"/>
+           <widget class="QLineEdit" name="name_line">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -109,7 +121,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="budget_line"/>
+           <widget class="QLineEdit" name="budget_line">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -130,7 +146,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="pass_line"/>
+           <widget class="QLineEdit" name="pass_line">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -151,6 +171,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
               <height>39</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
            </widget>
           </item>
          </layout>
@@ -170,6 +193,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </property>
         <item>
          <widget class="QPushButton" name="back_btn">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Back</string>
           </property>
@@ -177,6 +203,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Save </string>
           </property>
