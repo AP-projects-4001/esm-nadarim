@@ -18,9 +18,12 @@ SOURCES += \
     client.cpp \
     edit_profile_client.cpp \
     editprofile.cpp \
+    encryption.cpp \
     fileProduct.cpp \
     filter.cpp \
+    findPrime.cpp \
     forgetpassword.cpp \
+    generatingKey.cpp \
     get_money_customer.cpp \
     increase_budget.cpp \
     main.cpp \
@@ -44,11 +47,15 @@ HEADERS += \
     client.h \
     edit_profile_client.h \
     editprofile.h \
+    encryption.h \
     fileProduct.h \
     filter.h \
+    findPrime.h \
     forgetpassword.h \
+    generatingKey.h \
     get_money_customer.h \
     increase_budget.h \
+    keyRsa.h \
     mainwindow.h \
     manager.h \
     payment_client.h \

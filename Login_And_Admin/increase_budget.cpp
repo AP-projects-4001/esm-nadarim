@@ -47,8 +47,8 @@ void Increase_Budget::update_time()
 
 void Increase_Budget::on_pushButton_clicked()
 {
-    if(ui->lineEdit_part1->text().toInt() < 5000 || ui->lineEdit_part1->text().toInt() >= 7000 || ui->lineEdit_part2->text().toInt() == 1000 ||
-            ui->lineEdit_part3->text().toInt() == 1000 || ui->lineEdit_part4->text().toInt() == 1000 )
+    if(ui->lineEdit_part1->text().toInt() < 5000 || ui->lineEdit_part1->text().toInt() >= 7000 || ui->lineEdit_part2->text().size() < 4  ||
+            ui->lineEdit_part3->text().size() < 4  || ui->lineEdit_part4->text().size() < 4 )
     {
         QMessageBox::information(this,"Payment","Card number is incorrect");
         return;

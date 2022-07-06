@@ -28,8 +28,8 @@ void Get_Money_Customer::on_actionBack_triggered()
 
 void Get_Money_Customer::on_pushButton_confirm_clicked()
 {
-    if(ui->lineEdit_name->text() == "" || ui->lineEdit_part1->text() == ""||
-    ui->lineEdit_part2->text() == "" || ui->lineEdit_part3->text() == "" || ui->lineEdit_part4->text() == "" )
+    if(ui->lineEdit_name->text() == "" || ui->lineEdit_part1->text().size() < 4 ||
+    ui->lineEdit_part2->text().size() < 4  || ui->lineEdit_part3->text().size() < 4 || ui->lineEdit_part4->text().size() < 4  )
     {
         QMessageBox::information(this,"Error","All fields must be filled");
         return;
