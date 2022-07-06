@@ -38,8 +38,9 @@ Client::Client(QWidget *parent,QString username_client) :
                 break;
             }
            }
-           ui->label_budget->setText(vec_info_client[5]);
+
        }
+        ui->label_budget->setText(vec_info_client[5]);
        read_file.close();
        connect(ui->horizontalSlider_minPrice,SIGNAL(valueChanged(int)),ui->label_setminPrice,SLOT(setNum(int)));
        connect(ui->horizontalSlider_maxPrice,SIGNAL(valueChanged(int)),ui->label_setmaxPrice,SLOT(setNum(int)));
@@ -172,7 +173,7 @@ void Client::on_pushButton_clicked()
 
 void Client::on_pushButton_2_clicked()
 {
-    if(filter_obj.allProducts().size() == index_filter )
+    if(filter_obj.allProducts().size() <= index_filter )
     {
         return;
     }
@@ -232,15 +233,18 @@ void Client::on_pushButton_5_clicked()
     vec_info_client[5] = QString::number(budget);
     EditProfile obj_edit_budget;
     obj_edit_budget.Edit_Profile(vec_info_client[0],"Budget",QString::number(budget));
+
     obj_edit_budget.Edit_Profile(filter_obj.allProducts()[index_filter-1].userNameSeller,"Budget",
-            QString::number((ui->lineEdit_8->text().toInt() * ui->spinBox->value())+
-            obj_edit_budget.getBudget(filter_obj.allProducts()[index_filter-1].userNameSeller).toInt()));
+    QString::number((ui->lineEdit_8->text().toInt() * ui->spinBox->value())+
+    obj_edit_budget.getBudget(filter_obj.allProducts()[index_filter-1].userNameSeller).toInt()));
+
     ui->lineEdit_6->setText(QString::number(ui->lineEdit_6->text().toInt() - (ui->spinBox->value())));
 
     bak::Buyer buy_obj {vec_info_client[0].toStdString()};
+    buy_obj.setCountProduct(filter_obj.allProducts()[index_filter-1].CountProduct);
+    buy_obj.setNumberPurchased(ui->spinBox->value());
     buy_obj.buy();
-
-    QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
+      QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
 }
 
 

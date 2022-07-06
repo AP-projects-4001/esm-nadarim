@@ -1,5 +1,5 @@
 #include "admin.h"
-#include "QValidator"//"
+#include "QValidator"
 #include "ui_admin.h"
 #include "editprofile.h"
 
@@ -279,7 +279,7 @@ void Admin::on_pushButton_8_clicked()
 
 void Admin::on_pushButton_9_clicked()
 {
-    if(obj_manger.allTransactions().size() == index_transaction -1)
+    if(obj_manger.allTransactions().size() == index_transaction)
     {
         return;
     }
