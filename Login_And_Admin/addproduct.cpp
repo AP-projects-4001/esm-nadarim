@@ -96,7 +96,15 @@ void addproduct::on_confirm_btn_clicked()
         msg.warning(this,"not Successful","you have to fill all fields");
         return;
     }
-
+    ui->group_combo->setCurrentIndex(0);
+    ui->model_combo->setCurrentIndex(0);
+    ui->color_combo->setCurrentIndex(0);
+    ui->warranty_combo->setCurrentIndex(0);
+    ui->productname_line->clear();
+    ui->brand_line->clear();
+    ui->number_line->clear();
+    ui->weight_line->clear();
+    ui->price_line->clear();
     addtofile();
     QMessageBox::information(this,"adding product","product added successfully!");
 }

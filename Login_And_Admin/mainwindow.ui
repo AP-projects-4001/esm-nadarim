@@ -83,6 +83,20 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       </layout>
      </item>
      <item>
+      <widget class="QLabel" name="label_passState">
+       <property name="text">
+        <string>Show password</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_pass">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
         <number>12</number>
@@ -107,6 +121,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
   outline: none;
   -webkit-transition: all .2s;
   transition: all .2s;</string>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
          </property>
         </widget>
        </item>

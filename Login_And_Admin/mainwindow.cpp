@@ -138,3 +138,18 @@ void MainWindow::on_forgetpass_btn_clicked()
 
 }
 
+
+void MainWindow::on_checkBox_pass_clicked()
+{
+    if(ui->label_passState->text() == "Show password")
+    {
+        ui->label_passState->setText("Hide password");
+        ui->pass_line->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        ui->label_passState->setText("Show password");
+        ui->pass_line->setEchoMode(QLineEdit::Password);
+    }
+}
+
