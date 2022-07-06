@@ -61,7 +61,7 @@ void Payment_Client::on_pushButton_confirm_clicked()
     EditProfile Edit_obj;
     Edit_obj.Edit_Profile(username_seller,"Budget",QString::number(Edit_obj.getBudget(username_seller).toInt()+ui->label_money->text().toInt()));
 
-    Client* profile_obj = new Client(nullptr,vector_info[0]);
+    Client* profile_obj = new Client(nullptr,"Username:"+vector_info[0]);
     profile_obj->show();
     this->close();
 }
