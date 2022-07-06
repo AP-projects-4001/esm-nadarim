@@ -4,6 +4,7 @@
 #include "editprofile.h"
 #include <QMainWindow>
 #include <abstract_transactions.h>
+#include "Buyer.h"
 namespace Ui {
 class Get_Money_Customer;
 }

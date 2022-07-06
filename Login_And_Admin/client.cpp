@@ -244,7 +244,7 @@ void Client::on_pushButton_5_clicked()
     buy_obj.setCountProduct(filter_obj.allProducts()[index_filter-1].CountProduct);
     buy_obj.setNumberPurchased(ui->spinBox->value());
     buy_obj.buy();
-      QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
+    QMessageBox::information(this,"Payment","Your purchase was completed successfully.");
 }
 
 
@@ -260,12 +260,11 @@ void Client::on_pushButton_4_clicked()
         QMessageBox::information(this,"Error","The number of goods requested is more than the number of available goods.");
         return;
     }
-    if(ui->label_budget->text().toInt() < ui->lineEdit_8->text().toInt() * ui->spinBox->value())
-    {
-        QMessageBox::information(this,"Error","Your budget is not enough");
-        return;
-    }
-    Abstract_Transactions* payment_obj = new Payment_Client(nullptr,vec_info_client, ui->lineEdit_8->text().toInt() * ui->spinBox->value());
+    //
+    Abstract_Transactions* payment_obj = new Payment_Client(nullptr,vec_info_client,
+    ui->lineEdit_8->text().toInt() * ui->spinBox->value() , ui->spinBox->value() ,
+    filter_obj.allProducts()[index_filter-1].CountProduct , filter_obj.allProducts()[index_filter-1].userNameSeller);
+    //
     this->close();
     payment_obj->show();
 }
