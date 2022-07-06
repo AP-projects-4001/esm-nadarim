@@ -94,8 +94,10 @@ void MainWindow::searchFile()
 
 MainWindow::~MainWindow()
 {
+    qDebug()<<"aaa";
     delete ui;
     delete(customer);
+
 }
 
 
@@ -122,7 +124,7 @@ void MainWindow::on_login_btn_clicked()
 void MainWindow::on_signup_btn_clicked()
 {
     Register *r=new Register;
-    this->hide();
+    this->close();
     r->show();
 
 }
