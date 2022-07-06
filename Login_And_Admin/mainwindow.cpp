@@ -74,11 +74,15 @@ void MainWindow::searchFile()
         if (Level == "Admin")
         {
             Admin *w = new Admin(this);
+            delete ui;
+            this->close();
             w->show();
         }
         else if(Level == "Client")
         {
             Client *client_window = new Client(this,username);
+            delete ui;
+            this->close();
             client_window->show();
         }
         else if(Level=="Customer"){

@@ -32,6 +32,8 @@ void Abstract_Transactions::update_time()
         timer->stop();
         Edit_Profile_Client* profile_obj = new Edit_Profile_Client(nullptr,vector_info);
         profile_obj->show();
+        delete ui;
+        delete timer;
         this->close();
     }
     if(ui->label_second->text().toInt() == 0)

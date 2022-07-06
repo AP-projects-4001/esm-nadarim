@@ -25,6 +25,8 @@ void Payment_Client::on_actionBack_triggered()
     timer->stop();
     Client* profile_obj = new Client(nullptr,"Username:"+vector_info[0]);
     profile_obj->show();
+    delete timer;
+    delete ui;
     this->close();
 }
 
@@ -52,6 +54,8 @@ void Payment_Client::on_pushButton_confirm_clicked()
         QMessageBox::information(this,"Error","The number of products ordered is more than the available number.");
         Client* profile_obj = new Client(nullptr,"Username:"+vector_info[0]);
         profile_obj->show();
+        delete timer;
+        delete ui;
         this->close();
         return;
     }
@@ -63,5 +67,7 @@ void Payment_Client::on_pushButton_confirm_clicked()
 
     Client* profile_obj = new Client(nullptr,"Username:"+vector_info[0]);
     profile_obj->show();
+    delete timer;
+    delete ui;
     this->close();
 }

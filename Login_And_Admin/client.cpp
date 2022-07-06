@@ -3,6 +3,7 @@
 #include "ui_client.h"
 #include "edit_profile_client.h"
 #include "abstract_transactions.h"
+#include "mainwindow.h"
 Client::Client(QWidget *parent,QString username_client) :
     QMainWindow(parent),
     ui(new Ui::Client)
@@ -64,7 +65,11 @@ void Client::on_actionProfile_triggered()
 
 void Client::on_actionExit_triggered()
 {
+    MainWindow* window = new MainWindow();
+    vec_info_client.clear();
+    delete ui;
     this->close();
+    window->show();
 }
 
 

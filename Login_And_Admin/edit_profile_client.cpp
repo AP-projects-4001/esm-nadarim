@@ -23,6 +23,8 @@ Edit_Profile_Client::~Edit_Profile_Client()
 
 void Edit_Profile_Client::on_pushButton_4_clicked()
 {
+    vec_info_profile_client.clear();
+    delete ui;
     this->close();
 }
 
@@ -94,6 +96,8 @@ void Edit_Profile_Client::on_actionBack_triggered()
 {
     Client* newClient = new Client(nullptr,"Username:"+vec_info_profile_client[0]);
     this->close();
+    vec_info_profile_client.clear();
+    delete ui;
     newClient->show();
 }
 

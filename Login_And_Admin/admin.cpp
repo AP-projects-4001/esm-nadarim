@@ -2,7 +2,7 @@
 #include "QValidator"
 #include "ui_admin.h"
 #include "editprofile.h"
-
+#include "mainwindow.h"
 Admin::Admin(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Admin)
@@ -313,6 +313,10 @@ void Admin::on_pushButton_10_clicked()
 
 void Admin::on_actionBack_triggered()
 {
+    MainWindow* window = new MainWindow();
+    vecAdmin.clear();
+    delete ui;
     this->close();
+    window->show();
 }
 
