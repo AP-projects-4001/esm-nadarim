@@ -67,7 +67,16 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="user_line">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
          </property>
         </widget>
        </item>
@@ -88,8 +97,16 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="pass_line">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);
-</string>
+          <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
          </property>
         </widget>
        </item>
@@ -164,7 +181,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         <widget class="QPushButton" name="login_btn">
          <property name="maximumSize">
           <size>
-           <width>87</width>
+           <width>140</width>
            <height>40</height>
           </size>
          </property>
@@ -172,7 +189,21 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           <enum>Qt::RightToLeft</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">width: 300px; 
+		height: 88px;
+background-color: rgb(0, 170, 127);
+color: rgb(0, 85, 127);
+		border-radius: 5px;
+		position: absolute;
+		top: 50%; 
+		opacity: 1;
+		transform: translateY(-50%);
+		padding: 0;
+		border: none;
+		display: flex;
+		justify-content: center;
+    cursor: pointer;
+</string>
          </property>
          <property name="text">
           <string>Log in</string>
