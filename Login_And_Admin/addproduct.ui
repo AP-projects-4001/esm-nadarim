@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>471</width>
+    <width>540</width>
     <height>510</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>471</width>
+    <width>540</width>
     <height>510</height>
    </size>
   </property>
@@ -29,9 +29,6 @@
    <string notr="true">background-color: rgb(0, 85, 127);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <property name="spacing">
-    <number>10</number>
-   </property>
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
@@ -42,13 +39,10 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <string>Add new</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="spacing">
-       <number>21</number>
-      </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
-         <number>0</number>
+         <number>5</number>
         </property>
         <property name="leftMargin">
          <number>0</number>
@@ -81,7 +75,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 170, 127);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
           </property>
           <item>
            <property name="text">
@@ -104,6 +99,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>26</number>
+        </property>
         <item>
          <widget class="QLabel" name="label_2">
           <property name="maximumSize">
@@ -120,8 +118,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         <item>
          <widget class="QComboBox" name="model_combo">
           <property name="styleSheet">
-           <string notr="true">
-background-color: rgb(0, 170, 127);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
           </property>
          </widget>
         </item>
@@ -130,7 +128,7 @@ background-color: rgb(0, 170, 127);</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <property name="spacing">
-         <number>16</number>
+         <number>17</number>
         </property>
         <item>
          <widget class="QLabel" name="label_3">
@@ -142,7 +140,34 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QLineEdit" name="productname_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
           </property>
          </widget>
         </item>
@@ -151,7 +176,7 @@ background-color: rgb(0, 170, 127);</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <property name="spacing">
-         <number>63</number>
+         <number>64</number>
         </property>
         <item>
          <widget class="QLabel" name="label_4">
@@ -163,7 +188,34 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QLineEdit" name="brand_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
           </property>
          </widget>
         </item>
@@ -171,6 +223,9 @@ background-color: rgb(0, 170, 127);</string>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>26</number>
+        </property>
         <item>
          <widget class="QLabel" name="label_5">
           <property name="maximumSize">
@@ -187,8 +242,8 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QComboBox" name="color_combo">
           <property name="styleSheet">
-           <string notr="true">
-background-color: rgb(0, 170, 127);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
           </property>
           <item>
            <property name="text">
@@ -269,7 +324,34 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QLineEdit" name="number_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
           </property>
          </widget>
         </item>
@@ -290,7 +372,34 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QLineEdit" name="weight_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
           </property>
          </widget>
         </item>
@@ -311,7 +420,34 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QLineEdit" name="price_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
           </property>
          </widget>
         </item>
@@ -319,6 +455,9 @@ background-color: rgb(0, 170, 127);</string>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <property name="spacing">
+         <number>22</number>
+        </property>
         <item>
          <widget class="QLabel" name="label_9">
           <property name="maximumSize">
@@ -335,8 +474,8 @@ background-color: rgb(0, 170, 127);</string>
         <item>
          <widget class="QComboBox" name="warranty_combo">
           <property name="styleSheet">
-           <string notr="true">
-background-color: rgb(0, 170, 127);</string>
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
           </property>
           <item>
            <property name="text">

@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>303</height>
+    <width>560</width>
+    <height>452</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>419</width>
+    <width>560</width>
     <height>303</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>419</width>
-    <height>303</height>
+    <height>452</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -39,10 +39,22 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <string>Sign up</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>16</number>
+      </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
-         <number>73</number>
+         <number>74</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
         </property>
         <item>
          <widget class="QLabel" name="label">
@@ -56,9 +68,26 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </item>
         <item>
          <widget class="QLineEdit" name="name_line">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
+           <string notr="true">font-size: 16px;
+  display: block;
+  
+  width: 100%;
+  padding: 10px 10px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
+          </property>
+          <property name="maxLength">
+           <number>32765</number>
           </property>
          </widget>
         </item>
@@ -81,8 +110,23 @@ background-color: rgb(255, 255, 255);</string>
         </item>
         <item>
          <widget class="QLineEdit" name="username_line">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
           </property>
          </widget>
         </item>
@@ -105,8 +149,29 @@ background-color: rgb(255, 255, 255);</string>
         </item>
         <item>
          <widget class="QLineEdit" name="phone_line">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
           </property>
          </widget>
         </item>
@@ -130,7 +195,16 @@ background-color: rgb(255, 255, 255);</string>
         <item>
          <widget class="QLineEdit" name="address_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
           </property>
          </widget>
         </item>
@@ -154,7 +228,16 @@ background-color: rgb(255, 255, 255);</string>
         <item>
          <widget class="QLineEdit" name="pass_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
           </property>
          </widget>
         </item>
@@ -184,7 +267,16 @@ background-color: rgb(255, 255, 255);</string>
         <item>
          <widget class="QLineEdit" name="confirm_line">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;</string>
           </property>
          </widget>
         </item>
@@ -201,7 +293,7 @@ background-color: rgb(255, 255, 255);</string>
         <property name="maximumSize">
          <size>
           <width>1000</width>
-          <height>16777215</height>
+          <height>100</height>
          </size>
         </property>
         <property name="layoutDirection">
@@ -209,7 +301,8 @@ background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(0, 170, 127);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+border-radius: 5px;</string>
         </property>
         <property name="modelColumn">
          <number>0</number>
@@ -236,16 +329,35 @@ color: rgb(0, 0, 0);</string>
         <property name="spacing">
          <number>180</number>
         </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item alignment="Qt::AlignLeft">
          <widget class="QPushButton" name="login_btn_reg">
           <property name="maximumSize">
            <size>
             <width>85</width>
-            <height>16777215</height>
+            <height>40</height>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">width: 300px; 
+		height: 88px;
+background-color: rgb(0, 170, 127);
+color: rgb(0, 85, 127);
+		border-radius: 5px;
+		position: absolute;
+		top: 50%; 
+		opacity: 1;
+		transform: translateY(-50%);
+		padding: 0;
+		border: none;
+		display: flex;
+		justify-content: center;
+    cursor: pointer;</string>
           </property>
           <property name="text">
            <string>Back</string>
@@ -260,17 +372,36 @@ color: rgb(0, 0, 0);</string>
         </item>
         <item>
          <widget class="QPushButton" name="signup_btn_reg">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>85</width>
-            <height>16777215</height>
+            <height>63</height>
            </size>
           </property>
           <property name="layoutDirection">
            <enum>Qt::RightToLeft</enum>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">width: 300px; 
+		height: 88px;
+background-color: rgb(0, 170, 127);
+color: rgb(0, 85, 127);
+		border-radius: 5px;
+		position: absolute;
+		top: 50%; 
+		opacity: 1;
+		transform: translateY(-50%);
+		padding: 0;
+		border: none;
+		display: flex;
+		justify-content: center;
+    cursor: pointer;</string>
           </property>
           <property name="text">
            <string>Sign up</string>
@@ -278,7 +409,7 @@ color: rgb(0, 0, 0);</string>
           <property name="iconSize">
            <size>
             <width>12</width>
-            <height>20</height>
+            <height>50</height>
            </size>
           </property>
           <property name="default">

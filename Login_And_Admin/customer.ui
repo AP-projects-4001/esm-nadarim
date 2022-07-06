@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>294</height>
+    <width>510</width>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,9 +18,6 @@
 font: 600 9pt &quot;Segoe UI&quot;;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <property name="spacing">
-    <number>11</number>
-   </property>
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
@@ -30,98 +27,136 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
      <property name="title">
       <string>Customer</string>
      </property>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>26</y>
-        <width>153</width>
-        <height>211</height>
-       </rect>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>61</number>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="spacing">
-        <number>4</number>
-       </property>
-       <property name="leftMargin">
-        <number>2</number>
-       </property>
-       <property name="rightMargin">
-        <number>1</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="addproduct_btn">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 170, 127);</string>
-         </property>
-         <property name="text">
-          <string>Add new...</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="editprofile_btn">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 170, 127);</string>
-         </property>
-         <property name="text">
-          <string>Edit Profile</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="soldproduct_btn">
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 170, 127);</string>
-         </property>
-         <property name="text">
-          <string>Sold Product</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 170, 127);</string>
-         </property>
-         <property name="text">
-          <string>Products</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 170, 127);</string>
-         </property>
-         <property name="text">
-          <string>Receive profit</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="addproduct_btn">
+          <property name="styleSheet">
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Add new...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="editprofile_btn">
+          <property name="styleSheet">
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Edit Profile</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="soldproduct_btn">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Sold Product</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Products</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="styleSheet">
+           <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Receive profit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
    </item>
-   <item alignment="Qt::AlignHCenter">
+   <item>
     <widget class="QPushButton" name="exit_btn">
      <property name="minimumSize">
       <size>
        <width>100</width>
-       <height>0</height>
+       <height>20</height>
       </size>
      </property>
      <property name="layoutDirection">
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(85, 170, 255);</string>
+      <string notr="true">background-color: rgb(85, 170, 255);
+border-radius: 5px;</string>
      </property>
      <property name="text">
       <string>Exit</string>

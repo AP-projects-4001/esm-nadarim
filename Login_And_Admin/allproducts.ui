@@ -45,8 +45,22 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           </property>
           <item>
            <widget class="QPushButton" name="next_btn">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>32</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
             </property>
             <property name="text">
              <string>Next</string>
@@ -64,8 +78,22 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           </item>
           <item>
            <widget class="QPushButton" name="previous_btn">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>32</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
             </property>
             <property name="text">
              <string>Previous</string>
@@ -74,8 +102,22 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           </item>
           <item>
            <widget class="QPushButton" name="delete_btn">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>32</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
             </property>
             <property name="text">
              <string>Delete</string>
@@ -84,8 +126,22 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           </item>
           <item>
            <widget class="QPushButton" name="save_btn">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>32</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
             </property>
             <property name="text">
              <string>Save</string>
@@ -94,8 +150,22 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           </item>
           <item>
            <widget class="QPushButton" name="exit_btn">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>32</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;</string>
             </property>
             <property name="text">
              <string>Exit</string>
@@ -126,9 +196,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
               <item>
                <widget class="QComboBox" name="group_combo">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 170, 255);
-background-color: rgb(0, 170, 127);
-color: rgb(0, 0, 0);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
                 </property>
                 <item>
                  <property name="text">
@@ -161,8 +230,8 @@ color: rgb(0, 0, 0);</string>
               <item>
                <widget class="QComboBox" name="product_combo">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 170, 255);
-background-color: rgb(0, 170, 127);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
                 </property>
                </widget>
               </item>
@@ -184,8 +253,8 @@ background-color: rgb(0, 170, 127);</string>
               <item>
                <widget class="QComboBox" name="color_combo">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 170, 255);
-background-color: rgb(0, 170, 127);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
                 </property>
                 <item>
                  <property name="text">
@@ -263,8 +332,8 @@ background-color: rgb(0, 170, 127);</string>
               <item>
                <widget class="QComboBox" name="guarantee">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 170, 255);
-background-color: rgb(0, 170, 127);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;</string>
                 </property>
                 <item>
                  <property name="text">
@@ -301,7 +370,34 @@ background-color: rgb(0, 170, 127);</string>
               <item>
                <widget class="QLineEdit" name="name_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
                 </property>
                </widget>
               </item>
@@ -319,7 +415,34 @@ background-color: rgb(0, 170, 127);</string>
               <item>
                <widget class="QLineEdit" name="brand_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
                 </property>
                </widget>
               </item>
@@ -341,7 +464,34 @@ background-color: rgb(0, 170, 127);</string>
               <item>
                <widget class="QLineEdit" name="number_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
                 </property>
                </widget>
               </item>
@@ -359,7 +509,34 @@ background-color: rgb(0, 170, 127);</string>
               <item>
                <widget class="QLineEdit" name="weight_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
                 </property>
                </widget>
               </item>
@@ -379,7 +556,34 @@ background-color: rgb(0, 170, 127);</string>
             <item>
              <widget class="QLineEdit" name="price_line">
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(255, 255, 255);</string>
+               <string notr="true">background-color: #082336;
+	color: #3e93ff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1e4b6d;
+	padding: 10px;
+
+QLineEdit::hover
+{
+	background-color: #082336;
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}
+
+QLineEdit::focus
+{
+	
+	color: #3e93ca;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01dcff;
+	padding: 10px;
+
+}</string>
               </property>
              </widget>
             </item>
