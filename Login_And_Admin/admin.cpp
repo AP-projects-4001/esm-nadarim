@@ -41,6 +41,19 @@ Admin::Admin(QWidget *parent)
            {
                 ui->pushButton_8->setText("Activate account");
            }
+           ///////////////
+           for(int j=5 ;j<vecAdmin.size() ;j+=8)
+           {
+               if(vecAdmin[j]=="Admin")
+               {
+                   for(int z = 0 ;z < 8 ;z++)
+                   {
+                        vecAdmin.remove(j-5);
+                   }
+                   j=-3;
+               }
+           }
+           ///////////////
            index = 8;
         }
        bak::manager obj_manager;
