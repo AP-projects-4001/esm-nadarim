@@ -93,8 +93,9 @@ void transaction::on_previous_btn_clicked()
 
 void transaction::on_back_btn_clicked()
 {
-   this->close();
    Customer *customer=new Customer(nullptr,username);
+   this->close();
+   delete ui;
    customer->show();
 }
 

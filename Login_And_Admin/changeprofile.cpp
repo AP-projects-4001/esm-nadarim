@@ -159,8 +159,9 @@ void changeprofile::on_pushButton_2_clicked()
 
 void changeprofile::on_back_btn_clicked()
 {
-   this->hide();
    Customer *customer=new Customer(nullptr,Username);
+   this->close();
+   delete ui;
    customer->show();
 }
 

@@ -83,7 +83,8 @@ void ForgetPassword::on_confirm_btn_clicked()
 void ForgetPassword::on_back_btn_clicked()
 {
     login=new MainWindow;
-    this->hide();
+    this->close();
+    delete ui;
     login->show();
 }
 

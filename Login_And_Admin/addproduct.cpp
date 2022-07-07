@@ -96,6 +96,7 @@ void addproduct::on_confirm_btn_clicked()
         msg.warning(this,"not Successful","you have to fill all fields");
         return;
     }
+    addtofile();
     ui->group_combo->setCurrentIndex(0);
     ui->model_combo->setCurrentIndex(0);
     ui->color_combo->setCurrentIndex(0);
@@ -105,17 +106,15 @@ void addproduct::on_confirm_btn_clicked()
     ui->number_line->clear();
     ui->weight_line->clear();
     ui->price_line->clear();
-    addtofile();
     QMessageBox::information(this,"adding product","product added successfully!");
 }
 
 
 void addproduct::on_pushButton_2_clicked()
 {
-    this->hide();
     Customer *customer=new Customer(nullptr,username);
+    this->close();
+    delete ui;
     customer->show();
-    //QScopedPointer<Customer> customer(new Customer(nullptr,username));
-    //customer->show();
 }
 

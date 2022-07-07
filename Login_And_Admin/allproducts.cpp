@@ -204,8 +204,9 @@ void allproducts::on_save_btn_clicked()
 
 void allproducts::on_exit_btn_clicked()
 {
-   this->hide();
    Customer *customer=new Customer(nullptr,username);
+   this->close();
+   delete ui;
    customer->show();
 }
 

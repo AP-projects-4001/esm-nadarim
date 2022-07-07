@@ -86,8 +86,9 @@ void MainWindow::searchFile()
             client_window->show();
         }
         else if(Level=="Customer"){
-            this->hide();
             customer=new Customer(nullptr,save_password);
+            delete ui;
+            this->close();
             customer->show();
         }
     }
@@ -127,6 +128,7 @@ void MainWindow::on_login_btn_clicked()
 void MainWindow::on_signup_btn_clicked()
 {
     Register *r=new Register;
+    delete ui;
     this->close();
     r->show();
 
@@ -136,7 +138,8 @@ void MainWindow::on_signup_btn_clicked()
 void MainWindow::on_forgetpass_btn_clicked()
 {
    ForgetPassword *forgetpass=new ForgetPassword;
-   this->hide();
+   delete ui;
+   this->close();
    forgetpass->show();
 
 }

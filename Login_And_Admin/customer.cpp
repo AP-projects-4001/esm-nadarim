@@ -24,9 +24,9 @@ Customer::~Customer()
 
 void Customer::on_editprofile_btn_clicked()
 {
-   qDebug()<<username;
-   this->hide();
    changeprof=new changeprofile(nullptr,username);
+   this->close();
+   delete ui;
    changeprof->show();
 }
 
@@ -36,8 +36,10 @@ void Customer::on_editprofile_btn_clicked()
 
 void Customer::on_soldproduct_btn_clicked()
 {
-   this->hide();
+
    Transaction=new transaction(nullptr,username);
+   this->close();
+   delete ui;
    Transaction->show();
 
 }
@@ -45,16 +47,18 @@ void Customer::on_soldproduct_btn_clicked()
 
 void Customer::on_addproduct_btn_clicked()
 {
-    this->hide();
     addnew=new addproduct(nullptr,username);
+    this->close();
+    delete ui;
     addnew->show();
 }
 
 
 void Customer::on_pushButton_2_clicked()
 {
-    this->hide();
     products=new allproducts(nullptr,username);
+    this->close();
+    delete ui;
     products->show();
 }
 
@@ -72,6 +76,7 @@ void Customer::on_pushButton_4_clicked()
     Get_Money_Customer* get_money_obj = new Get_Money_Customer(nullptr,vec);
     get_money_obj->show();
     this->close();
+    delete ui;
 
 }
 
