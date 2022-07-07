@@ -98,7 +98,6 @@ void MainWindow::searchFile()
 
 MainWindow::~MainWindow()
 {
-    qDebug()<<"aaa";
     delete ui;
     delete(customer);
 

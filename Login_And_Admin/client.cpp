@@ -180,6 +180,7 @@ void Client::on_pushButton_2_clicked()
 {
     if(filter_obj.allProducts().size() <= index_filter )
     {
+        QMessageBox::information(this,"information","It is the last");
         return;
     }
     ui->lineEdit->setText(filter_obj.allProducts()[index_filter].group);
@@ -199,6 +200,7 @@ void Client::on_pushButton_3_clicked()
 {
     if(index_filter < 2 )
     {
+        QMessageBox::information(this,"information","It is the last");
         return;
     }
     index_filter -=2;

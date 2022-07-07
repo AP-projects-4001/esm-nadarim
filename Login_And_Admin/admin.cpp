@@ -70,6 +70,7 @@ void Admin::on_pushButton_clicked()
 {
     if (vecAdmin.size() == index)
     {
+        QMessageBox::information(this,"information","It is the last");
         return;
     }
     ui->lineEdit->setText(vecAdmin[index]);
@@ -106,6 +107,7 @@ void Admin::on_pushButton_2_clicked()
 
     if(index <= 9)
     {
+        QMessageBox::information(this,"information","It is the first");
         return;
     }
      index = index -16;
@@ -169,7 +171,7 @@ void Admin::on_pushButton_7_clicked()
         msg.exec();
         return;
     }
-    if(ui->lineEdit_4->text().size() < 11)
+    if(ui->lineEdit_4->text().size() < 10)
     {
         QMessageBox::information(this,"Error","The phone number entered is invalid");
         return;
@@ -281,6 +283,7 @@ void Admin::on_pushButton_9_clicked()
 {
     if(obj_manger.allTransactions().size() == index_transaction)
     {
+        QMessageBox::information(this,"information","It is the last");
         return;
     }
     ui->lineEdit_8->setText(obj_manger.allTransactions()[index_transaction].userNameBuyer);
@@ -298,6 +301,7 @@ void Admin::on_pushButton_10_clicked()
 
     if(index_transaction < 2)
     {
+        QMessageBox::information(this,"information","It is the first");
         return;
     }
     index_transaction -= 2;

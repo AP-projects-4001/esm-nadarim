@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 7.0.2, 2022-07-07T01:46:51. -->
-=======
-<!-- Written by QtCreator 7.0.2, 2022-07-06T22:09:39. -->
->>>>>>> 1e66e56f5d0886cb810ef29f186c4639b47b250a
+<!-- Written by QtCreator 7.0.2, 2022-07-07T08:03:57. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -245,8 +241,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">AP_Project2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Lenovo/Desktop/pro/esm-nadarim/Login_And_Admin/AP_Project.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Lenovo/Desktop/pro/esm-nadarim/Login_And_Admin/AP_Project.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Lenovo/Desktop/propro/esm-nadarim/Login_And_Admin/AP_Project.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Lenovo/Desktop/propro/esm-nadarim/Login_And_Admin/AP_Project.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
