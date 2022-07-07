@@ -2,7 +2,7 @@
 
 void bak::fileEnctyption::setAddresFile(std::string addresFileIn) { addresFile = addresFileIn; }
 
-void bak::fileEnctyption::write(const char* wordIn, unsigned int sizeWord, unsigned int location) {
+void bak::fileEnctyption::write(const unsigned char* wordIn, unsigned int sizeWord, unsigned int location) {
 	std::fstream fileWrite(addresFile, std::ios::in | std::ios::out | std::ios::binary);
 	fileWrite.seekp(location);
 	

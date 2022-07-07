@@ -15,7 +15,7 @@ void bak::fileProduct::addProduct(product newProduct) {
 
 	newProduct.CountProduct = (location / (sizeof(product) * sizeof(unsigned int)));
 
-	fileEnctyption.write(reinterpret_cast<const char*>(&newProduct), sizeof(product), location);
+	fileEnctyption.write(reinterpret_cast<const unsigned char*>(&newProduct), sizeof(product), location);
 }
 
 void bak::fileProduct::deleteProduct(int CountProductIn) { editProduct(CountProductIn, product()); }
@@ -26,7 +26,7 @@ void bak::fileProduct::editProduct(int CountProductIn, product newProduct) {
 
 	newProduct.CountProduct = search.CountProduct;
 
-	fileEnctyption.write(reinterpret_cast<const char*>(&newProduct), sizeof(product), location);
+	fileEnctyption.write(reinterpret_cast<const unsigned char*>(&newProduct), sizeof(product), location);
 }
 
 std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {

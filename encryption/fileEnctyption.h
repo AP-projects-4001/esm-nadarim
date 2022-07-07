@@ -13,7 +13,7 @@ namespace bak {
 	public:
 		void setAddresFile(std::string addresFileIn);
 
-		void write(const char* wordIn, unsigned int sizeWord, unsigned int location);
+		void write(const unsigned char* wordIn, unsigned int sizeWord, unsigned int location);
 		void read(char* wordOut, unsigned int sizeWord, unsigned int location);
 
 	private:
