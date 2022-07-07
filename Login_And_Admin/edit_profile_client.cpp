@@ -59,7 +59,7 @@ void Edit_Profile_Client::on_pushButton_2_clicked()
         QMessageBox::information(this,"Error",QString::fromStdString(check_pass.getErr()));
         return;
     }
-    if(ui->lineEdit_4->text().size() < 11)
+    if(ui->lineEdit_4->text().size() < 10)
     {
         QMessageBox::information(this,"Error","Invalid phoneNumber");
         return;
