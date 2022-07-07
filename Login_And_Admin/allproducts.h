@@ -33,6 +33,7 @@ private:
     Ui::allproducts *ui;
     std::vector<bak::product> Allproducts;
     int index;
+    int deleteCount;
     QString username;
     QString group;
     QString product;

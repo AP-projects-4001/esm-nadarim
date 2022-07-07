@@ -1,17 +1,20 @@
 #include "product.h"
 #include <cstring>
 
-//void bak::product::setProduct(product productIn) {
-//	buyerProduct.restrictWord(productIn.userNameSeller, buyerProduct.userNameSeller, sizeof(buyerProduct.userNameSeller));
-//	buyerProduct.restrictWord(productIn.name, buyerProduct.name, sizeof(buyerProduct.name));
-//	buyerProduct.restrictWord(productIn.group, buyerProduct.group, sizeof(buyerProduct.group));
-//	buyerProduct.restrictWord(productIn.brand, buyerProduct.brand, sizeof(buyerProduct.brand));
-//	buyerProduct.restrictWord(productIn.model, buyerProduct.model, sizeof(buyerProduct.model));
-//	buyerProduct.restrictWord(productIn.color, buyerProduct.color, sizeof(buyerProduct.color));
-//	buyerProduct.restrictWord(productIn.warranty, buyerProduct.warranty, sizeof(buyerProduct.warranty));
-//	buyerProduct.price = productIn.price;
-//	buyerProduct.weight = productIn.weight;
-//}
+
+void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
+
+    int length = wordIn.size();
+    length = (length < (size - 1) ? length : (size - 1));
+    wordIn[length] = '\0';
+
+    strncpy(wordOut, "", size);
+
+    if (wordIn != "")
+        strncpy(wordOut, wordIn.data(), length);
+    else
+        wordOut[0] = '\0';
+}
 
 bool bak::product::operator==(product& productIn) {
     if (std::string(this->userNameSeller) != std::string(productIn.userNameSeller))
@@ -79,18 +82,3 @@ bool bak::product::operator<=(product comparison) {
 }
 
 bool bak::product::operator>=(product comparison) { return (comparison <= *this); }
-
-void bak::product::restrictWord(std::string wordIn, char* wordOut, int size) {
-
-    int length = wordIn.size();
-    length = (length < (size - 1) ? length : (size - 1));
-    wordIn[length] = '\0';
-
-    strncpy(wordOut, "", size);
-
-    if (wordIn != "")
-        strncpy(wordOut, wordIn.data(), length);
-    else
-        wordOut[0] = '\0';
-
-}

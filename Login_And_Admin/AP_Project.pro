@@ -20,6 +20,7 @@ SOURCES += \
     editprofile.cpp \
     encryption.cpp \
     fileProduct.cpp \
+    fileenctyption.cpp \
     filter.cpp \
     findPrime.cpp \
     forgetpassword.cpp \
@@ -49,6 +50,7 @@ HEADERS += \
     editprofile.h \
     encryption.h \
     fileProduct.h \
+    fileenctyption.h \
     filter.h \
     findPrime.h \
     forgetpassword.h \

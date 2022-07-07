@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>404</width>
-    <height>289</height>
+    <width>500</width>
+    <height>350</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>404</width>
-    <height>289</height>
+    <width>500</width>
+    <height>350</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>404</width>
-    <height>289</height>
+    <width>500</width>
+    <height>400</height>
    </size>
   </property>
   <property name="mouseTracking">
@@ -32,14 +32,14 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 85, 127);</string>
+   <string notr="true">background-color: #3B8BEB;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(242, 254, 255);
+       <string notr="true">background-color: #E7E3D4;
 font: 600 9pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="title">
@@ -47,10 +47,13 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="spacing">
-        <number>12</number>
+        <number>11</number>
        </property>
        <property name="topMargin">
-        <number>15</number>
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
        </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -124,7 +127,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           <number>1</number>
          </property>
          <property name="bottomMargin">
-          <number>14</number>
+          <number>25</number>
          </property>
          <item>
           <widget class="QCheckBox" name="checkBox_pass">
@@ -141,6 +144,18 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          </item>
          <item>
           <widget class="QLabel" name="label_passState">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="text">
             <string>Show password</string>
            </property>
@@ -221,7 +236,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            <property name="maximumSize">
             <size>
              <width>140</width>
-             <height>40</height>
+             <height>48</height>
             </size>
            </property>
            <property name="layoutDirection">
@@ -230,8 +245,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
            <property name="styleSheet">
             <string notr="true">width: 300px; 
 		height: 88px;
-background-color: rgb(0, 170, 127);
-color: rgb(0, 85, 127);
+background-color: #B23850;
+color: #E7E3D4;
 		border-radius: 5px;
 		position: absolute;
 		top: 50%; 

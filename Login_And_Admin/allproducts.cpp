@@ -17,6 +17,7 @@ allproducts::allproducts(QWidget *parent,QString username):
     Allproducts=customer.allProductsSell();
 
     index=0;
+    deleteCount=0;
     this->username=username;
 
     if(Allproducts.size()>0)
@@ -72,7 +73,7 @@ void allproducts::on_next_btn_clicked()
         return;
     }
 
-
+    deleteCount=0;
     ++index;
     ui->brand_line->setText(Allproducts[index].brand);
     ui->name_line->setText(Allproducts[index].name);
@@ -107,6 +108,7 @@ void allproducts::on_previous_btn_clicked()
     }
 
     index-=1;
+    deleteCount=0;
 
     ui->brand_line->setText(Allproducts[index].brand);
     ui->name_line->setText(Allproducts[index].name);
@@ -161,10 +163,18 @@ void allproducts::on_group_combo_currentTextChanged()
 
 void allproducts::on_delete_btn_clicked()
 {
-
+  if(deleteCount==0)
+  {
    bak::seller deleteproduct(username.toStdString());
-
    deleteproduct.deleteProduct(Allproducts[index].CountProduct);
+   ++deleteCount;
+   QMessageBox::information(this,"Successful delete","The Item Successfully deleted!");
+  }
+  else{
+      QMessageBox msg;
+      msg.warning(this,"not Successful","There is nothing to be deleted!");
+      return;
+  }
 }
 
 

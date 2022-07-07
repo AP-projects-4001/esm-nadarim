@@ -26,7 +26,7 @@
    <string>Admin</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 85, 127);
+   <string notr="true">background-color: #B4DFE5
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -40,8 +40,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-</string>
+     <string notr="true">background-color: #D2FDFF;
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="title">
      <string>User information</string>
@@ -57,6 +57,13 @@
        <width>241</width>
        <height>24</height>
       </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+</string>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -165,7 +172,8 @@
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Next</string>
@@ -181,7 +189,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Previous</string>
@@ -197,7 +206,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Delete profile</string>
@@ -213,7 +223,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Edit profile</string>
@@ -245,11 +256,15 @@
      </property>
      <property name="font">
       <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
        <kerning>true</kerning>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C</string>
      </property>
      <property name="text">
       <string>Save</string>
@@ -391,7 +406,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Disable account</string>
@@ -408,7 +424,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: #D2FDFF;
+font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="title">
      <string>transaction</string>
@@ -556,7 +573,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Next</string>
@@ -572,7 +590,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: #303C6C;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Previous</string>
@@ -612,7 +631,7 @@
      <x>0</x>
      <y>0</y>
      <width>931</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLogin">

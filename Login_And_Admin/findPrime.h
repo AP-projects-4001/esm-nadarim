@@ -1,3 +1,7 @@
+#ifndef FINDPRIME_H
+#define FINDPRIME_H
+
+
 #pragma once
 
 #include <vector>
@@ -5,17 +9,19 @@
 
 namespace bak {
 
-	class findPrime{
+    class findPrime{
 
-	public:
-		void setRange(unsigned int minNumberIn, unsigned int maxNumberIn );
-		std::vector<unsigned int> find();
+    public:
+        void setRange(unsigned int minNumberIn, unsigned int maxNumberIn );
+        std::vector<unsigned int> find();
 
-	private:
-		bool isPrime(unsigned int numberIn);
-		unsigned int convertOdd(unsigned int numberIn);
+    private:
+        bool isPrime(unsigned int numberIn);
+        unsigned int convertOdd(unsigned int numberIn);
 
-		unsigned int minNumber = 0, maxNumber = 0;
-	};
+        unsigned int minNumber = 0, maxNumber = 0;
+    };
 
 }
+
+#endif // FINDPRIME_H

@@ -18,7 +18,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>419</width>
+    <width>560</width>
     <height>452</height>
    </size>
   </property>
@@ -26,13 +26,13 @@
    <string>Sign Up</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 85, 127);</string>
+   <string notr="true">background-color: #3B8BEB;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(242, 254, 255);
+      <string notr="true">background-color: #E7E3D4;
 font: 600 9pt &quot;Segoe UI&quot;;</string>
      </property>
      <property name="title">
@@ -300,7 +300,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 170, 127);
+         <string notr="true">background-color: #B23850;
 color: rgb(0, 0, 0);
 border-radius: 5px;</string>
         </property>
@@ -337,17 +337,23 @@ border-radius: 5px;</string>
         </property>
         <item alignment="Qt::AlignLeft">
          <widget class="QPushButton" name="login_btn_reg">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>85</width>
-            <height>40</height>
+            <height>60</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">width: 300px; 
 		height: 88px;
-background-color: rgb(0, 170, 127);
-color: rgb(0, 85, 127);
+background-color: #B23850;
+color: #E7E3D4;
 		border-radius: 5px;
 		position: absolute;
 		top: 50%; 
@@ -357,7 +363,8 @@ color: rgb(0, 85, 127);
 		border: none;
 		display: flex;
 		justify-content: center;
-    cursor: pointer;</string>
+    cursor: pointer;
+</string>
           </property>
           <property name="text">
            <string>Back</string>
@@ -375,13 +382,13 @@ color: rgb(0, 85, 127);
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>0</height>
+            <height>30</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
             <width>85</width>
-            <height>63</height>
+            <height>73</height>
            </size>
           </property>
           <property name="layoutDirection">
@@ -390,8 +397,8 @@ color: rgb(0, 85, 127);
           <property name="styleSheet">
            <string notr="true">width: 300px; 
 		height: 88px;
-background-color: rgb(0, 170, 127);
-color: rgb(0, 85, 127);
+background-color: #B23850;
+color: #E7E3D4;
 		border-radius: 5px;
 		position: absolute;
 		top: 50%; 
@@ -401,7 +408,8 @@ color: rgb(0, 85, 127);
 		border: none;
 		display: flex;
 		justify-content: center;
-    cursor: pointer;</string>
+    cursor: pointer;
+</string>
           </property>
           <property name="text">
            <string>Sign up</string>
