@@ -14,6 +14,7 @@ Edit_Profile_Client::Edit_Profile_Client(QWidget *parent,QVector<QString> vec_in
     ui->textEdit->setText(vec_info_profile_client[3]);
     ui->lineEdit_4->setText(vec_info_profile_client[4]);
     ui->lineEdit_6->setText(vec_info_profile_client[5]);
+    ui->lineEdit_4->setValidator(new QIntValidator());
 }
 
 Edit_Profile_Client::~Edit_Profile_Client()
@@ -62,6 +63,11 @@ void Edit_Profile_Client::on_pushButton_2_clicked()
     if(ui->lineEdit_4->text().size() < 10)
     {
         QMessageBox::information(this,"Error","Invalid phoneNumber");
+        return;
+    }
+    if(ui->lineEdit_4->text()[0] == '0')
+    {
+        QMessageBox::information(this,"Error","Phone number msut not start with 0");
         return;
     }
     EditProfile editProfile_obj;

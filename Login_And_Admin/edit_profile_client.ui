@@ -175,6 +175,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <height>24</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;without 0 at first&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="maxLength">
       <number>11</number>
      </property>
