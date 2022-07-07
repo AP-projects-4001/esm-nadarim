@@ -12,6 +12,10 @@ addproduct::addproduct(QWidget *parent, QString username) :
 {
     ui->setupUi(this);
     this->username=username;
+
+     ui->price_line->setValidator(new QIntValidator(0,100000000,this));
+     ui->weight_line->setValidator(new QIntValidator);
+     ui->number_line->setValidator(new QIntValidator);
 }
 
 addproduct::~addproduct()

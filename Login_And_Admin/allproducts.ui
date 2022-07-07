@@ -587,6 +587,9 @@ QLineEdit::focus
 
 }</string>
               </property>
+              <property name="inputMethodHints">
+               <set>Qt::ImhPreferNumbers</set>
+              </property>
              </widget>
             </item>
            </layout>

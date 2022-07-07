@@ -56,6 +56,10 @@ allproducts::allproducts(QWidget *parent,QString username):
     number=ui->number_line->text();
     weight=ui->weight_line->text();
     price=ui->price_line->text();
+
+     ui->number_line->setValidator(new QIntValidator);
+     ui->weight_line->setValidator(new QIntValidator);
+     ui->price_line->setValidator(new QIntValidator(0,100000000,this));
 }
 
 allproducts::~allproducts()
@@ -193,6 +197,13 @@ void allproducts::on_save_btn_clicked()
     if(group_delete==group && product_delete==product && color_delete==color && warranty_delete==warranty && productname_delete==productname && brand_delete==brand && number_delete==number && weight_delete==weight && price_delete==price){
         QMessageBox msg;
         msg.warning(this,"not Successful","There is nothing to be saved");
+        return;
+    }
+
+
+    if(group_delete=="" || product_delete=="" || color_delete=="" || warranty_delete=="" || productname_delete=="" || brand_delete==" " || number_delete==" " || weight_delete==" " || price_delete==" "){
+        QMessageBox msg;
+        msg.warning(this,"not Successful","You have to fill all fileds!");
         return;
     }
 

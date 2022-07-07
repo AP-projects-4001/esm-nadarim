@@ -45,7 +45,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
-         <number>74</number>
+         <number>99</number>
         </property>
         <property name="sizeConstraint">
          <enum>QLayout::SetDefaultConstraint</enum>
@@ -96,7 +96,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <property name="spacing">
-         <number>50</number>
+         <number>76</number>
         </property>
         <item>
          <widget class="QLabel" name="label_2">
@@ -139,11 +139,23 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
         </property>
         <item>
          <widget class="QLabel" name="label_3">
+          <property name="minimumSize">
+           <size>
+            <width>87</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>109</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(0, 0, 0);</string>
           </property>
           <property name="text">
-           <string>Phone Number</string>
+           <string>PhoneNumber(+98)</string>
           </property>
          </widget>
         </item>
@@ -180,7 +192,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <property name="spacing">
-         <number>68</number>
+         <number>93</number>
         </property>
         <item>
          <widget class="QLabel" name="label_4">
@@ -213,7 +225,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <property name="spacing">
-         <number>55</number>
+         <number>80</number>
         </property>
         <item>
          <widget class="QLabel" name="label_5">
@@ -246,7 +258,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <property name="spacing">
-         <number>9</number>
+         <number>33</number>
         </property>
         <item>
          <widget class="QLabel" name="label_6">
