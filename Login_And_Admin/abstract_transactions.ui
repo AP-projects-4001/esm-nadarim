@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>485</height>
+    <width>604</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -40,7 +40,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(242, 254, 255);</string>
+     <string notr="true">background-color: rgb(242, 254, 255);
+background-color: rgb(124, 255, 135);</string>
     </property>
     <property name="title">
      <string>Transaction page</string>
@@ -193,8 +194,8 @@
    <widget class="QPushButton" name="pushButton_confirm">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>410</y>
+      <x>270</x>
+      <y>310</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -328,7 +329,8 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(242, 254, 255);</string>
+     <string notr="true">background-color: rgb(242, 254, 255);
+background-color: rgb(7, 251, 255);</string>
     </property>
     <property name="title">
      <string>card number</string>
@@ -406,13 +408,14 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>310</y>
+      <y>120</y>
       <width>551</width>
       <height>80</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(242, 254, 255);</string>
+     <string notr="true">background-color: rgb(242, 254, 255);
+background-color: rgb(7, 189, 255);</string>
     </property>
     <property name="title">
      <string>Bank account name</string>
@@ -453,7 +456,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>613</width>
+     <width>604</width>
      <height>21</height>
     </rect>
    </property>

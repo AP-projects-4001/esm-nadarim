@@ -200,7 +200,7 @@ void Client::on_pushButton_3_clicked()
 {
     if(index_filter < 2 )
     {
-        QMessageBox::information(this,"information","It is the last");
+        QMessageBox::information(this,"information","It is the first");
         return;
     }
     index_filter -=2;
