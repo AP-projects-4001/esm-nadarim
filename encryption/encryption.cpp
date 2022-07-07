@@ -8,9 +8,13 @@ bak::encryption::encryption() {
 	keyUnlocking.numberSecondKey = 16459;
 }
 
-std::vector<unsigned int> bak::encryption::lock(std::string wordIn) {return encryptionWord(toVectorUnInt(wordIn), keyLocking);}
+std::vector<unsigned int> bak::encryption::lock(std::string wordIn) { return encryptionWord(toVectorUnInt(wordIn), keyLocking); }
+
+unsigned int bak::encryption::lock(unsigned int wordIn) { return encryptionNumber(wordIn, keyLocking); }
 
 std::string bak::encryption::unlock(std::vector<unsigned int> wordIn) { return toString(encryptionWord(wordIn, keyUnlocking)); }
+
+unsigned int bak::encryption::unlock(unsigned int wordIn) { return encryptionNumber(wordIn, keyUnlocking); }
 
 std::vector<unsigned int> bak::encryption::encryptionWord(std::vector<unsigned int> wordIn, keyRsa keyIn) {
 	std::vector<unsigned int> wordOut(wordIn.size());

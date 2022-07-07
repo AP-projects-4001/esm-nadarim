@@ -9,13 +9,12 @@ namespace bak {
 	struct product {
 
 	public:
-		void setProduct(product productIn);
+		void restrictWord(std::string wordIn, char* wordOut, int size);
 
 		bool operator==(product& productIn);
 		bool operator!=(product& productIn);
 		bool operator<=(product comparison);
 		bool operator>=(product comparison);
-
 
 		char userNameSeller[50] = "";
 		char userNameBuyer[50] = "";
@@ -30,7 +29,6 @@ namespace bak {
 		int weight = -1;
 		int CountProduct = -1;
 
-		void restrictWord(std::string wordIn, char* wordOut, int size);
 
 	};
 

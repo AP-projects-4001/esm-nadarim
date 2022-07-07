@@ -5,32 +5,28 @@ bak::fileProduct::fileProduct() {
 	std::fstream start(addresFile, std::ios::app | std::ios::binary);
 	start.seekg(0, std::ios::end);
 	lenghFile = start.tellg();
+	start.close();
+
+	fileEnctyption.setAddresFile(addresFile);
 }
 
 void bak::fileProduct::addProduct(product newProduct) {
 	int location = findEmptySpace();
 
-	std::fstream fProducts(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-	fProducts.seekp(location);
+	newProduct.CountProduct = (location / (sizeof(product) * sizeof(unsigned int)));
 
-	newProduct.CountProduct = (location / sizeof(product));
-	fProducts.write(reinterpret_cast<const char*>(&newProduct), sizeof(product));
-
-	fProducts.close();
+	fileEnctyption.write(reinterpret_cast<const char*>(&newProduct), sizeof(product), location);
 }
 
 void bak::fileProduct::deleteProduct(int CountProductIn) { editProduct(CountProductIn, product()); }
 
 void bak::fileProduct::editProduct(int CountProductIn, product newProduct) {
-	int location=(CountProductIn *sizeof(product));
+	int location = (CountProductIn * sizeof(product) * sizeof(unsigned int));
 	product search = searchProduct(CountProductIn);
 
 	newProduct.CountProduct = search.CountProduct;
 
-	std::fstream edit(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-	edit.seekp(location);
-	edit.write(reinterpret_cast<const char*>(&newProduct), sizeof(product));
-	edit.close();
+	fileEnctyption.write(reinterpret_cast<const char*>(&newProduct), sizeof(product), location);
 }
 
 std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {
@@ -38,31 +34,25 @@ std::vector<bak::product> bak::fileProduct::searchProduct(product productIn) {
 	std::vector<product> listOut;
 	product test;
 
-	std::fstream cearch(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-	cearch.seekg(0);
-	location = cearch.tellg();
+	location = 0;
 
 	while (location != lenghFile) {
-		cearch.read(reinterpret_cast<char*>(&test), sizeof(product));
-		location = cearch.tellg();
+		fileEnctyption.read(reinterpret_cast<char*>(&test), sizeof(product), location);
+
+		location += sizeof(product) * sizeof(unsigned int);
 
 		if (test >= productIn && !std::string(test.userNameSeller).empty())
 			listOut.push_back(test);
 	}
 
-	cearch.close();
-
 	return listOut;
 }
 
 bak::product bak::fileProduct::searchProduct(int CountProductIn) {
-	int location = (CountProductIn * sizeof(product));
+	int location = (CountProductIn * sizeof(product) * sizeof(unsigned int));
 	product productOut;
 
-	std::fstream cearch(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-	cearch.seekg(location);
-	cearch.read(reinterpret_cast<char*>(&productOut), sizeof(product));
-	cearch.close();
+	fileEnctyption.read(reinterpret_cast<char*>(&productOut), sizeof(product), location);
 
 	return productOut;
 }
@@ -72,15 +62,11 @@ int bak::fileProduct::findEmptySpace() {
 	int location = 0;
 	product test;
 
-	std::fstream findEmpty(addresFile, std::ios::in | std::ios::out | std::ios::binary);
-	findEmpty.seekg(0);
-	findEmpty.read(reinterpret_cast<char*>(&test), sizeof(product));
+	fileEnctyption.read(reinterpret_cast<char*>(&test), sizeof(product), location);
 
 	while (!std::string(reinterpret_cast<const char*>(&test)).empty() && location != lenghFile) {
-		location = findEmpty.tellg();
-		findEmpty.read(reinterpret_cast<char*>(&test), sizeof(product));
+		location += sizeof(product) * sizeof(unsigned int);
+		fileEnctyption.read(reinterpret_cast<char*>(&test), sizeof(product), location);
 	}
-
-	findEmpty.close();
 	return location;
 }

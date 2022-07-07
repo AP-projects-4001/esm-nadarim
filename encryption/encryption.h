@@ -15,8 +15,10 @@ namespace bak {
 		encryption();
 
 		std::vector<unsigned int> lock(std::string wordIn);
-		std::string unlock(std::vector<unsigned int> wordIn);
+		unsigned int lock(unsigned int wordIn);
 
+		std::string unlock(std::vector<unsigned int> wordIn);
+		unsigned int unlock(unsigned int wordIn);
 
 	private:
 		std::vector<unsigned int> encryptionWord(std::vector<unsigned int> wordIn, keyRsa keyIn);

@@ -1,15 +1,16 @@
 #pragma once
 
-#include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 
 #include "product.h"
 
+#include "../encryption/fileEnctyption.h"
+
 namespace bak {
 
-	struct fileProduct {
+	class fileProduct {
 
 	public:
 		fileProduct();
@@ -21,6 +22,8 @@ namespace bak {
 
 	private:
 		int findEmptySpace();
+
+		fileEnctyption fileEnctyption;
 
 		std::string addresFile = "fProducts.dat";
 		int lenghFile;
