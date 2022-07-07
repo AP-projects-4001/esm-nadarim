@@ -6,21 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>367</height>
+    <width>554</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 85, 127);</string>
+   <string notr="true">background-color: #19181A;
+font: 600 9pt &quot;Segoe UI&quot;;</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_13">
+  <layout class="QVBoxLayout" name="verticalLayout_12">
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(242, 254, 255);
+      <string notr="true">background-color: #19181A;
+color: rgb(255, 255, 255);
 font: 600 9pt &quot;Segoe UI&quot;;</string>
      </property>
      <property name="title">
@@ -196,8 +198,8 @@ color: rgb(0, 0, 0);
               <item>
                <widget class="QComboBox" name="group_combo">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;</string>
+                 <string notr="true">background-color: #479761;
+	color: #222629;</string>
                 </property>
                 <item>
                  <property name="text">
@@ -230,8 +232,8 @@ color: rgb(0, 0, 0);
               <item>
                <widget class="QComboBox" name="product_combo">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;</string>
+                 <string notr="true">background-color: #479761;
+	color: #222629;</string>
                 </property>
                </widget>
               </item>
@@ -253,8 +255,8 @@ color: rgb(0, 0, 0);
               <item>
                <widget class="QComboBox" name="color_combo">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;</string>
+                 <string notr="true">background-color: #479761;
+	color: #222629;</string>
                 </property>
                 <item>
                  <property name="text">
@@ -332,8 +334,8 @@ color: rgb(0, 0, 0);
               <item>
                <widget class="QComboBox" name="guarantee">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;</string>
+                 <string notr="true">background-color: #479761;
+	color: #222629;</string>
                 </property>
                 <item>
                  <property name="text">
@@ -370,8 +372,8 @@ color: rgb(0, 0, 0);
               <item>
                <widget class="QLineEdit" name="name_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;
+                 <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -415,8 +417,8 @@ QLineEdit::focus
               <item>
                <widget class="QLineEdit" name="brand_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;
+                 <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -464,8 +466,8 @@ QLineEdit::focus
               <item>
                <widget class="QLineEdit" name="number_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;
+                 <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -509,8 +511,8 @@ QLineEdit::focus
               <item>
                <widget class="QLineEdit" name="weight_line">
                 <property name="styleSheet">
-                 <string notr="true">background-color: #082336;
-	color: #3e93ff;
+                 <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -556,8 +558,8 @@ QLineEdit::focus
             <item>
              <widget class="QLineEdit" name="price_line">
               <property name="styleSheet">
-               <string notr="true">background-color: #082336;
-	color: #3e93ff;
+               <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;

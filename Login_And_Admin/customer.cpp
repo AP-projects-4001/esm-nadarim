@@ -1,4 +1,5 @@
 #include "customer.h"
+#include "mainwindow.h"
 #include "ui_customer.h"
 #include "changeprofile.h"
 #include "transaction.h"
@@ -78,5 +79,14 @@ void Customer::on_pushButton_4_clicked()
     this->close();
     delete ui;
 
+}
+
+
+void Customer::on_exit_btn_clicked()
+{
+    MainWindow *login=new MainWindow;
+    this->close();
+    delete(ui);
+    login->show();
 }
 

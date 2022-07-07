@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>390</width>
-    <height>328</height>
+    <width>440</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,21 +18,23 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>390</width>
-    <height>328</height>
+    <width>440</width>
+    <height>400</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 85, 127);</string>
+   <string notr="true">background-color: #19181A;
+font: 600 9pt &quot;Segoe UI&quot;;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_8">
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(242, 254, 255);
+      <string notr="true">background-color: #19181A;
+color: rgb(255, 255, 255);
 font: 600 9pt &quot;Segoe UI&quot;;</string>
      </property>
      <property name="title">
@@ -59,8 +61,8 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
           <item>
            <widget class="QLineEdit" name="user_line">
             <property name="styleSheet">
-             <string notr="true">background-color: #082336;
-	color: #3e93ff;
+             <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -107,8 +109,8 @@ QLineEdit::focus
           <item>
            <widget class="QLineEdit" name="phone_line">
             <property name="styleSheet">
-             <string notr="true">background-color: #082336;
-	color: #3e93ff;
+             <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -162,8 +164,8 @@ QLineEdit::focus
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #082336;
-	color: #3e93ff;
+             <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -207,8 +209,8 @@ QLineEdit::focus
           <item>
            <widget class="QLineEdit" name="budget_line">
             <property name="styleSheet">
-             <string notr="true">background-color: #082336;
-	color: #3e93ff;
+             <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -271,8 +273,8 @@ QLineEdit::focus
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #082336;
-	color: #3e93ff;
+             <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;
@@ -322,8 +324,8 @@ QLineEdit::focus
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #082336;
-	color: #3e93ff;
+             <string notr="true">background-color: #479761;
+	color: #222629;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #1e4b6d;

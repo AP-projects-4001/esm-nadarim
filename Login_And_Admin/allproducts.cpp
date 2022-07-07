@@ -209,6 +209,7 @@ void allproducts::on_save_btn_clicked()
     saveproduct.setWeight(ui->weight_line->text().toInt());
 
     saveproduct.editProduct(Allproducts[index].CountProduct);
+    QMessageBox::information(this,"Save Edit","Saved Successfully!");
 }
 
 

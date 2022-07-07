@@ -29,14 +29,16 @@ transaction::transaction(QWidget *parent,QString username):
      ui->number_line->setText(QString::number(vecTransaction[index].number));
     }
     else{
-        ui->Clientname_line->setReadOnly(true);
-        ui->Cusname_line->setReadOnly(true);
-        ui->group_name->setReadOnly(true);
-        ui->productname_line->setReadOnly(true);
-        ui->price_line->setReadOnly(true);
-        ui->number_line->setReadOnly(true);
+
         index=-1;
     }
+
+    ui->Clientname_line->setReadOnly(true);
+    ui->Cusname_line->setReadOnly(true);
+    ui->group_name->setReadOnly(true);
+    ui->productname_line->setReadOnly(true);
+    ui->price_line->setReadOnly(true);
+    ui->number_line->setReadOnly(true);
 }
 
 transaction::~transaction()
