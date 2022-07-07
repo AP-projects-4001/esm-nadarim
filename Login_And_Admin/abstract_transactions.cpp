@@ -11,6 +11,8 @@ Abstract_Transactions::Abstract_Transactions(QWidget *parent, QVector<QString> _
     ui->lineEdit_part2->setValidator(new QIntValidator(1001, 9999, this));
     ui->lineEdit_part3->setValidator(new QIntValidator(1001, 9999, this));
     ui->lineEdit_part4->setValidator(new QIntValidator(1001, 9999, this));
+    ui->lineEdit_pass->setValidator(new QIntValidator());
+    ui->lineEdit_CVV2->setValidator(new QIntValidator(100, 9999, this));
     vector_info = _vector_info;
     timer = new QTimer(this);
     timer->setInterval(1000);

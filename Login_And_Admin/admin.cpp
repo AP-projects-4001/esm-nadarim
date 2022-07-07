@@ -68,7 +68,7 @@ Admin::Admin(QWidget *parent)
            ui->lineEdit_13->setText(QString::number(obj_manger.allTransactions()[0].number));
            index_transaction = 1;
        }
-
+        ui->lineEdit_4->setValidator(new QIntValidator());
     }
 
 }
@@ -193,6 +193,11 @@ void Admin::on_pushButton_7_clicked()
     if(obj.checkusername(ui->lineEdit->text()) == 1 && user_current != ui->lineEdit->text())
     {
         QMessageBox::information(this,"Error","This username is already registered for another user");
+        return;
+    }
+    if(ui->lineEdit_4->text()[0] == '0')
+    {
+        QMessageBox::information(this,"Error","Phone number msut not start with 0");
         return;
     }
     obj.change_username(vecAdmin[index-8] ,ui->lineEdit->text());

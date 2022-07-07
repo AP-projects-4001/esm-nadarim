@@ -62,8 +62,7 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-</string>
+      <string notr="true"/>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -106,6 +105,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <width>241</width>
        <height>24</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;without 0 at first&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="maxLength">
       <number>11</number>
@@ -631,7 +633,7 @@ color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>931</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLogin">

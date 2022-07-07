@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 85, 127);
+   <string notr="true">background-color: #2C3531
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -40,7 +40,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(242, 254, 255);
+     <string notr="true">background-color: #116466;
 font: 600 9pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="title">
@@ -71,6 +71,14 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <height>24</height>
       </rect>
      </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgb(206, 164, 124);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
+     </property>
      <property name="text">
       <string>save</string>
      </property>
@@ -97,6 +105,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <height>24</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgb(206, 164, 124);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
+     </property>
      <property name="text">
       <string>Exit</string>
      </property>
@@ -109,6 +122,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <width>121</width>
        <height>24</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgb(206, 164, 124);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
      </property>
      <property name="text">
       <string>Increase budget</string>
@@ -175,6 +193,9 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <height>24</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;without 0 at first&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="maxLength">
       <number>11</number>
      </property>
@@ -203,6 +224,11 @@ font: 600 9pt &quot;Segoe UI&quot;;</string>
        <width>121</width>
        <height>24</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgb(206, 164, 124);
+font: 600 9pt &quot;Segoe UI&quot;;</string>
      </property>
      <property name="text">
       <string>Edit_Profile</string>
